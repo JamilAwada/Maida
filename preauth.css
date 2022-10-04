@@ -5,9 +5,29 @@
     font-family: 'Abyssinica SIL', sans-serif;
 }
 
+.primary-bg {
+    background-color: #FA2C02;
+}
+
+.primary-fg {
+    color: #FA2C02;
+}
+
 .main-logo {
     width: 50%;
     height: auto;
+}
+
+.logo-list {
+    list-style-type: none;
+}
+
+.logo-list li {
+    background: url('list_orange.png') no-repeat left;
+    font-size: 18px;
+    margin: 1em 0;
+    padding-left: 3.5em;
+    vertical-align: middle;
 }
 
 .rectangle {
