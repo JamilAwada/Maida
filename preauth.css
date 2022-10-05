@@ -102,3 +102,21 @@ footer {
     padding: 0 10px;
     background-color: white;
  }
+
+ .forgot-pass {
+    font-size: 12px;
+    margin-right: 11.5em;
+    text-decoration: underline;
+ }
+
+ .login-btn {
+    padding: 0.5em 1.2em;
+    border-radius: 10px;
+    color: white;
+    border-width: 0;
+ }
+
+ .signup-btn {
+    font-size: 12px;
+    text-decoration: underline;
+ }
