@@ -5,6 +5,12 @@
     font-family: 'Abyssinica SIL', sans-serif;
     box-sizing: border-box;
 }
+body{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 100vh;
+}
 
 .primary-bg {
     background-color: #FA2C02;
@@ -40,6 +46,43 @@
     border-radius: 20px;
 }
 
+.rectangle-register{
+    height: 100%;
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 35px 7px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.col{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.register-form-rectangle{
+   background: white;
+   box-shadow: 0px 1px 35px 7px rgba(0, 0, 0, 0.15);
+   width: 80%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   align-self: center;
+   border-radius: 20px;
+   min-width: 350px;
+}
+
+.box-shadow{
+   box-shadow: 0px 1px 1px px rgba(0, 0, 0, 0.15);
+}
 footer {
     position: fixed;
     bottom: 0;
@@ -57,6 +100,8 @@ footer {
  footer a:hover {
     color: white;
  }
+
+
 
  .container-2 {
     display: flex;
