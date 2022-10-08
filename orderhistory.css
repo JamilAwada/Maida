@@ -1,0 +1,58 @@
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.body-section{
+    background-color: #FEA18F;
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    height: 55%;
+    overflow-y: scroll;
+}
+
+.info-row p{
+    font-size: 0.9em;
+}
+
+.info-row{
+    line-height: 0.2em;
+    background-color: white;
+    padding: 20px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    width: 100%;
+    box-shadow: 0px 1px 5px 7px rgba(0, 0, 0, 0.15);
+    display: flex;
+
+}
+
+.price{
+    margin-left: auto;
+}
+
+.info{
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    list-style: none;
+}
+
+.price{
+    color: #F73D18;
+}
+
+#status{
+    color: green;
+}
+
+
+
