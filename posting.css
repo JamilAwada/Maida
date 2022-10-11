@@ -71,3 +71,13 @@
     text-align: left;
   }
 }
+
+.input-container {
+  text-align: left;
+}
+
+label {
+  font-size: large;
+  color: #FA2C02;
+}
+
