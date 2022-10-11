@@ -5,6 +5,10 @@
   font-family: 'Abyssinica SIL', sans-serif;
 }
 
+body {
+  overflow-x: hidden; 
+}
+
 .topnav {
   background-color: #FA2C02;
   overflow: hidden;
@@ -98,6 +102,13 @@ label {
   width: 15em;
   background-color: #9c9c9c;
   border-radius: 10px;
+}
+
+.clear-btn {
+  border: 1px solid #FA2C02;
+  border-radius: 10px;
+  background-color: white;
+  padding: 0.5em;
 }
 
 .post-btn {
