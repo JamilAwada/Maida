@@ -72,6 +72,18 @@
   }
 }
 
+form {
+  display: table;
+}
+
+p {
+  display: table-row;
+}
+
+p > label, p > input {
+  display: table-cell;
+}
+
 .input-container {
   text-align: left;
 }
@@ -81,3 +93,17 @@ label {
   color: #FA2C02;
 }
 
+.rectangle {
+  height: 15rem;
+  width: 15em;
+  background-color: #9c9c9c;
+  border-radius: 10px;
+}
+
+.post-btn {
+  background-color: #FA2C02;
+  color: white;
+  border-width: 0;
+  padding: 0.5em;
+  border-radius: 10px;
+}

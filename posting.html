@@ -33,10 +33,11 @@
 
     <div class="container">
       <div class="row">
-        <div class="col">
-          <h1 align="center" style="color: #fa2c02" class="py-4">
-            Post a new dish
-          </h1>
+        <h1 align="left" style="color: #fa2c02" class="py-4 ms-5">
+          Post a new dish
+        </h1>
+        <div class="col-8">
+          
           <form>
             <div class="input-container ps-5 my-3">
               <label for="name">Dish name:</label><br/>
@@ -80,14 +81,32 @@
             
             <div class="input-container ps-5 my-3">
               <div class="my-3" style="font-size: large; color:#fa2c02;">Nutritional Information:</div>
-              <label for="carbs" class="my-3">Carbohydrates:</label>
-              <input type="number" id="carbs" name="carbs"/><br/>
-              <label for="protein" class="my-3">Protein:</label>
-              <input type="number" id="protein" name="protein"/><br/>
-              <label for="fat" class="my-3">Fat:</label>
-              <input type="number" id="fat" name="fat"/><br/>
+              <p>
+                <label for="carbs" class="pe-3">Carbohydrates:</label>
+                <input type="number" id="carbs" name="carbs"/><br/>
+              </p>
+              <p>
+                <label for="protein">Protein:</label>
+                <input type="number" id="protein" name="protein"/><br/>
+              </p>
+              <p>
+                <label for="fat">Fat:</label>
+                <input type="number" id="fat" name="fat"/><br/>
+              </p>
             </div>
           </form>
+        </div>
+        <div class="col-4">
+          <h2 class="py-4" align="left" style="color:#fa2c02;">Photos</h2>
+          <div class="rectangle">
+            <img src="images/camera.png" style="height: 60%; width: 60%;" class="ms-5 mt-5">
+          </div>
+          <div class="mt-5 pt-5">
+            <button class="btn">Clear fields</button>
+            <button class="post-btn">Post meal</button>
+          </div>
+          
+
         </div>
       </div>
     </div>
