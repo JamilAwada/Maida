@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+.header{
+        
+    background-color:#f73d18 ;
+    width: 100%;
+    height: 8%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    align-items: center;
+    flex-direction: row;
+    display: flex;
+    border-bottom: #ec3814 2px solid;
+
+
+}
+.user{
+    height: 24px;
+    width: 25px;
+    left: 8%;
+    top:28%;
+    position: absolute;
+}
+
+.home{
+    width:25px;
+    height: 25px;
+    margin-right: 10px;
+    left: 3%;
+    top:28% ;
+    z-index: 1;
+    position: absolute;
+}
+.options{
+    height: 28px;
+    width: 28px;
+    position: absolute ;
+    top: 25%;
+    right:2%;
+}
+
+.container{
+    top:28%;
+    left:20%;
+    width: 60%;
+    height:60%;
+    position: absolute;
+
+    background: white;
+    box-shadow: 0px 1px 30px 2px rgba(0, 0, 0, 0.15);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 25px;
+    z-index: -1;
+    margin-bottom: 10%;
+    
+}
+.edit{
+    position:absolute;
+    right:10%;
+    top:12%;
+    width:3.5%;
+    height:6%;
+}
+.profile{
+    position:relative ;
+    margin-top: 7%;
+    margin-bottom: 3%;
+    font-family: 'Pacifico', sans-serif;
+    font-size: 220%;
+    z-index: 1;
+    color: #f73d18;
+
+}
+.propic{
+    width: 18%;
+    height:100%;
+
+}
+.username{
+    float: left;
+    position: relative;
+}
+.username,.email,.numberoforders{
+    position: relative;
+    font-family:Arial, Helvetica, sans-serif;
+    color: rgb(153, 153, 153);
+    margin-left: 5%;
+    font-size: 120%;
+}
+
+a:link{
+    text-decoration: none;
+    color: rgb(153, 153, 153);
+}
+a:hover{
+    text-decoration: underline;
+}
+body{
+    background-image: url(MAIDA.png);
+    background-position: bottom right;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 12%;
+   
+}
+.bmydishes{   
+    color: white;
+    background-color: #f73d18;
+    border: 0px;
+    height: auto;
+    width: 130px;
+    padding: 13px;
+    border-radius: 15px;
+    transition-duration: 0.3s;
+    position: absolute;
+    margin-top: 48%;
+    margin-left: 42%;
+}
+.bmydishes:hover{
+    cursor: pointer;
+    background-color: white;
+    color:#f73d18;
+    font-weight: bold;
+    box-shadow:  0px 1px 30px 2px rgba(0, 0, 0, 0.15) ;
+}
+@media (max-width:1050px) {
+    .user{
+        left:10%;
+    }
+    .edit{
+        width:5%;
+        height:5%;
+        top:8%;
+
+    }
+    .profile{
+        margin-top: 10%;
+    }
+}
