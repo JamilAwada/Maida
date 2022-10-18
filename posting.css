@@ -9,29 +9,6 @@ body {
   overflow-x: hidden; 
 }
 
-.topnav {
-  background-color: #FA2C02;
-  overflow: hidden;
-}
-
-.topnav a {
-  float: right;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.topnav a:first-of-type{
-  float: left;
-  text-indent: 1em;
-}
-
-.topnav a:nth-of-type(5) {
-  float: left;
-}
 
 .image-link {
   width: fit-content;
@@ -52,7 +29,7 @@ body {
 }
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 605px) {
   .topnav a:not(:first-child) {display: none;}
   .circle, a.image-link {display: none; padding: 0 0;}
   .topnav a.icon {
@@ -62,7 +39,7 @@ body {
 }
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 605px) {
   .topnav.responsive {position: relative;}
   .topnav.responsive a.icon {
     position: absolute;
