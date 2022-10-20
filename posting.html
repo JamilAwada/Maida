@@ -12,25 +12,43 @@
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="posting.css" />
-    <script>
-        $(function(){
-          $(".topnav").load("navbar.html");
-        })
-      </script>
+    <link rel="stylesheet" href="navbar.css"/>
     <title>Post a new dish</title>
   </head>
   <body>
 
-    <div class="topnav">
+    <!-- Nav -->
 
+    <div class="topnav" id="myTopnav">
+      <a href="#home" class="active">Maida</a>
+      <a href="#profile">Susan Smith</a>
+      <a href="#profile" class="image-link"
+        ><i class="fa-regular fa-user"></i>
+      </a>
+      <a href="#orders">Orders
+        <i class="fa-regular fa-paper-plane"></i>
+      </a>
+      <a href="#cart">Cart
+        <i class="fa-solid fa-cart-shopping"></i>
+      </a>
+      <a href="#browse">Browse
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </a>
+      <a href="#posting">New Post
+        <i class="fa-solid fa-plus"></i>
+      </a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
     </div>
+  
 
     <div class="container">
       <div class="row">
-        <h1 align="left" style="color: #fa2c02" class="py-4 ms-5">
+        <h1 align="left" style="color: #fa2c02; font-family: 'Pacifico', sans-serif;" class="pt-4 ms-5 mt-5">
           Post a new dish
         </h1>
         <div class="col-lg-8 col-sm-12">
@@ -43,12 +61,13 @@
             
             <div class="input-container ps-5 my-3">
               <label for="desc">Description:</label><br/>
-              <input type="text" id="desc" name="desc"/><br/>
+              <textarea type="text" id="desc" name="desc"></textarea><br/>
             </div>
             
             <div class="input-container ps-5 my-3">
               <label for="cuisine">Cuisine:</label><br/>
             <select id="cuisine" name="cuisine">
+              <option value="none">None</option>
               <option value="italian">Italian</option>
               <option value="american">American</option>
               <option value="french">French</option>
@@ -96,11 +115,9 @@
         <div class="col-lg-4 col-sm-12 text-sm-center d-flex justify-content-center">
           <div>
             <h2 class="py-4" align="center" style="color:#fa2c02;">Photos</h2>
-          <div class="rectangle">
-            <img src="images/camera.png" style="height: 60%; width: 60%;" class="ms-2 mt-5">
-          </div>
-          <div class="mt-5 pt-5">
-            <button class="clear-btn">Clear fields</button>
+            <i class="fa-solid fa-camera" style="font-size: 250px; color: lightgray;"></i>
+          <div class="my-4">
+            <button class="clear-btn" style="color: #fa2c02">Clear fields</button>
             <button class="post-btn">Post meal</button>
           </div>
           </div>
@@ -111,7 +128,9 @@
       </div>
     </div>
 
+    
     <script src="posting.js"></script>
+    <script src="navbar.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
       integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"

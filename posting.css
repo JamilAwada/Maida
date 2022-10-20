@@ -28,6 +28,21 @@ body {
   display: none;
 }
 
+input, textarea, select {
+    height: 2rem;
+    width: 15rem;
+    border: 1px solid gray;
+    border-radius: 7px;
+    text-indent: 5px;
+}
+
+textarea {
+    height: 5rem;
+    width: 25rem;   
+}
+
+
+
 
 @media screen and (max-width: 605px) {
   .topnav a:not(:first-child) {display: none;}
@@ -55,6 +70,8 @@ body {
 
 form {
   display: table;
+  border-collapse: separate;
+  border-spacing: 0 10px;
 }
 
 p {
@@ -63,6 +80,7 @@ p {
 
 p > label, p > input {
   display: table-cell;
+  
 }
 
 .input-container {
@@ -93,5 +111,5 @@ label {
   color: white;
   border-width: 0;
   padding: 0.5em;
-  border-radius: 10px;
+  border-radius: 7px;
 }
