@@ -15,3 +15,7 @@ input, textarea {
 h1, i {
     color: #FA2C02;
 }
+
+.testimonial {
+    height: 27.6rem;
+}
