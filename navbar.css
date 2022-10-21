@@ -1,15 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-
 * {
-  font-family: 'Abyssinica SIL', sans-serif;
+  font-family: DD-TTNorms, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: white;
 }
 
 .topnav {
     position: fixed;
     width: 100%;
-    background-color: #FA2C02;
+    background-color: orangered;
     overflow: hidden;
+    border-bottom: 2px solid #ec2700;
+    top:0;
+    
   }
   
   .topnav a {
@@ -22,7 +23,7 @@
     font-size: 17px;
   }
   
-  .topnav a:first-of-type{
+  .topnav a:nth-of-type(1){
     float: left;
     text-indent: 1em;
     padding-right: 3em;
@@ -34,11 +35,8 @@
 
   .topnav a:hover {
     color: white;
+    font-weight: 700;
     text-decoration: none;
-  }
-
-  .topnav a.active {
-    color: white;
   }
   
   .topnav .icon {
@@ -47,7 +45,7 @@
   
   
   @media screen and (max-width: 600px) {
-    .topnav a:not(:first-child), .fa-user {display: none;}
+    .topnav a:not(:first-child) {display: none;}
     .circle, a.image-link {display: none; padding: 0 0;}
     .topnav a.icon {
       float: right;
@@ -66,6 +64,5 @@
     .topnav.responsive a {
       float: none;
       display: block;
-      text-align: left;
     }
   }

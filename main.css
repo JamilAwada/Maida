@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-
 * {
     font-family: 'Abyssinica SIL', sans-serif;
     box-sizing: border-box;
 }
-
+#carouselExampleCaptions{
+    width:50%;
+    position: relative;
+}
 .primary-bg {
     background-color: #FA2C02;
 }
@@ -37,10 +37,10 @@
 }
 
 .carousel-item {
-    margin-top: 2rem;
     height: 15rem;
     background-color: grey;
     position: relative;
+    height: 250px;
 }
 
 .carousel-title {
@@ -49,10 +49,6 @@
 
 .carousel-desc {
     font-size: 16px;
-}
-
-.carousel-item {
-    height: 250px;
 }
 
 .carousel-item > img {
@@ -67,7 +63,6 @@
 
 .carousel-inner {
     border-radius: 10px;
-    margin-top: 2rem;
   }
 
 .carousel-caption > button {
