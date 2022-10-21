@@ -1,0 +1,17 @@
+.add-btn {
+    border-radius: 7px;
+    border-width: 0;
+    background-color: limegreen;
+    color: white;
+    
+}
+
+input, textarea {
+    border: 1px solid gray;
+    border-radius: 7px;
+    text-indent: 5px;
+}
+
+h1, i {
+    color: #FA2C02;
+}

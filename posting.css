@@ -41,9 +41,6 @@ textarea {
     width: 25rem;   
 }
 
-
-
-
 @media screen and (max-width: 605px) {
   .topnav a:not(:first-child) {display: none;}
   .circle, a.image-link {display: none; padding: 0 0;}
