@@ -47,7 +47,7 @@
   
   
   @media screen and (max-width: 600px) {
-    .topnav a:not(:first-child) {display: none;}
+    .topnav a:not(:first-child), .fa-user {display: none;}
     .circle, a.image-link {display: none; padding: 0 0;}
     .topnav a.icon {
       float: right;
