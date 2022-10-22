@@ -89,6 +89,7 @@ div{
     margin-top: 35px;
     border-radius: 10px;
     display: block;
+    transition: 0.5s;
 }
 
 .links{
@@ -142,3 +143,11 @@ div{
 #goToTop:hover {
     background-color: rgb(232, 87, 3); 
   }
+
+.dish:hover{
+
+    width: 330px;
+    height: 230px;
+
+
+}

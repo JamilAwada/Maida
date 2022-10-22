@@ -1,3 +1,8 @@
+*{
+  font-family: DD-TTNorms, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+}
+
 .footer {
     display: flex;
     flex-flow: row wrap;
@@ -18,7 +23,7 @@
   
   .footer__logo {
     font-family: 'Pacifico', sans-serif;
-    color: #FA2C02;
+    color: orangered;
     font-weight: 400;
     font-size: 1.5rem;
   }
@@ -55,7 +60,7 @@
   }
 
   .footer__btn:hover {
-    color: #FA2C02;
+    color: orangered;
   }
   
   .footer ul {
@@ -86,7 +91,7 @@
   }
 
   .nav__ul a:hover {
-    color: #FA2C02;
+    color: orangered;
   }
   
   .nav__ul--extra {
