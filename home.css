@@ -145,9 +145,71 @@ div{
   }
 
 .dish:hover{
+    transform:scale(1.1);
 
-    width: 330px;
-    height: 230px;
+}
 
+#popular{
+    box-shadow: 0px 1px 35px 7px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+}
+.maincol2{
+    box-sizing: border-box;
+    height: 100%;
+    width: 85%;
+    display: flex;    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.rowcontainerpop{
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-flow: row nowrap;
+}
 
+.dishpop{
+    height: 250px;
+    width: 350px;
+    margin: 20px;
+    border-radius: 10px;
+    transition: 0.5s;
+    display: block;
+    transition: 0.5s;
+}
+
+.imgpop{
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+
+}
+.dishpop:hover{
+        transform: scale(1.1);
+
+}
+.textcontainerpop{
+    margin-left: 40px;
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+}
+.titleoutpop{
+    display: block;
+
+}
+.titleinpop{
+    font-size: 24px;
+    font-family: DD-TTNorms, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: -0.03ch;
+    color: rgb(148, 148, 148);
+    margin: 0px;
+    padding: 0px;
+    display: block;
+    
 }
