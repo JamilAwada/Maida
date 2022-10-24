@@ -1,10 +1,12 @@
 * {
-    font-family: 'Abyssinica SIL', sans-serif;
+    font-family: DD-TTNorms, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     box-sizing: border-box;
 }
 #carouselExampleCaptions{
-    width:50%;
-    position: relative;
+    width:40%;
+    position: absolute;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 .primary-bg {
     background-color: white;
@@ -20,7 +22,7 @@
 
 .grey-bg {
     display: inline-block;
-    background-color:rgba(0,0,0,0.4);
+    background-color:rgba(0, 0, 0, 0.307);
     border-radius: 5px;
     padding: 0 1em;
 }
@@ -37,10 +39,9 @@
 }
 
 .carousel-item {
-    height: 15rem;
     background-color: grey;
     position: relative;
-    height: 250px;
+    height: 45vh;
 }
 
 .carousel-title {
@@ -58,16 +59,8 @@
     transform: translate(-50%, -50%);
     min-width: 100%;
     height: 40rem;
-    margin: 0 auto;
   }
 
 .carousel-inner {
     border-radius: 10px;
   }
-
-.carousel-caption > button {
-    background-color: #FA2C02;
-    color: white;
-    border-radius: 5px;
-    border-width: 0;
-}
