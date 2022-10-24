@@ -15,37 +15,30 @@
 </head>
 <body>
 
- <!-- Start of Nav -->
+ <!--NavBar-->
+ <div class="topnav" id="myTopnav" style="z-index: 999;">
+  <a href="main.html" class="home">Maida</a>
+  <a href="myprofile.html">Hi!Hanine</a>
+  <a href="#">Log Out</a>
 
- <!-- <div class="topnav" id="myTopnav">
-    <a href="#home" class="active">Maida</a>
-    <a href="#profile">Susan Smith</a>
-    <a href="#profile" class="image-link"
-      ><i class="fa-regular fa-user"></i>
-    </a>
-    <a href="#orders">Orders
-      <i class="fa-regular fa-paper-plane"></i>
-    </a>
-    <a href="#cart">Cart
-      <i class="fa-solid fa-cart-shopping"></i>
-    </a>
-    <a href="#browse">Browse
-      <i class="fa-solid fa-magnifying-glass"></i>
-    </a>
-    <a href="#posting">New Post
-      <i class="fa-solid fa-plus"></i>
-    </a>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-      <i class="fa fa-bars"></i>
-    </a>
-  </div> -->
-
-  <!-- End of Nav -->
+  <a href="#cart">My Cart
+      <img src="images/shopping-cart.png" class="">
+  </a>
+  <a href="#browse">Browse
+      <img src="images/loupe.png" class="">
+  </a>
+  <a href="#posting">New Post
+      <img src="images/add.png" class="">
+  </a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
 
     <div class="container">
         <div class="row">
             <div class="col-lg-6 text-center">
-                <i class="fa-solid fa-camera" style="font-size: 250px; color: lightgray;"></i>
+                <i class="fa-solid fa-camera card p-5" style="font-size: 250px; color: lightgray;"></i>
             </div>
             <div class="col-lg-6">
                 <div class="row">
@@ -57,7 +50,7 @@
                     <div class="col-lg-6">
                         <label>Any requests?</label>
                         <br>
-                        <textarea type="text" id="request" name="request" style="width: 300px"></textarea>
+                        <textarea type="text" id="request" name="request" style="width: 15em"></textarea>
                     </div>
                     <div class="col-lg-6">
                         <label>Quantity</label>
@@ -71,9 +64,9 @@
         </div>
     </div>
 
-    <!-- Chef Profile -->
+    <div class="divider mt-5"></div>
 
-    
+    <!-- Chef Profile -->
 
     <div class="container mt-5 mb-5">
     
@@ -104,64 +97,116 @@
 
 
         <!-- Testimonials -->
-
-        <div id="carouselExampleCaptions" class="carousel slide text-center card" data-bs-ride="false">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <i class="fa-solid fa-circle-user" style="font-size: 100px;"></i><br>
-                    <strong>Karen Smith</strong>
-                    <div>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa-regular fa-star"></i>                       
-                    </div>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus iure inventore animi, veritatis voluptatum in rerum dolorem dolore aspernatur quam! Nisi enim veniam, placeat tenetur quidem nulla dolorem dolores perferendis?</p>
-                    
-                </div>
-                  </div>
-              
-              <div class="carousel-item">
-                <i class="fa-solid fa-circle-user" style="font-size: 100px;"></i><br>
-                    <strong>Karen Smith</strong>
-                    <div>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa-regular fa-star"></i>                       
-                    </div>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus iure inventore animi, veritatis voluptatum in rerum dolorem dolore aspernatur quam! Nisi enim veniam, placeat tenetur quidem nulla dolorem dolores perferendis?</p>
-              </div>
-              <div class="carousel-item">
-                <i class="fa-solid fa-circle-user" style="font-size: 100px;"></i><br>
-                    <strong>Karen Smith</strong>
-                    <div>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa-regular fa-star"></i>                       
-                    </div>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus iure inventore animi, veritatis voluptatum in rerum dolorem dolore aspernatur quam! Nisi enim veniam, placeat tenetur quidem nulla dolorem dolores perferendis?</p>
-              </div>
-              
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-
         
-    
+
+        <div id="carouselExampleControls" class="carousel slide card" data-bs-ride="carousel">
+          <div class="carousel-inner text-center">
+            <div class="carousel-item active">
+              <i class="fa-solid fa-user-pen my-4" style="font-size: 100px;"></i><br>
+              <strong class="py-2">Karen Smith</strong>
+              <p class="px-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis minima, temporibus velit odit animi assumenda officiis obcaecati delectus vel quasi hic voluptatum sunt accusantium in molestiae beatae, veritatis quia aperiam?</p>
+            </div>
+            <div class="carousel-item">
+              <i class="fa-solid fa-user-pen my-4" style="font-size: 100px;"></i><br>
+              <strong class="py-2">Jason Smith</strong>
+              <p class="px-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla iure magni voluptatum vero, dolorem minima ut illo inventore fuga numquam illum modi vitae? Fugiat quod consequuntur explicabo blanditiis natus consequatur.</p>
+            </div>
+            <div class="carousel-item">
+              <i class="fa-solid fa-user-pen my-4" style="font-size: 100px;"></i><br>
+              <strong class="my-3">Jaafar Me2ded</strong>
+              <p class="px-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere consectetur nulla eligendi vitae maiores aut, minus cupiditate, tempora perspiciatis esse iusto, vel ab aliquam ut laborum culpa eius! Quae, officiis.</p>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
     </div>
+
+    <!-- Nut Facts -->
+  
+    <h1 align="center" class="my-5">Nutrition Facts</h1>
+    <div class="d-flex justify-content-center mb-5" style="width: 100%">
+      <figure class="pie-chart text-center">
+        <h3 align="left" class="ms-2 mt-2">Food Title</h3>
+        <i class="fa-solid fa-chart-pie" style="font-size: 250px;"></i>
+        <figcaption>
+            Carbohydrates 50<span style="color:#0400ff"></span><br>
+            Protein 30<span style="color:#ff0000"></span><br>
+            Fat 20<span style="color:#ffdd00"></span>
+        </figcaption>
+      </figure>
+    </div>
+    
+    <!-- Footer -->
+    
+    <br>
+
+    <footer class="footer">
+      <div class="footer__addr">
+        <h1 class="footer__logo">Maida</h1>
+            
+        <h2>Contact</h2>
+        
+        <address>
+          Beirut, 1102<br>
+              
+          <a class="footer__btn" href="mailto:example@gmail.com">Email Us</a>
+        </address>
+      </div>
+      
+      <ul class="footer__nav">
+        <li class="nav__item">
+          <h2 class="nav__title">Social</h2>
+    
+          <ul class="nav__ul">
+            <li>
+              <a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
+            </li>
+    
+            <li>
+              <a href="#"><i class="fa-brands fa-twitter"></i> Twitter</a>
+            </li>
+                
+            <li>
+              <a href="#"><i class="fa-brands fa-github"></i> Github</a>
+            </li>
+          </ul>
+        </li>
+      
+        <li class="nav__item">
+          <h2 class="nav__title">Legal</h2>
+          
+          <ul class="nav__ul">
+            <li>
+              <a href="#">Privacy Policy</a>
+            </li>
+            
+            <li>
+              <a href="#">Terms of Use</a>
+            </li>
+            
+            <li>
+              <a href="#">Sitemap</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <div class="legal">
+        <p>&copy; 2022 Maida. All rights reserved.</p>
+        
+        <div class="legal__links">
+          <span>A web project by Jamil Awada, Hanine Al Khatib and Rissal Hedna</span>
+        </div>
+      </div>
+    </footer>
+    
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
     <script
