@@ -41,7 +41,6 @@ div{
     display: block;
     margin-left: 25%;
     margin-bottom: 5px;
-    margin-top: 5px;
     -webkit-text-stroke: 0.5px rgb(208, 55, 0);
 
 }
@@ -51,6 +50,7 @@ div{
     background-color: #f3f3f3;
     display: flex;
     justify-content: center;
+    align-items: center;
     border-radius: 20px;
     margin-bottom: 15px;
     width: 30%;
@@ -59,13 +59,12 @@ div{
   }
   
   .searchbar input[type=text] {
-    background-color: none;
-    padding: 5px;
+    padding: 8px;
     border: none;
-    margin-top: 8px;
+    margin-top: 5px;
     margin-bottom: 5px;
-    margin-right: 16px;
-    font-size: 17px;
+    margin-left: 18px;
+    font-size: 16px;
     display: flex;
     justify-content: center;
     align-items: center;
