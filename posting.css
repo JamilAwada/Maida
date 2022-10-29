@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 * {
-  font-family: 'Abyssinica SIL', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -80,13 +79,18 @@ p > label, p > input {
   
 }
 
+.container {
+  border: solid 2px #999;
+  border-radius: 7px;
+}
+
 .input-container {
   text-align: left;
 }
 
 label {
   font-size: large;
-  color: #FA2C02;
+  color: orangered;
 }
 
 .rectangle {
@@ -97,16 +101,32 @@ label {
 }
 
 .clear-btn {
-  border: 1px solid #FA2C02;
-  border-radius: 10px;
+  border: 1px solid orangered;
+  border-radius: 7px;
   background-color: white;
   padding: 0.5em;
 }
 
-.post-btn {
-  background-color: #FA2C02;
+.clear-btn:hover {
+  background-color: orangered;
   color: white;
-  border-width: 0;
+  border: 1px solid orangered;
   padding: 0.5em;
   border-radius: 7px;
+}
+
+.post-btn {
+  background-color: orangered;
+  color: white;
+  border: 1px solid orangered;
+  padding: 0.5em;
+  border-radius: 7px;
+}
+
+.post-btn:hover {
+  border: 1px solid orangered;
+  border-radius: 7px;
+  background-color: white;
+  color: orangered;
+  padding: 0.5em;
 }

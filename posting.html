@@ -11,7 +11,6 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
-    <!-- Import fontawesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -25,24 +24,27 @@
     <title>Post a new dish</title>
   </head>
   <body>
-    <!-- Start of Nav -->
+    <!-- NavBar Start -->
+    
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo">Maida</label>
+      <ul class="nav-list">
+        <li><a href="#">Browse <i class="fa-solid fa-magnifying-glass"></i></a></li>
+        <li><a href="#">New Post <i class="fa-solid fa-circle-plus"></i></a></li>
+        <li><a href="#">Cart <i class="fa-solid fa-cart-shopping"></i></a></li>
+        <li><a href="#">Susan Smith</a></li>
+        <li><a href="#">Log out <i class="fa-solid fa-right-from-bracket"></i></a></li>
+      </ul>
+    </nav>
 
-    <div class="topnav" id="myTopnav" style="z-index: 999">
-      <a href="main.html" class="home">Maida</a>
-      <a href="myprofile.html">Hi!Hanine</a>
-      <a href="#">Log Out</a>
-
-      <a href="#cart">My Cart </a>
-      <a href="#posting">New Post </a>
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-      </a>
-    </div>
-
-    <!-- End of Nav -->
+    <!-- NavBar End -->
 
     <div class="container">
-      <div class="row">
+      <div class="row w-100">
         <h1
           align-text="left"
           style="color: #fa2c02; font-family: 'Pacifico', sans-serif"
@@ -50,20 +52,20 @@
         >
           Post a new dish
         </h1>
-        <div class="col-lg-8 col-sm-12">
+        <div class="col-lg col-sm-12">
           <form>
             <div class="input-container ps-5 my-3">
-              <label for="name">Dish name:</label><br />
+              <label for="name">Dish name</label><br />
               <input type="text" id="name" name="name" /><br />
             </div>
 
             <div class="input-container ps-5 my-3">
-              <label for="desc">Description:</label><br />
+              <label for="desc">Description</label><br />
               <textarea type="text" id="desc" name="desc"></textarea><br />
             </div>
 
             <div class="input-container ps-5 my-3">
-              <label for="cuisine">Cuisine:</label><br />
+              <label for="cuisine">Cuisine</label><br />
               <select id="cuisine" name="cuisine">
                 <option value="none">None</option>
                 <option value="italian">Italian</option>
@@ -77,7 +79,7 @@
             </div>
 
             <div class="input-container ps-5 my-3">
-              <label for="diet">Diet:</label><br />
+              <label for="diet">Diet</label><br />
               <select id="diet" name="diet">
                 <option value="none">None</option>
                 <option value="vegetarian">Vegetarian</option>
@@ -89,71 +91,74 @@
             </div>
 
             <div class="input-container ps-5 my-3">
-              <label for="price">Price:</label><br />
+              <label for="price">Price</label><br />
               <input type="number" id="price" name="price" /><br />
             </div>
 
             <div class="input-container ps-5 my-3">
               <div class="my-3" style="font-size: large; color: #fa2c02">
-                Nutritional Information:
+                Nutritional Information
               </div>
               <p>
-                <label for="carbs" class="pe-3">Carbohydrates:</label>
+                <label for="carbs" class="pe-3">Carbohydrates</label>
                 <input type="number" id="carbs" name="carbs" /><br />
               </p>
               <p>
-                <label for="protein">Protein:</label>
+                <label for="protein">Protein</label>
                 <input type="number" id="protein" name="protein" /><br />
               </p>
               <p>
-                <label for="fat">Fat:</label>
+                <label for="fat">Fat</label>
                 <input type="number" id="fat" name="fat" /><br />
               </p>
             </div>
           </form>
         </div>
         <div
-          class="col-lg-4 col-sm-12 text-sm-center d-flex justify-content-center"
+          class="col-lg col-sm-12 text-sm-center"
         >
-          <div>
+          <div class="w-100">
             <h2 class="py-4" style="color: #fa2c02">Photos</h2>
             <i
               class="fa-solid fa-camera"
               style="font-size: 250px; color: lightgray"
             ></i>
-            <div class="my-4">
-              <button class="clear-btn" style="color: #fa2c02">
-                Clear fields
-              </button>
-              <button class="post-btn">Post meal</button>
+            <div class="container-fluid">
+              <div class="mt-5 text-center">
+                <button class="clear-btn" style="color: #fa2c02">
+                  Clear fields     
+                </button>
+                <button class="post-btn">Post meal</button>
+              </div>
             </div>
+            
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Start of Footer -->
+    <!-- Footer Start -->
 
     <br />
 
     <footer class="footer">
-      <div class="footer__addr">
-        <h1 class="footer__logo">Maida</h1>
+      <div class="footer-addr">
+        <h1 class="footer-logo">Maida</h1>
 
         <h2>Contact</h2>
 
         <address>
           Beirut, 1102<br />
 
-          <a class="footer__btn" href="mailto:example@gmail.com">Email Us</a>
+          <a class="footer-btn" href="mailto:example@gmail.com">Email Us</a>
         </address>
       </div>
 
-      <ul class="footer__nav">
-        <li class="nav__item">
-          <h2 class="nav__title">Social</h2>
+      <ul class="footer-nav">
+        <li class="nav-item">
+          <h2 class="nav-title">Social</h2>
 
-          <ul class="nav__ul">
+          <ul class="nav-ul">
             <li>
               <a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
             </li>
@@ -168,10 +173,10 @@
           </ul>
         </li>
 
-        <li class="nav__item">
-          <h2 class="nav__title">Legal</h2>
+        <li class="nav-item">
+          <h2 class="nav-title">Legal</h2>
 
-          <ul class="nav__ul">
+          <ul class="nav-ul">
             <li>
               <a href="#">Privacy Policy</a>
             </li>
@@ -186,11 +191,10 @@
           </ul>
         </li>
       </ul>
-
       <div class="legal">
         <p>&copy; 2022 Maida. All rights reserved.</p>
 
-        <div class="legal__links">
+        <div class="legal-links">
           <span
             >A web project by Jamil Awada, Hanine Al Khatib and Rissal
             Hedna</span
@@ -199,7 +203,7 @@
       </div>
     </footer>
 
-    <!-- End of Footer -->
+    <!-- Footer End -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
       integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
