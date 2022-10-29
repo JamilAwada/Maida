@@ -139,3 +139,7 @@
       flex: 2 0px;
     }
   }
+
+  footer{
+    position: relative;
+  }

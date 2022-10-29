@@ -1,42 +1,44 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width", initial-scale="1.0">
-        <title>My Profile</title>
-        <link href="Profile.css" rel="stylesheet">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" , initial-scale="1.0" />
+    <title>My Profile</title>
+    <link href="Profile.css" rel="stylesheet" />
+    <link rel="stylesheet" href="navbar.css" />
+  </head>
 
-    </head>
+  <body>
+    <!-- Navbar -->
+    <div class="topnav" id="myTopnav" style="z-index: 999">
+      <a href="main.html" class="home">Maida</a>
+      <a href="myprofile.html">Hi!Hanine</a>
+      <a href="#">Log Out</a>
 
-    <body>
-        <header class="header"> 
-            <a href="main.html"><img class="home" src="home.png"></a>
-            <a href="profile.html"><img class="user" src="white user.png"></a>
-            <a href=#><img class="options" src="options.png"></a>
+      <a href="#cart">My Cart </a>
+      <a href="#posting">New Post </a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
 
-        </header>
-       
-        <center><h1 class="profile">My Profile</h1></center>
-        <br>
-        <div class="container">
-                <br>
-                <a href="main.html"><img class="edit" src="edit.png"></a>
-                
-                <center><img class="propic" src="userpropic.png"></center>
-                <h3 class="username">Username</h3><br>
-                <h3 class="numberoforders">Number of Orders</h3>
-                <br>
-                <h3 class="email">Email</h3>
-                <br>
-                <button class="bmydishes">View My Dishes</button>
+    <center><h1 class="profile">My Profile</h1></center>
+    <br />
+    <div class="container">
+      <br />
+      <a href="main.html"><img class="edit" src="edit.png" /></a>
 
-            </div>
-            
-        
-        <div class="fixedlogo"></div>
-        
-        
-    </body>
+      <center><img class="propic" src="userpropic.png" /></center>
+      <h3 class="username">Username</h3>
+      <br />
+      <h3 class="numberoforders">Number of Orders</h3>
+      <br />
+      <h3 class="email">Email</h3>
+      <br />
+      <button class="bmydishes">View My Dishes</button>
+    </div>
 
+    <div class="fixedlogo"></div>
+  </body>
 </html>

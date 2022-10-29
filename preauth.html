@@ -4,49 +4,136 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="preauth.css"/>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-  </head>
+    <link rel="stylesheet" href="preauth.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="navbar.css" />
+
     <title>Maida - Food Delivery</title>
   </head>
   <body>
-        <div class="container">
-            <div class="row gx-0">
-                <div class="col-lg-6 col-md-12">
-                    <img src="logo.jpeg" class="main-logo" style="display: block; margin: auto;">
-                    <ul class="logo-list primary-fg d-lg-block mb-5">
-                        <li>Experience a wide variety of cuisines</li>
-                        <li>Order local homemade meals</li>
-                        <li>Sell your culinary creations</li>
-                        <li>Track your order</li>
-                    </ul>
-                </div>
-                <div class="col-lg-6 col-md-8">
-                    <div class="rectangle ms-5 float-lg-end float-md-none">
-                        <div class="container-2">
-                            <h2 class="primary-fg mt-5">Let's get cooking!</h2>
-                            <div class="input-box mt-5">
-                                <input type="text" required="required">
-                                <span>Email</span>
-                            </div>
-                            <div class="input-box mt-4">
-                                <input type="text" required="required">
-                                <span>Password</span>
-                            </div>
-                            <div class="forgot-pass mt-1"><a>Forgot password?</a></div>
-                            <button class="login-btn primary-bg mt-5">Log In</button>
-                            <div class="signup-btn mt-4"><a>First time user?</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <footer class="primary-bg">
-            <a href="#" class="px-5">Careers</a>
-            <a href="#" class="px-5">Social</a>
-            <a href="#" class="px-5">Support</a>
-        </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-  </body>
+    <!-- Navbar -->
+    <div class="topnav" id="myTopnav" style="z-index: 999">
+      <a href="main.html" class="home">Maida</a>
+      <a href="myprofile.html">Hi!Hanine</a>
+      <a href="#">Log Out</a>
 
+      <a href="#cart">My Cart </a>
+      <a href="#posting">New Post </a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+
+    <!-- Container section -->
+    <div class="container">
+      <div class="row gx-0">
+        <div class="col-lg-6 col-md-12">
+          <img
+            src="logo.jpeg"
+            class="main-logo"
+            style="display: block; margin: auto"
+          />
+          <ul class="logo-list primary-fg d-lg-block mb-5">
+            <li>Experience a wide variety of cuisines</li>
+            <li>Order local homemade meals</li>
+            <li>Sell your culinary creations</li>
+            <li>Track your order</li>
+          </ul>
+        </div>
+        <div class="col-lg-6 col-md-8">
+          <div class="rectangle ms-5 float-lg-end float-md-none">
+            <div class="container-2">
+              <h2 class="primary-fg mt-5">Let's get cooking!</h2>
+              <div class="input-box mt-5">
+                <input type="text" required="required" />
+                <span>Email</span>
+              </div>
+              <div class="input-box mt-4">
+                <input type="text" required="required" />
+                <span>Password</span>
+              </div>
+              <div class="forgot-pass mt-1"><a>Forgot password?</a></div>
+              <button class="login-btn primary-bg mt-5">Log In</button>
+              <div class="signup-btn mt-4"><a>First time user?</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+
+      <footer class="footer">
+        <div class="footer__addr">
+          <h1 class="footer__logo">Maida</h1>
+
+          <h2>Contact</h2>
+
+          <address>
+            Beirut, 1102<br />
+
+            <a class="footer__btn" href="mailto:example@gmail.com">Email Us</a>
+          </address>
+        </div>
+
+        <ul class="footer__nav">
+          <li class="nav__item">
+            <h2 class="nav__title">Social</h2>
+
+            <ul class="nav__ul">
+              <li>
+                <a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
+              </li>
+
+              <li>
+                <a href="#"><i class="fa-brands fa-twitter"></i> Twitter</a>
+              </li>
+
+              <li>
+                <a href="#"><i class="fa-brands fa-github"></i> Github</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav__item">
+            <h2 class="nav__title">Legal</h2>
+
+            <ul class="nav__ul">
+              <li>
+                <a href="#">Privacy Policy</a>
+              </li>
+
+              <li>
+                <a href="#">Terms of Use</a>
+              </li>
+
+              <li>
+                <a href="#">Sitemap</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+        <div class="legal">
+          <p>&copy; 2022 Maida. All rights reserved.</p>
+
+          <div class="legal__links">
+            <span
+              >A web project by Jamil Awada, Hanine Al Khatib and Rissal
+              Hedna</span
+            >
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

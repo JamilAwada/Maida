@@ -3,8 +3,7 @@
     background: lightgrey;
     height: 60%;
     border-radius: 5px;
-    direction: flex;
-    justify-content: center;
+
     overflow-y: scroll;
 }
 

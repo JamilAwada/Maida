@@ -1,20 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-
-.header{
-        
-    background-color:#f73d18 ;
-    width: 100%;
-    height: 8%;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    align-items: center;
-    flex-direction: row;
-    display: flex;
-    border-bottom: #ec3814 2px solid;
-
-
+body{
+    margin: 0;
 }
 .user{
     height: 24px;
@@ -127,18 +114,4 @@ body{
     color:#f73d18;
     font-weight: bold;
     box-shadow:  0px 1px 30px 2px rgba(0, 0, 0, 0.15) ;
-}
-@media (max-width:1050px) {
-    .user{
-        left:10%;
-    }
-    .edit{
-        width:5%;
-        height:5%;
-        top:8%;
-
-    }
-    .profile{
-        margin-top: 10%;
-    }
 }
