@@ -144,9 +144,12 @@ h2 {
 
 .forgot-pass a {
   font-size: 16pxpx;
-  margin-right: 6rem;
   color: black;
   text-decoration: none;
+}
+
+.forgot-pass a:hover {
+  color: black;
 }
 
 .signup-btn a {
