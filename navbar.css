@@ -1,80 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 * {
-  font-family: DD-TTNorms, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-
-}
-
-
-div{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
   box-sizing: border-box;
 }
 
-.topnav {
-    color: rgb(200,200,200);
-    height: 55px;
-    width: 100%;
-    background-color: white;
-    overflow: hidden;
-    top:0;
-    box-shadow: 0px 1px 5px 2px rgba(0, 0, 0, 0.15);
-    position: sticky;
-    
-  }
+nav {
+  background: white;
+  height: 80px;
+  width: 100%;
+}
 
-  .topnav a {
-    color: gray;
-    float: right;
+label.logo {
+  color: orangered;
+  font-family: 'Pacifico', cursive;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+}
+
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: orangered;
+  text-decoration: none;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  font-family: 'Poppins', sans-serif;
+}
+
+a:hover, a:hover i {
+  background: orangered;
+  color: white;
+  transition: 0.5s;
+}
+
+i {
+  color: orangered;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+@media (max-width: 952px) {
+  label.logo {
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+@media (max-width: 858px) {
+
+  i {display: hidden;}
+  .checkbtn {
     display: block;
-    text-align: center;
-    padding: 12px;
-    text-decoration: none;
-    font-size: 17px;
-    transition: 0.1s;
-    position: relative;
   }
-  
-  .topnav a:nth-of-type(1){
-    float: left;
-    text-indent: 1em;
-    padding-right: 3em;
-  }
-  
-  .topnav a:nth-of-type(5), .topnav a:nth-of-type(6) {
-    float: left;
-  }
-
-  .topnav a:hover {
-    color: orangered;
-    transform: scale(1.1);    
-    text-decoration: none;
-  }
-  
-  .topnav .icon {
-    display: none;
-  }
-  .topnav .parts{
-    width: 15%;
+  ul {
     position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
   }
-  
-  @media screen and (max-width: 600px) {
-    .topnav a:not(:first-child) {display: none;}
-    .circle, a.image-link {display: none; padding: 0 0;}
-    .topnav a.icon {
-      float: right;
-      display: block;
-    }
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
   }
-  
-  
-  @media screen and (max-width: 600px) {
-    .topnav.responsive {position: relative;}
-    .topnav.responsive a.icon {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    .topnav.responsive a {
-      float: none;
-      display: block;
-    }
+  nav ul li a {
+    font-size: 20px;
   }
+  a:hover,
+  a.active {
+    background: orangered;
+    color: white;
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
+}
