@@ -34,7 +34,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: orangered;
+  color: #999;
   text-decoration: none;
   font-size: 17px;
   padding: 7px 13px;
@@ -42,14 +42,14 @@ nav ul li a {
   font-family: 'Poppins', sans-serif;
 }
 
-a:hover, a:hover i {
+nav ul li a:hover, nav ul li a:hover i {
   background: orangered;
   color: white;
   transition: 0.5s;
 }
 
 i {
-  color: orangered;
+  color: #999;
 }
 
 .checkbtn {
@@ -62,7 +62,11 @@ i {
   display: none;
 }
 
-#check {
+.checkbtn i {
+  color: orangered;
+}
+
+#check  {
   display: none;
 }
 
