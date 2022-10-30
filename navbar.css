@@ -42,10 +42,15 @@ nav ul li a {
   font-family: 'Poppins', sans-serif;
 }
 
-nav ul li a:hover, nav ul li a:hover i {
+nav ul li a:hover {
   background: orangered;
   color: white;
   transition: 0.5s;
+}
+
+nav ul li a:hover i {
+  background-color: none;
+  color: white;
 }
 
 nav ul li a i {
