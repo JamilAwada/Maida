@@ -1,7 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 h1 {
     font-family: 'Pacifico', sans-serif;
     color: #FA2C02;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
 }
