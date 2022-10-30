@@ -29,10 +29,20 @@ body {
 
 input, textarea, select {
     height: 2rem;
-    width: 15rem;
+    width: 10rem;
     border: 1px solid gray;
     border-radius: 7px;
     text-indent: 5px;
+}
+
+#pic {
+  padding: 15px;
+  border: 1px solid gray;
+  border-radius: 7px;
+}
+
+.apple {
+  transform: scale(0.5);
 }
 
 textarea {
@@ -80,7 +90,6 @@ p > label, p > input {
 }
 
 .container {
-  border: solid 2px #999;
   border-radius: 7px;
 }
 
