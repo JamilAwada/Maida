@@ -1,10 +1,13 @@
-
 .add-btn {
     border-radius: 7px;
     border-width: 0;
     background-color: limegreen;
     color: white;
     
+}
+
+.container1 {
+	background-color: orangered;
 }
 
 input, textarea {
