@@ -4,29 +4,49 @@ body {
 }
 
 .add-btn {
-	border: solid limegreen 1px;
+	border: solid rgb(168, 168, 168) 1px;
 	border-radius: 7px;
-    background-color: limegreen;
-    color: white;
-	transition: 0.5s;
+    background-color: rgb(230, 230, 230);
+    color: orangered;
+	font-weight: bold;
+	transition: 0.3s;
+	height: auto;
+	width: 40px;
+}
+.chef{
+	text-decoration: none;
+	color: orangered;
+	font-weight: bold;
+}
+.chef:hover{
+	color: rgb(167, 45, 0);
 }
 
 .add-btn:hover {
 	background-color: white;
-	color: limegreen;
-	border: solid limegreen 1px;
+	color: orangered;
+	border: solid rgb(206, 24, 0) 1px;
 }
 
 .container1 {
 	background-color: orangered;
 	padding: 2em 4em;
 }
+.container2 {
+	padding: 2em 4em;
+	width: 80vw;
+	height: auto;
+	margin: auto;
+}
 
 .subcontainer {
 	background-color: white;
 	border-radius: 20px;
 	padding-bottom: 1em;
-	box-shadow: 1px 1px 10px;
+	border-bottom: 4px solid rgb(210, 56, 0);
+	width: 60vw;
+	height: 80vh;
+	margin: auto;
 }
 
 input, textarea {
