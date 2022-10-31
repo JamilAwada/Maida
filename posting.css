@@ -132,25 +132,9 @@ label {
   background-color: #9c9c9c;
   border-radius: 10px;
 }
-
-.clear-btn {
-  border: 1px solid orangered;
-  border-radius: 7px;
-  background-color: white;
-  padding: 0.5em;
-}
-
-.clear-btn:hover {
-  background-color: orangered;
-  color: white;
-  border: 1px solid orangered;
-  padding: 0.5em;
-  border-radius: 7px;
-}
-
 .post-btn {
-  background-color: orangered;
   color: white;
+  background-color: #f73d18;
   border: 1px solid orangered;
   padding: 0.5em;
   border-radius: 7px;
@@ -160,6 +144,21 @@ label {
   border: 1px solid orangered;
   border-radius: 7px;
   background-color: white;
-  color: orangered;
+  color: #f73d18;
+  padding: 0.5em;
+}
+.clear-btn {
+  color: white;
+  background-color: #f73d18;
+  border: 1px solid orangered;
+  padding: 0.5em;
+  border-radius: 7px;
+}
+
+.clear-btn:hover {
+  border: 1px solid orangered;
+  border-radius: 7px;
+  background-color: white;
+  color: #f73d18;
   padding: 0.5em;
 }
