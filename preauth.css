@@ -40,17 +40,6 @@
   border-radius: 20px;
 }
 
-/* .rectangle-register{
-    height: 100%;
-    width: 100%;
-    background: #FFFFFF;
-    box-shadow: 0px 1px 35px 7px rgba(0, 0, 0, 0.15);
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
-
 .row {
   display: flex;
   justify-content: center;
