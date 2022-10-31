@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: orangered;
+}
+
+.maincontainer {
+  background: white;
+  width: 60vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10vh;
+  border-radius: 20px;
+  margin-bottom: 10vh;
+  border: 3px solid #e12d09;
+}
+
+.image-link {
+  width: fit-content;
+}
+
+.circle {
+  border-radius: 50%;
+  height: 5%;
+  width: auto;
+}
+
+.topnav a.active {
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+input,
+textarea,
+select {
+  height: 2rem;
+  width: 10rem;
+  border: 1px solid gray;
+  border-radius: 7px;
+  text-indent: 5px;
+}
+
+#pic {
+  padding: 15px;
+  border: 1px solid gray;
+  border-radius: 7px;
+}
+
+.apple {
+  transform: scale(0.5);
+}
+
+textarea {
+  height: 5rem;
+  width: 25rem;
+}
+
+@media screen and (max-width: 605px) {
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+  .circle,
+  a.image-link {
+    display: none;
+    padding: 0 0;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 605px) {
+  .topnav.responsive {
+    position: relative;
+  }
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+form {
+  display: table;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+
+p {
+  display: table-row;
+}
+
+p > label,
+p > input {
+  display: table-cell;
+}
+
+.container {
+  border-radius: 7px;
+}
+
+.input-container {
+  text-align: left;
+}
+
+label {
+  font-size: large;
+  color: orangered;
+}
+
+.rectangle {
+  height: 15rem;
+  width: 15em;
+  background-color: #9c9c9c;
+  border-radius: 10px;
+}
+
+.clear-btn {
+  border: 1px solid orangered;
+  border-radius: 7px;
+  background-color: white;
+  padding: 0.5em;
+}
+
+.clear-btn:hover {
+  background-color: orangered;
+  color: white;
+  border: 1px solid orangered;
+  padding: 0.5em;
+  border-radius: 7px;
+}
+
+.post-btn {
+  background-color: orangered;
+  color: white;
+  border: 1px solid orangered;
+  padding: 0.5em;
+  border-radius: 7px;
+}
+
+.post-btn:hover {
+  border: 1px solid orangered;
+  border-radius: 7px;
+  background-color: white;
+  color: orangered;
+  padding: 0.5em;
+}
