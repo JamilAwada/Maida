@@ -99,7 +99,7 @@
 
 .card{
   background-color: grey;
-  height: 250px;
+  height: 85%;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   overflow: hidden;
@@ -139,10 +139,13 @@ hr{
 .name{
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
+  font-size: 1rem;
 }
 .price{
   font-family: 'Poppins', sans-serif;
   color: orangered;
+  font-size: 1rem;
+
 }
 
 .cardsList{

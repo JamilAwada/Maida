@@ -1,0 +1,26 @@
+.container{
+    width: 80%;
+    height: 30rem;
+    border-radius: 10px;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.dishesAvailable{
+    font-family: "Pacifico", cursive;
+    color: orangered;
+}
+
+.cardContainer{
+    width: 230px;
+    height: 250px;
+    padding-bottom: 15px;
+}
+
+hr{
+    width: 60%;
+}
+
