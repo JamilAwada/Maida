@@ -57,6 +57,7 @@ div {
   line-height: 80px;
   text-decoration: none; 
   position: relative; 
+  transition: 0.5s;
 }
  
 
@@ -76,11 +77,16 @@ div {
    transition:.7s;
 }
 
+
+
 .servegoal:hover:after {
  width: 100%;
  background: orangered;
 }
 
+.servegoal:hover {
+  color: orangered;
+}
 
 .maincol {
   box-sizing: border-box;
@@ -158,6 +164,7 @@ div {
   display: block;
   transition: 0.5s;
 }
+
 .dish2:hover {
   transform: scale(1.1);
 }
