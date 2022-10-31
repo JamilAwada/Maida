@@ -1,13 +1,32 @@
+body {
+	overflow-x: hidden;
+	font-family: 'Poppins', sans-serif;
+}
+
 .add-btn {
-    border-radius: 7px;
-    border-width: 0;
+	border: solid limegreen 1px;
+	border-radius: 7px;
     background-color: limegreen;
     color: white;
-    
+	transition: 0.5s;
+}
+
+.add-btn:hover {
+	background-color: white;
+	color: limegreen;
+	border: solid limegreen 1px;
 }
 
 .container1 {
 	background-color: orangered;
+	padding: 2em 4em;
+}
+
+.subcontainer {
+	background-color: white;
+	border-radius: 20px;
+	padding-bottom: 1em;
+	box-shadow: 1px 1px 10px;
 }
 
 input, textarea {
@@ -16,7 +35,19 @@ input, textarea {
     text-indent: 5px;
 }
 
-h1, i {
+.title, label {
+	color: orangered;
+}
+
+.description {
+	color: orangered;
+}
+
+p > i {
+	color: orangered;
+}
+
+i {
     color: #FA2C02;
 }
 
