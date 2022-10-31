@@ -6,8 +6,23 @@
 
 body {
   overflow-x: hidden; 
+  background-color: orangered;
 }
 
+.maincontainer {
+  background: white;
+  width: 60vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10vh;
+  border-radius: 20px;
+  margin-bottom: 10vh;
+  border: 3px solid #e12d09;
+}
 
 .image-link {
   width: fit-content;
