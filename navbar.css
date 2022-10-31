@@ -12,6 +12,8 @@ nav {
   background: white;
   height: 80px;
   width: 100%;
+  position: sticky;
+  box-shadow: 1px 1px 10px 1px rgb(182, 182, 182);
 }
 
 label.logo {
