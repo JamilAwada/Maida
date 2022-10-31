@@ -1,117 +1,103 @@
-@import url('https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-body{
-    margin: 0;
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+body {
+  margin: 0;
+  background-color: orangered;
+  /*
+  background-image: url(images/mashawi.jpeg);
+  background-position: bottom right;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;*/
 }
-.user{
-    height: 24px;
-    width: 25px;
-    left: 8%;
-    top:28%;
-    position: absolute;
+.mainfixed {
+  width: 100%;
+  position: relative;
+  margin-left: 5%;
+  
+}
+.maincontainer {
+  background: white;
+  width: 60vw;
+  height: auto;
+  box-shadow: 0px 1px 30px 2px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10vh;
+  border-radius: 20px;
+  margin-bottom: 10vh;
+  border: 3px solid #e12d09;
 }
 
-.home{
-    width:25px;
-    height: 25px;
-    margin-right: 10px;
-    left: 3%;
-    top:28% ;
-    z-index: 1;
-    position: absolute;
+.profile {
+  font-size: 50px;
+  letter-spacing: -0.02ch;
+  color: orangered;
+  text-align: center;
+  display: block;
+  font-family: "Pacifico", cursive;
+  line-height: 100px;
 }
-.options{
-    height: 28px;
-    width: 28px;
-    position: absolute ;
-    top: 25%;
-    right:2%;
+.username,
+.email,
+.numberoforders {
+  font-family: "Poppins", sans-serif;
+  color: rgb(153, 153, 153);
+  padding: 15px;
+  font-size: 20px;
+  width: 100%;
+  list-style: none;
 }
-
-.container{
-    top:28%;
-    left:20%;
-    width: 60%;
-    height:60%;
-    position: absolute;
-
-    background: white;
-    box-shadow: 0px 1px 30px 2px rgba(0, 0, 0, 0.15);
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-radius: 25px;
-    z-index: -1;
-    margin-bottom: 10%;
-    
+.fixed {
+  float: left;
+  margin-right: 2rem;
+  padding: 30px;
+  margin-right: 3rem;
 }
-.edit{
-    position:absolute;
-    right:10%;
-    top:12%;
-    width:3.5%;
-    height:6%;
-}
-.profile{
-    position:relative ;
-    margin-top: 7%;
-    margin-bottom: 3%;
-    font-family: 'Pacifico', sans-serif;
-    font-size: 220%;
-    z-index: 1;
-    color: #f73d18;
-
-}
-.propic{
-    width: 18%;
-    height:100%;
-
-}
-.username{
-    float: left;
-    position: relative;
-}
-.username,.email,.numberoforders{
-    position: relative;
-    font-family:Arial, Helvetica, sans-serif;
-    color: rgb(153, 153, 153);
-    margin-left: 5%;
-    font-size: 120%;
+.imgprofile {
+  transform: scale(1.7);
+  margin-top: 6rem;
+  margin-right: 3rem;
 }
 
-a:link{
-    text-decoration: none;
-    color: rgb(153, 153, 153);
+.fixed2 {
+  float: left;
+  position: absolute;
+  margin-left: 70%;
 }
-a:hover{
-    text-decoration: underline;
+a:link {
+  text-decoration: none;
+  color: rgb(153, 153, 153);
 }
-body{
-    background-image: url(MAIDA.png);
-    background-position: bottom right;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: 12%;
-   
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 10px;
 }
-.bmydishes{   
-    color: white;
-    background-color: #f73d18;
-    border: 0px;
-    height: auto;
-    width: 130px;
-    padding: 13px;
-    border-radius: 15px;
-    transition-duration: 0.3s;
-    position: absolute;
-    margin-top: 48%;
-    margin-left: 42%;
+
+.bmydishes {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  background-color: #f73d18;
+  float: left;
+  border: 0px;
+  height: auto;
+  width: 145px;
+  height: 55px;
+  padding: 13px;
+  border-radius: 15px;
+  transition-duration: 0.3s;
+  margin: 20px;
+  font-size: 15px;
 }
-.bmydishes:hover{
-    cursor: pointer;
-    background-color: white;
-    color:#f73d18;
-    font-weight: bold;
-    box-shadow:  0px 1px 30px 2px rgba(0, 0, 0, 0.15) ;
+.bmydishes:hover {
+  cursor: pointer;
+  background-color: white;
+  color: #f73d18;
+  box-shadow: 0px 1px 30px 2px rgba(0, 0, 0, 0.15);
 }
