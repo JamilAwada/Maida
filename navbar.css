@@ -40,12 +40,13 @@ nav ul li a {
   padding: 7px 13px;
   border-radius: 3px;
   font-family: 'Poppins', sans-serif;
+  transition: 0.5s;
 }
 
 nav ul li a:hover {
   background: orangered;
   color: white;
-  transition: 0.5s;
+ 
 }
 
 nav ul li a:hover i {
@@ -98,7 +99,7 @@ nav ul li a i {
     top: 80px;
     left: -100%;
     text-align: center;
-    transition: all 0.5s;
+    transition: 0.5s;
   }
   nav ul li {
     display: block;
