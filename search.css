@@ -137,9 +137,11 @@ hr{
 
 
 .name{
+  font-family: 'Poppins', sans-serif;
   font-weight: bold;
 }
 .price{
+  font-family: 'Poppins', sans-serif;
   color: orangered;
 }
 
