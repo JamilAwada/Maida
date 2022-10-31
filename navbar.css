@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 * {
   padding: 0;
@@ -16,7 +16,7 @@ nav {
 
 label.logo {
   color: orangered;
-  font-family: 'Pacifico', cursive;
+  font-family: "Pacifico", cursive;
   font-size: 35px;
   line-height: 80px;
   padding: 0 100px;
@@ -40,14 +40,13 @@ nav ul li a {
   font-size: 17px;
   padding: 7px 13px;
   border-radius: 3px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   transition: 0.5s;
 }
 
 nav ul li a:hover {
   background: orangered;
   color: white;
- 
 }
 
 nav ul li a:hover i {
@@ -73,7 +72,7 @@ nav ul li a i {
   color: orangered;
 }
 
-#check  {
+#check {
   display: none;
 }
 
@@ -87,8 +86,9 @@ nav ul li a i {
   }
 }
 @media (max-width: 858px) {
-
-  i {display: hidden;}
+  i {
+    display: hidden;
+  }
   .checkbtn {
     display: block;
   }

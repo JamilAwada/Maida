@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 
 * {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-  overflow-x: hidden; 
+  overflow-x: hidden;
   background-color: orangered;
 }
 
@@ -42,12 +42,14 @@ body {
   display: none;
 }
 
-input, textarea, select {
-    height: 2rem;
-    width: 10rem;
-    border: 1px solid gray;
-    border-radius: 7px;
-    text-indent: 5px;
+input,
+textarea,
+select {
+  height: 2rem;
+  width: 10rem;
+  border: 1px solid gray;
+  border-radius: 7px;
+  text-indent: 5px;
 }
 
 #pic {
@@ -61,22 +63,29 @@ input, textarea, select {
 }
 
 textarea {
-    height: 5rem;
-    width: 25rem;   
+  height: 5rem;
+  width: 25rem;
 }
 
 @media screen and (max-width: 605px) {
-  .topnav a:not(:first-child) {display: none;}
-  .circle, a.image-link {display: none; padding: 0 0;}
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+  .circle,
+  a.image-link {
+    display: none;
+    padding: 0 0;
+  }
   .topnav a.icon {
     float: right;
     display: block;
   }
 }
 
-
 @media screen and (max-width: 605px) {
-  .topnav.responsive {position: relative;}
+  .topnav.responsive {
+    position: relative;
+  }
   .topnav.responsive a.icon {
     position: absolute;
     right: 0;
@@ -99,9 +108,9 @@ p {
   display: table-row;
 }
 
-p > label, p > input {
+p > label,
+p > input {
   display: table-cell;
-  
 }
 
 .container {
