@@ -1,17 +1,7 @@
-*{
-    color: white;
-}
-
-body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .background{
     width: 80%;
     height: 50%;
-    background-color: orangered;
+    background-color: #FEA18F;
     border-radius: 10px;
     padding-top: 80px;
 
@@ -21,8 +11,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 7rem;
-    padding: 0px;
+    margin: 0px;
 }
 
 .progress-bar{
@@ -38,7 +27,7 @@ body{
     width: 90%;
     height: 15px;
     border-radius: 50px;
-    background-color: orangered;
+    background-color: #FEA18F;
     display: flex;
     justify-content: flex-start;
     padding: 0;
@@ -80,7 +69,7 @@ p{
     font-family: 'Pacifico', sans-serif;
     font-size: 1.5ex; 
     text-align: center;
-    color:white;
+    color: rgb(26, 26, 26);
 }
 
 .shadow{
