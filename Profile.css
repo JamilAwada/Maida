@@ -86,13 +86,16 @@ a:link {
   float: left;
   border: 0px;
   height: auto;
-  width: 145px;
-  height: 55px;
+  width: 150px;
+  height: 60px;
   padding: 13px;
   border-radius: 15px;
   transition-duration: 0.3s;
   margin: 20px;
   font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .bmydishes:hover {
   cursor: pointer;
