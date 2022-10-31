@@ -1,7 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+h1 {
+    font-family: 'Pacifico', sans-serif;
+    color: #FA2C02;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.historyContainer{
+    overflow-y: scroll;
+    height: 400px;
+}
 .row{
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .body-section{
@@ -39,12 +55,7 @@
     margin-top: 15px;
 }
 
-ul{
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    list-style: none;
-}
+
 
 .price{
     color: #F73D18;
@@ -54,5 +65,11 @@ ul{
     color: green;
 }
 
-
+.col{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
 
