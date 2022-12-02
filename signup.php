@@ -77,7 +77,6 @@
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
       crossorigin="anonymous"
     ></script>
-
     <!-- NavBar End -->
 
     <!-- Container  -->
@@ -101,25 +100,81 @@
             <div class="ms-5 col">
               <div class="register-form-rectangle pb-5 text-center">
                 <img src="images/logo.jpeg" alt="Maida logo" width="300px" />
-                <form action="" method="POST">
+                <form action="process_signup.php" method="POST">
                   <h2 class="primary-fg" align="center">Sign Up</h2>
                   <div class="input-box mt-4">
-                    <input type="text" required="required" />
+                    
+                  <?php 
+                    if(isset($_GET['username'])){
+                      $username = $_GET['username'];
+                      echo '<input type="text" name="username" value="'.$username.'" required/>';
+                    }else{
+                      echo '<input type="text" name="username" required/>';
+                    }
+                  ?>
                     <span>Username</span>
                   </div>
                   <div class="input-box mt-4">
-                    <input type="text" required="required" />
+                    <?php
+                      if(isset($_GET['email'])){
+                        $email = $_GET['email'];
+                        echo '<input type="email" name="email" value="'.$email.'" required/>';
+                      }else{
+                        echo '<input type="email" name="email" required/>';
+                      }
+                    ?>
+
                     <span>Email</span>
                   </div>
                   <div class="input-box mt-4">
-                    <input type="text" required="required" />
+                    <input
+                      type="password"
+                      name="password"
+                      required
+
+                    />
                     <span>Password</span>
                   </div>
-                  <button class="login-btn primary-bg my-4">Sign Up</button>
+                  <button
+                    class="login-btn primary-bg my-4"
+                    type="submit"
+                    name="submit"
+                    id="submit"
+                  >
+                    Sign Up
+                  </button>
+                  <?php
+                  
+                  if(!isset($_GET['error'])){
+                    exit();
+                  }else{
+                    $errorCheck = $_GET['error'];
+                    if($errorCheck == "empty"){
+                      echo "<p style='color:red;'>Fill in all fields!</p>";
+                    }
+
+                    else if($errorCheck == "invalidemail"){
+                      echo "<p style='color:red;'>Choose a proper email!</p>";
+                    }
+                    else if($errorCheck == "shortpassword"){
+                      echo "<p style='color:red;'>The password must be at least 6 characters long!</p>";
+                    }
+                    else if($errorCheck == "usernametaken"){
+                      echo "<p style='color:red;'>Username already taken!</p>";
+                    }
+
+                    else if($errorCheck == "emailtaken"){
+                      echo "<p style='color:red;'>Email already taken!</p>";
+                    }
+                  }
+
+                ?>
                   <div class="forgot-pass mt-2">
                     <a href="#">Already have an account?</a>
                   </div>
+
                 </form>
+                
               </div>
             </div>
           </div>
@@ -192,8 +247,10 @@
         </div>
       </div>
     </footer>
+    <!-- Container ends -->
 
     <!-- Footer End -->
+    
     <script
       src="https://code.jquery.com/jquery-3.6.1.js"
       integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
