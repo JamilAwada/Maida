@@ -71,7 +71,6 @@
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
       crossorigin="anonymous"
     ></script>
-
     <!-- NavBar End -->
 
     <!-- Container section -->
@@ -84,59 +83,73 @@
             style="display: block; margin: auto"
           />
           <br>
+
           <ul class="logo-list primary-fg d-lg-block mb-5">
             <li>Experience a wide variety of cuisines</li>
             <li>Order local homemade meals</li>
             <li>Sell your culinary creations</li>
             <li>Track your order</li>
           </ul>
+
         </div>
         <div class="col-lg-6 col-md-8">
           <div class="rectangle ms-5 float-lg-end float-md-none">
+          <form action="process_preauth.php" method="POST">
             <div class="container-2">
               <h2 class="primary-fg mt-5">Let's get cooking!</h2>
               <div class="input-box mt-5">
-                <input type="text" required="required" />
+                <input type="email" name="email" required="required" />
                 <span>Email</span>
               </div>
               <div class="input-box mt-4">
-                <input type="text" required="required" />
+                <input type="password" name ="password" required="required" />
                 <span>Password</span>
               </div>
+              <?php
+              if(isset($_GET['error'])){
+                $errortype = $_GET['error'];
+                if($errortype == 'invalid'){
+                  print("<br><p style='color:red;'>Invalid email or password</p>");
+                }
+                else if ($errortype == 'empty'){
+                  print("<br><p style='color:red;'>Please fill in all fields</p>");
+                }
+              }
+              ?>
               <div class="forgot-pass mt-1">
                 <a href="#">Forgot password?</a>
               </div>
-              <button class="login-btn primary-bg mt-5">Log In</button>
+              
+
+              <button type="submit" name ="submit" class="login-btn primary-bg mt-5">Log In</button>
+              
               <div class="signup-btn mt-4">
-                <a href="#">First time user?</a>
+                <a href="signup.php">First time user?</a>
               </div>
+              
             </div>
+            </form>
+            
           </div>
         </div>
       </div>
       <br />
-
-     
-      
     </div>
 
-     <!-- Footer Start -->
+    <!-- Container ends -->
+
+    <!-- Footer Start -->
 
      <br />
-
     <footer class="footer" style="position: relative">
       <div class="footer-addr">
         <h1 class="footer-logo">Maida</h1>
-
         <h2>Contact</h2>
-
         <address>
           Beirut, 1102<br />
-
           <a class="footer-btn" href="mailto:example@gmail.com">Email Us</a>
         </address>
       </div>
-
       <ul class="footer-nav">
         <li class="nav-item">
           <h2 class="nav-title">Social</h2>
@@ -145,11 +158,9 @@
             <li>
               <a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
             </li>
-
             <li>
               <a href="#"><i class="fa-brands fa-twitter"></i> Twitter</a>
             </li>
-
             <li>
               <a href="#"><i class="fa-brands fa-github"></i> Github</a>
             </li>
@@ -158,16 +169,13 @@
 
         <li class="nav-item">
           <h2 class="nav-title">Legal</h2>
-
           <ul class="nav-ul">
             <li>
               <a href="#">Privacy Policy</a>
             </li>
-
             <li>
               <a href="#">Terms of Use</a>
             </li>
-
             <li>
               <a href="#">Sitemap</a>
             </li>

@@ -170,7 +170,7 @@
 
                 ?>
                   <div class="forgot-pass mt-2">
-                    <a href="#">Already have an account?</a>
+                    <a href="preauth.php">Already have an account?</a>
                   </div>
 
                 </form>
