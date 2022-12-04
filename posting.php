@@ -77,9 +77,10 @@
 
     <!-- NavBar End -->
 
+    <!-- Container starts -->
+
     <div class="maincontainer">
       <div class="container">
-        <div class="row w-100">
           <h1
             align-text="left"
             style="color: #fa2c02; font-family: 'Pacifico', sans-serif"
@@ -87,16 +88,19 @@
           >
             Post a new dish
           </h1>
-          <div class="col-lg col-sm-12">
-            <form>
-              <div class="input-container ps-5 my-3">
+          <form action="process_post.php" method ="POST" enctype="multipart/form-data">
+            <div class="row">
+              <div class="col-xl-6 col-xs-12">
+                <div class="input-container ps-5 my-3">
                 <label for="name">Dish name</label><br />
                 <input type="text" id="name" name="name" /><br />
               </div>
 
               <div class="input-container ps-5 my-3">
-                <label for="desc">Description</label><br />
-                <textarea type="text" id="desc" name="desc"></textarea><br />
+                <label for="desc">Description</label>
+                <br />
+                <textarea type="text" id="desc" name="desc"></textarea>
+                <br />
               </div>
 
               <div class="input-container ps-5 my-3">
@@ -147,8 +151,9 @@
                   <input type="number" id="fat" name="fat" /><br />
                 </p>
               </div>
-            </form>
-          </div>
+              
+        </div>
+        <div class="col-xl-6 col-xs-12">
           <div class="col-lg col-sm-12 text-sm-center">
             <div class="w-100">
               <h2 class="py-4" style="color: #fa2c02">Photos</h2>
@@ -157,13 +162,15 @@
                 class="fa-solid fa-camera"
                 style="font-size: 250px; color: lightgray"
               ></i>
+              <br>
+              <input type="file" name="image" class="photo-file"/>
               <div class="container-fluid">
                 <div class="mt-5 text-center">
                   <button class="clear-btn">Clear fields</button>
                   <button
                     class="post-btn"
-                    onclick="location.href='search.html'"
-                    type="button"
+                    type="submit"
+                    name = "submit"
                   >
                     Post meal
                   </button>
@@ -172,8 +179,13 @@
             </div>
           </div>
         </div>
+      </div>    
+      </form>
       </div>
     </div>
+
+    <!-- Container ends -->
+
     <!-- Footer Start -->
 
     <br />

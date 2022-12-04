@@ -143,6 +143,9 @@
                   >
                     Sign Up
                   </button>
+                  <div class="forgot-pass mt-2">
+                    <a href="preauth.php">Already have an account?</a>
+                  </div>
                   <?php
                   
                   if(!isset($_GET['error'])){
@@ -169,12 +172,7 @@
                   }
 
                 ?>
-                  <div class="forgot-pass mt-2">
-                    <a href="preauth.php">Already have an account?</a>
-                  </div>
-
-                </form>
-                
+                </form> 
               </div>
             </div>
           </div>

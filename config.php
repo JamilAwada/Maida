@@ -9,8 +9,7 @@
     $db = new PDO($dsn, $db_user, $db_pass);
 
     // set attributes
-    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
+    $db -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // use mysqli
     // $db = new mysqli($db_host, $db_user, $db_pass, $db_name);
