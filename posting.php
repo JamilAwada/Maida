@@ -35,32 +35,7 @@
   <body>
     <!-- NavBar Start -->
     <nav id="header">
-      <!-- <input type="checkbox" id="check" />
-      <label for="check" class="checkbtn">
-        <i class="fas fa-bars"></i>
-      </label>
-      <label class="logo">Maida</label>
-      <ul>
-        <li>
-          <a href="search.html"
-            >Browse <i class="fa-solid fa-magnifying-glass"></i
-          ></a>
-        </li>
-        <li>
-          <a href="posting.html"
-            >New Post <i class="fa-solid fa-circle-plus"></i
-          ></a>
-        </li>
-        <li>
-          <a href="#">Cart <i class="fa-solid fa-cart-shopping"></i></a>
-        </li>
-        <li><a href="Profile.html">Susan Smith</a></li>
-        <li>
-          <a href="logout.php"
-            >Log out <i class="fa-solid fa-right-from-bracket"></i
-          ></a>
-        </li>
-      </ul> -->
+
     </nav>
 
     <!-- NavBar End -->
@@ -242,21 +217,6 @@
 
     <!-- Footer End -->
     
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
-      integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-      crossorigin="anonymous"
-    ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
        <script type="text/javascript">
         $(function(){

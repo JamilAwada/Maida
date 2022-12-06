@@ -1,3 +1,12 @@
+<?php
+  session_start();
+  include_once('config.php');
+  // redirect to preauth.php if not logged in
+  if(!isset($_SESSION['username'])){
+    header('Location: preauth.php');
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -26,50 +35,9 @@
   </head>
   <body>
     <!-- NavBar Start -->
-    <nav>
-      <input type="checkbox" id="check" />
-      <label for="check" class="checkbtn">
-        <i class="fas fa-bars"></i>
-      </label>
-      <label class="logo">Maida</label>
-      <ul>
-        <li>
-          <a href="search.html">Browse <i class="fa-solid fa-magnifying-glass"></i></a>
-        </li>
-        <li>
-          <a href="posting.html">New Post <i class="fa-solid fa-circle-plus"></i></a>
-        </li>
-        <li>
-          <a href="#">Cart <i class="fa-solid fa-cart-shopping"></i></a>
-        </li>
-        <li><a href="Profile.html">Susan Smith</a></li>
-        <li>
-          <a href="logout.php">Log out <i class="fa-solid fa-right-from-bracket"></i></a>
-        </li>
-      </ul>
+    <nav id="header">
+      <!-- Loaded the Header through JQuery -->
     </nav>
-    <script src="navbar.js"></script>
-    <script
-      src="https://code.jquery.com/jquery-3.6.1.js"
-      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
-      integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-      crossorigin="anonymous"
-    ></script>
-
     <!-- NavBar End -->
     <div class="container">
       <div class="row searchSection">
@@ -80,6 +48,7 @@
             deliciousness!
           </p>
         </div>
+        <div style="height:100px; text-align:center;">
         <div class="searchContainer">
           <img
             src="images/searchicon.png"
@@ -91,9 +60,17 @@
             style="font-family: 'Poppins', sans-serif"
             type="text"
             class="searchBar"
+            id = "search"
             placeholder="Search meals"
           />
+          <br>
         </div>
+        <br>
+        <ul style="height:100px;overflow-y:scroll;width:28.5rem;margin-top:-25px;border-bottom-left-radius:5px;border-bottom-right-radius:5px;" id="result">
+        </ul>
+        </div>
+        
+        
         <span class=""
           ><button class="sortnfilter">
             Sort <i class="fa-solid fa-sort"></i>
@@ -104,249 +81,181 @@
       </div>
       <div class="categoriesSection">
         <div class="section">
-          <h2 class="listheader">Recents</h2>
+          <h2 class="listheader">Italian</h2>
           <center>
             <div class="cardsList">
-              <div class="cardContainer">
-                <div class="card">
-                  <img src="images/kebbe.jpeg" alt="Kebbe Image" />
-                </div>
-                <div class="cardDescription">
-                  <div class="name">Kebbe niyye</div>
-                  <div class="price">350.000L.L.</div>
-                </div>
-              </div>
-              <div class="cardContainer">
-                <div class="card">
-                  <img src="images/kebbe.jpeg" alt="Kebbe Image" />
-                </div>
-                <div class="cardDescription">
-                  <div class="name">Kebbe niyye</div>
-                  <div class="price">350.000L.L.</div>
-                </div>
-              </div>
-              <div class="cardContainer">
-                <div class="card">
-                  <img src="images/kebbe.jpeg" alt="Kebbe Image" />
-                </div>
-                <div class="cardDescription">
-                  <div class="name">Kebbe niyye</div>
-                  <div class="price">350.000L.L.</div>
-                </div>
-              </div>
-              <div class="cardContainer">
-                <div class="card">
-                  <img src="images/kebbe.jpeg" alt="Kebbe Image" />
-                </div>
-                <div class="cardDescription">
-                  <div class="name">Kebbe niyye</div>
-                  <div class="price">350.000L.L.</div>
-                </div>
-              </div>
-              <div class="cardContainer">
-                <div class="card">
-                  <img src="images/kebbe.jpeg" alt="Kebbe Image" />
-                </div>
-                <div class="cardDescription">
-                  <div class="name">Kebbe niyye</div>
-                  <div class="price">350.000L.L.</div>
-                </div>
-              </div>
+
+              <?php
+                // select all dishes with italian type
+                $sql = "SELECT * FROM dishes WHERE cuisine = 'Italian'";
+                $query = $db->prepare($sql);
+                $query->execute();
+                $result = $query->fetchAll(PDO::FETCH_OBJ);
+
+                // if result is not empty
+
+                if($query->rowCount() > 0){
+                  foreach($result as $row){
+                    echo "<div class='cardContainer'>
+                            <div class='card'>
+                              <img src='ImageUploads/".$row->image."' alt='Kebbe Image' />
+                            </div>
+                            <div class='cardDescription'>
+                              <div class='name'>".$row->name."</div>
+                              <div class='price'>".
+                              $row->price."L.L.</div>
+                            </div>
+                          </div>";
+                  }
+                }
+
+                
+              ?>
+
             </div>
           </center>
         </div>
         <div class="section">
           <center><hr /></center>
-          <h2 class="listheader">Most popular</h2>
+          <h2 class="listheader">Turkish</h2>
           <center>
             <div class="cardsList">
-              <div class="cardContainer">
-                <div class="card">
-                  <img src="images/kebbe.jpeg" alt="Kebbe Image" />
-                </div>
-                <div class="cardDescription">
-                  <div class="name">Kebbe niyye</div>
-                  <div class="price">350.000L.L.</div>
-                </div>
-              </div>
-              <div class="cardContainer">
-                <div class="card">
-                  <img src="images/kebbe.jpeg" alt="Kebbe Image" />
-                </div>
-                <div class="cardDescription">
-                  <div class="name">Kebbe niyye</div>
-                  <div class="price">350.000L.L.</div>
-                </div>
-              </div>
-              <div class="cardContainer">
-                <div class="card">
-                  <img src="images/kebbe.jpeg" alt="Kebbe Image" />
-                </div>
-                <div class="cardDescription">
-                  <div class="name">Kebbe niyye</div>
-                  <div class="price">350.000L.L.</div>
-                </div>
-              </div>
-              <div class="cardContainer">
-                <div class="card">
-                  <img src="images/kebbe.jpeg" alt="Kebbe Image" />
-                </div>
-                <div class="cardDescription">
-                  <div class="name">Kebbe niyye</div>
-                  <div class="price">350.000L.L.</div>
-                </div>
-              </div>
-              <div class="cardContainer">
-                <div class="card">
-                  <img src="images/kebbe.jpeg" alt="Kebbe Image" />
-                </div>
-                <div class="cardDescription">
-                  <div class="name">Kebbe niyye</div>
-                  <div class="price">350.000L.L.</div>
-                </div>
-              </div>
-              <div class="cardContainer">
-                <div class="card">
-                  <img src="images/kebbe.jpeg" alt="Kebbe Image" />
-                </div>
-                <div class="cardDescription">
-                  <div class="name">Kebbe niyye</div>
-                  <div class="price">350.000L.L.</div>
-                </div>
-              </div>
+            <?php
+                // select all dishes with italian type
+                $sql = "SELECT * FROM dishes WHERE cuisine = 'Turkish'";
+                $query = $db->prepare($sql);
+                $query->execute();
+                $result = $query->fetchAll(PDO::FETCH_OBJ);
+
+                // if result is not empty
+
+                if($query->rowCount() > 0){
+                  foreach($result as $row){
+                    echo "<div class='cardContainer'>
+                            <div class='card'>
+                              <img src='ImageUploads/".$row->image."' alt='Kebbe Image' />
+                            </div>
+                            <div class='cardDescription'>
+                              <div class='name'>".$row->name."</div>
+                              <div class='price'>".
+                              $row->price."L.L.</div>
+                            </div>
+                          </div>";
+                  }
+                }
+
+                
+              ?>
             </div>
           </center>
         </div>
         <div class="section">
           <center><hr /></center>
-          <h2 class="listheader">Local dishes</h2>
+          <h2 class="listheader">Chinese</h2>
           <center>
             <div class="cardsList">
-              <div class="cardContainer">
-                <div class="card">
-                  <img src="images/kebbe.jpeg" alt="Kebbe Image" />
-                </div>
-                <div class="cardDescription">
-                  <div class="name">Kebbe niyye</div>
-                  <div class="price">350.000L.L.</div>
-                </div>
-              </div>
-              <div class="cardContainer">
-                <div class="card">
-                  <img src="images/kebbe.jpeg" alt="Kebbe Image" />
-                </div>
-                <div class="cardDescription">
-                  <div class="name">Kebbe niyye</div>
-                  <div class="price">350.000L.L.</div>
-                </div>
-              </div>
-              <div class="cardContainer">
-                <div class="card">
-                  <img src="images/kebbe.jpeg" alt="Kebbe Image" />
-                </div>
-                <div class="cardDescription">
-                  <div class="name">Kebbe niyye</div>
-                  <div class="price">350.000L.L.</div>
-                </div>
-              </div>
-              <div class="cardContainer">
-                <div class="card">
-                  <img src="images/kebbe.jpeg" alt="Kebbe Image" />
-                </div>
-                <div class="cardDescription">
-                  <div class="name">Kebbe niyye</div>
-                  <div class="price">350.000L.L.</div>
-                </div>
-              </div>
-              <div class="cardContainer">
-                <div class="card">
-                  <img src="images/kebbe.jpeg" alt="Kebbe Image" />
-                </div>
-                <div class="cardDescription">
-                  <div class="name">Kebbe niyye</div>
-                  <div class="price">350.000L.L.</div>
-                </div>
-              </div>
-              <div class="cardContainer">
-                <div class="card">
-                  <img src="images/kebbe.jpeg" alt="Kebbe Image" />
-                </div>
-                <div class="cardDescription">
-                  <div class="name">Kebbe niyye</div>
-                  <div class="price">350.000L.L.</div>
-                </div>
-              </div>
+            <?php
+                // select all dishes with italian type
+                $sql = "SELECT * FROM dishes WHERE cuisine = 'Chinese'";
+                $query = $db->prepare($sql);
+                $query->execute();
+                $result = $query->fetchAll(PDO::FETCH_OBJ);
+
+                // if result is not empty
+
+                if($query->rowCount() > 0){
+                  foreach($result as $row){
+                    echo "<div class='cardContainer'>
+                            <div class='card'>
+                              <img src='ImageUploads/".$row->image."' alt='Kebbe Image' />
+                            </div>
+                            <div class='cardDescription'>
+                              <div class='name'>".$row->name."</div>
+                              <div class='price'>".
+                              $row->price."L.L.</div>
+                            </div>
+                          </div>";
+                  }
+                }
+
+                
+              ?>
+            </div>
+          </center>
+        </div>
+        <div class="section">
+          <center><hr /></center>
+          <h2 class="listheader">Other</h2>
+          <center>
+            <div class="cardsList">
+            <?php
+                // select all dishes with italian type
+                $sql = "SELECT * FROM dishes WHERE cuisine = 'None'";
+                $query = $db->prepare($sql);
+                $query->execute();
+                $result = $query->fetchAll(PDO::FETCH_OBJ);
+
+                // if result is not empty
+
+                if($query->rowCount() > 0){
+                  foreach($result as $row){
+                    echo "<div class='cardContainer'>
+                            <div class='card'>
+                              <img src='ImageUploads/".$row->image."' alt='Kebbe Image' />
+                            </div>
+                            <div class='cardDescription'>
+                              <div class='name'>".$row->name."</div>
+                              <div class='price'>".
+                              $row->price."L.L.</div>
+                            </div>
+                          </div>";
+                  }
+                }
+
+                
+              ?>
             </div>
           </center>
         </div>
       </div>
     </div>
     <!-- Footer Start -->
+    <br>
+    <footer id="footer">
 
-    <br />
-
-    <footer class="footer">
-      <div class="footer-addr">
-        <h1 class="footer-logo">Maida</h1>
-
-        <h2>Contact</h2>
-
-        <address>
-          Beirut, 1102<br />
-
-          <a class="footer-btn" href="mailto:example@gmail.com">Email Us</a>
-        </address>
-      </div>
-
-      <ul class="footer-nav">
-        <li class="nav-item">
-          <h2 class="nav-title">Social</h2>
-
-          <ul class="nav-ul">
-            <li>
-              <a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
-            </li>
-
-            <li>
-              <a href="#"><i class="fa-brands fa-twitter"></i> Twitter</a>
-            </li>
-
-            <li>
-              <a href="#"><i class="fa-brands fa-github"></i> Github</a>
-            </li>
-          </ul>
-        </li>
-
-        <li class="nav-item">
-          <h2 class="nav-title">Legal</h2>
-
-          <ul class="nav-ul">
-            <li>
-              <a href="#">Privacy Policy</a>
-            </li>
-
-            <li>
-              <a href="#">Terms of Use</a>
-            </li>
-
-            <li>
-              <a href="#">Sitemap</a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-      <div class="legal">
-        <p>&copy; 2022 Maida. All rights reserved.</p>
-
-        <div class="legal-links">
-          <span
-            >A web project by Jamil Awada, Hanine Al Khatib and Rissal
-            Hedna</span
-          >
-        </div>
-      </div>
     </footer>
 
+    <!-- include the jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- add the jquery code for header and footer -->
+    <script>
+      $(function(){
+        $("#header").load("navbar.php");
+        $("#footer").load("footer.php");
+      });
+    </script>
+
+    <script>
+      $(document).ready(function(){
+        $('#search').keyup(function(){
+          var input = $(this).val();
+          if(input != ""){
+            $.ajax({
+            url:"process_search.php",
+            method:"POST",
+            data:{input:input},
+            success:function(data){
+              $('#result').html(data);
+            }
+            });
+          }else{
+            $('#result').html("");
+          }
+          })
+          }
+        )
+      
+    </script>
     <!-- Footer End -->
   </body>
 </html>

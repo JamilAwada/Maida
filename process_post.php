@@ -44,9 +44,9 @@
 
 
         $error = false;
-        if(empty($name) | empty($description) | empty($price) | empty($carbs) | empty($protein) | empty($fat)){
+        if(empty($name) | empty($price) | empty($carbs) | empty($protein) | empty($fat)){
             $error = true;
-            header("Location: posting.php?error =empty");
+            header("Location: posting.php?error=empty");
             exit();
         }
 
@@ -62,11 +62,18 @@
             // insert variables into the dishes table with pdo
             
             $sql = "INSERT INTO dishes (name, description, cuisine, diet, price, carbohydrates, protein, fat, image, chefid) VALUES (:name, :description, :cuisine, :diet, :price, :carbohydrates, :protein, :fat, :image, :chefid)";
+
+            // insert name into search table
+            $sql2 = "INSERT INTO search (name) VALUES (:name)";
+
+
             $stmt = $db->prepare($sql);
+            $stmt2 = $db->prepare($sql2);
             //execute the query
             $stmt->execute(['name' => $name, 'description' => $description, 'cuisine' => $cuisine, 'diet' => $diet, 'price' => $price, 'carbohydrates' => $carbs, 'protein' => $protein, 'fat' => $fat, 'image' => $image, 'chefid' => $chefid]);
+            $stmt2->execute(['name' => $name]);
 
-            // if successful
+            // if successfully inserted into database
             if($stmt){
 
                 echo "

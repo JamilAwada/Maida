@@ -14,6 +14,9 @@ nav {
   width: 100%;
   position: sticky;
   box-shadow: 1px 1px 10px 1px rgb(182, 182, 182);
+  z-index: 999;
+  position: fixed;
+  top:0;
 }
 
 label.logo {
@@ -22,6 +25,11 @@ label.logo {
   font-size: 35px;
   line-height: 80px;
   padding: 0 100px;
+}
+
+/* Make the cursor point when hovering over .logo */
+label.logo:hover {
+  cursor: pointer;
 }
 
 nav ul {
@@ -121,3 +129,4 @@ nav ul li a i {
     left: 0;
   }
 }
+
