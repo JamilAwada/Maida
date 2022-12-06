@@ -1,3 +1,12 @@
+<?php
+  session_start();
+  // check if user is logged in
+  if (isset($_SESSION['username'])) {
+    header("Location: home.php");
+    exit();
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -30,25 +39,8 @@
     <!-- NavBar Start -->
     <nav>
       <input type="checkbox" id="check" />
-      <label for="check" class="checkbtn">
-        <i class="fas fa-bars"></i>
-      </label>
       <label class="logo">Maida</label>
-      <ul>
-        <li>
-          <a href="search.html">Browse <i class="fa-solid fa-magnifying-glass"></i></a>
-        </li>
-        <li>
-          <a href="posting.html">New Post <i class="fa-solid fa-circle-plus"></i></a>
-        </li>
-        <li>
-          <a href="#">Cart <i class="fa-solid fa-cart-shopping"></i></a>
-        </li>
-        <li><a href="Profile.html">Susan Smith</a></li>
-        <li>
-          <a href="home.html">Log out <i class="fa-solid fa-right-from-bracket"></i></a>
-        </li>
-      </ul>
+
     </nav>
     <script src="navbar.js"></script>
     <script

@@ -88,5 +88,10 @@
             
         }
     }
+    else if(isset($_POST['clear'])){
+        //clear all fields in the form
+        header("Location: posting.php");
+        exit();
+    }
 
 ?>

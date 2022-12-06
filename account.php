@@ -1,15 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
-      crossorigin="anonymous"
-    />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" , initial-scale="1.0" />
+    <title>Maida - My Chef Profile</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -17,11 +12,14 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="incoming.css" />
+
+    <link href="Profile.css" rel="stylesheet" />
+    <link rel="stylesheet" href="search.css" />
+    <link rel="stylesheet" href="account.css" />
     <link rel="stylesheet" href="navbar.css" />
     <link rel="stylesheet" href="footer.css" />
-    <title>Maida - Incoming orders</title>
   </head>
+
   <body>
     <!-- NavBar Start -->
     <nav>
@@ -32,23 +30,17 @@
       <label class="logo">Maida</label>
       <ul>
         <li>
-          <a href="search.html"
-            >Browse <i class="fa-solid fa-magnifying-glass"></i
-          ></a>
+          <a href="search.html">Browse <i class="fa-solid fa-magnifying-glass"></i></a>
         </li>
         <li>
-          <a href="posting.html"
-            >New Post <i class="fa-solid fa-circle-plus"></i
-          ></a>
+          <a href="posting.html">New Post <i class="fa-solid fa-circle-plus"></i></a>
         </li>
         <li>
           <a href="#">Cart <i class="fa-solid fa-cart-shopping"></i></a>
         </li>
         <li><a href="Profile.html">Susan Smith</a></li>
         <li>
-          <a href="home.html"
-            >Log out <i class="fa-solid fa-right-from-bracket"></i
-          ></a>
+          <a href="logout.php">Log out <i class="fa-solid fa-right-from-bracket"></i></a>
         </li>
       </ul>
     </nav>
@@ -76,91 +68,118 @@
 
     <!-- NavBar End -->
 
-    <div class="container">
-      <div class="row w-100">
-        <div class="col">
-          <h1
-            style="
-              line-height: 120px;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-            "
-          >
-            Incoming Orders
-          </h1>
-          <div class="card" style="margin: 20px">
-            <div class="container">
-              <div class="row" style="padding: 20px">
-                <div class="col-2">
-                  <div
-                    class="h-100 d-flex align-items-center justify-content-center"
-                  >
-                    <i
-                      class="fa-solid fa-circle-user my-3 d-none d-lg-block"
-                      style="font-size: 150px"
-                    ></i>
-                  </div>
+    <!--Profile Container-->
+    <div class="maincontainer">
+      <div class="maintext">
+        <span class="profile">Chef's Profile</span>
+      </div>
+      <div class="mainfixed">
+        <div class="fixed">
+          <li>
+            <ul class="username">
+              <strong>Username:</strong>
+              <br />
+              <ul>
+                Hanine Al Khatib
+              </ul>
+            </ul>
+            <br />
+
+            <ul class="numberoforders">
+              <strong>Number of Incoming Orders:</strong>
+              <br />
+              <ul>
+                17
+              </ul>
+            </ul>
+            <br />
+            <ul class="email">
+              <strong>Email:</strong>
+              <br />
+              <ul>
+                hanine.alkhatib@gmail.com
+              </ul>
+            </ul>
+            <br />
+          </li>
+        </div>
+        <div class="fixed2">
+          <img class="imgprofile" src="images/profile.png" />
+        </div>
+        <br />
+      </div>
+      <div class="buttons">
+        <button class="bmydishes">Edit My Profile</button>
+        <button class="bmydishes">View My Incoming Orders</button>
+      </div>
+    </div>
+    <!--Profile Container End-->
+
+    <center>
+      <div class="container">
+        <div class="mydishesHeader">
+          <h2 class="dishesAvailable">My Dishes</h2>
+          <hr />
+        </div>
+        <div class="slider">
+          <center>
+            <div class="cardsList">
+              <div class="cardContainer">
+                <div class="card">
+                  <img src="images/kebbe.jpeg" alt="Kebbe Image" />
                 </div>
-                <div class="col-4">
-                  <div class="mt-3" style="font-size: 24px">Johnny Smith</div>
-                  <div style="color: gray">
-                    would like X orders of
-                    <span style="color: #fa2c02">Dish</span>
-                  </div>
-                  <i
-                    class="fa-solid fa-quote-left my-3"
-                    style="font-size: 20px; color: #fa2c02"
-                  ></i>
-                  <div style="color: gray; font-style: italic">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Quidem dolorum deleniti ratione eius dolores facere placeat
-                    ex culpa ducimus, porro excepturi tempora nostrum ad. Omnis
-                    atque deserunt cupiditate cum sit.
-                  </div>
-                  <div class="w-100 d-flex justify-content-end">
-                    <i
-                      class="fa-solid fa-quote-right my-3"
-                      style="font-size: 20px; color: #fa2c02"
-                    ></i>
-                  </div>
+                <div class="cardDescription">
+                  <div class="name">Kebbe niyye</div>
+                  <div class="price">350.000L.L.</div>
                 </div>
-                <div class="col-6 text-center">
-                  <i
-                    class="fa-solid fa-location-dot my-3"
-                    style="font-size: 40px; color: #fa2c02"
-                  ></i>
-                  <div>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Vero voluptatum quibusdam mollitia. Cum accusantium
-                    pariatur, debitis tenetur alias vel. Magni recusandae
-                    veritatis neque tempora, deleniti explicabo ex eius
-                    reprehenderit obcaecati!
-                  </div>
-                  <i
-                    class="fa-solid fa-coins my-3"
-                    style="font-size: 40px; color: #fa2c02"
-                  ></i>
-                  <div>$24.99</div>
-                  <button
-                    class="my-2 btn"
-                    style="background-color: #fa2c02; color: white"
-                  >
-                    Fulfill
-                  </button>
+              </div>
+              <div class="cardContainer">
+                <div class="card">
+                  <img src="images/kebbe.jpeg" alt="Kebbe Image" />
+                </div>
+                <div class="cardDescription">
+                  <div class="name">Kebbe niyye</div>
+                  <div class="price">350.000L.L.</div>
+                </div>
+              </div>
+              <div class="cardContainer">
+                <div class="card">
+                  <img src="images/kebbe.jpeg" alt="Kebbe Image" />
+                </div>
+                <div class="cardDescription">
+                  <div class="name">Kebbe niyye</div>
+                  <div class="price">350.000L.L.</div>
+                </div>
+              </div>
+              <div class="cardContainer">
+                <div class="card">
+                  <img src="images/kebbe.jpeg" alt="Kebbe Image" />
+                </div>
+                <div class="cardDescription">
+                  <div class="name">Kebbe niyye</div>
+                  <div class="price">350.000L.L.</div>
+                </div>
+              </div>
+              <div class="cardContainer">
+                <div class="card">
+                  <img src="images/kebbe.jpeg" alt="Kebbe Image" />
+                </div>
+                <div class="cardDescription">
+                  <div class="name">Kebbe niyye</div>
+                  <div class="price">350.000L.L.</div>
                 </div>
               </div>
             </div>
-          </div>
+          </center>
         </div>
       </div>
-    </div>
+    </center>
 
     <!-- Footer Start -->
 
     <br />
 
-    <footer class="footer">
+    <footer class="footer vw-100" style="position: relative;">
       <div class="footer-addr">
         <h1 class="footer-logo">Maida</h1>
 
@@ -237,6 +256,12 @@
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+    <script src="navbar.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.js"
+      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
       crossorigin="anonymous"
     ></script>
   </body>

@@ -32,7 +32,7 @@
       </li>
       <li><a href="Profile.html">Susan Smith</a></li>
       <li>
-        <a href="home.html">Log out <i class="fa-solid fa-right-from-bracket"></i></a>
+        <a href="logout.php">Log out <i class="fa-solid fa-right-from-bracket"></i></a>
       </li>
     </ul>
   </nav>

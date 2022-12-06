@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" , initial-scale="1.0" />
-    <title>Maida - My Chef Profile</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -13,13 +18,11 @@
       referrerpolicy="no-referrer"
     />
 
-    <link href="Profile.css" rel="stylesheet" />
-    <link rel="stylesheet" href="search.css" />
-    <link rel="stylesheet" href="account.css" />
+    <link rel="stylesheet" href="checkout.css" />
     <link rel="stylesheet" href="navbar.css" />
     <link rel="stylesheet" href="footer.css" />
+    <title>Maida - Order History</title>
   </head>
-
   <body>
     <!-- NavBar Start -->
     <nav>
@@ -30,17 +33,23 @@
       <label class="logo">Maida</label>
       <ul>
         <li>
-          <a href="search.html">Browse <i class="fa-solid fa-magnifying-glass"></i></a>
+          <a href="search.html"
+            >Browse <i class="fa-solid fa-magnifying-glass"></i
+          ></a>
         </li>
         <li>
-          <a href="posting.html">New Post <i class="fa-solid fa-circle-plus"></i></a>
+          <a href="posting.html"
+            >New Post <i class="fa-solid fa-circle-plus"></i
+          ></a>
         </li>
         <li>
           <a href="#">Cart <i class="fa-solid fa-cart-shopping"></i></a>
         </li>
         <li><a href="Profile.html">Susan Smith</a></li>
         <li>
-          <a href="home.html">Log out <i class="fa-solid fa-right-from-bracket"></i></a>
+          <a href="logout.php"
+            >Log out <i class="fa-solid fa-right-from-bracket"></i
+          ></a>
         </li>
       </ul>
     </nav>
@@ -68,118 +77,73 @@
 
     <!-- NavBar End -->
 
-    <!--Profile Container-->
-    <div class="maincontainer">
-      <div class="maintext">
-        <span class="profile">Chef's Profile</span>
-      </div>
-      <div class="mainfixed">
-        <div class="fixed">
-          <li>
-            <ul class="username">
-              <strong>Username:</strong>
-              <br />
-              <ul>
-                Hanine Al Khatib
-              </ul>
-            </ul>
-            <br />
+    <div class="container">
+      <div class="row w-100">
+        <div class="col">
+          <h1
+            style="
+              line-height: 120px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            "
+          >
+            Checkout
+          </h1>
 
-            <ul class="numberoforders">
-              <strong>Number of Incoming Orders:</strong>
-              <br />
-              <ul>
-                17
-              </ul>
-            </ul>
-            <br />
-            <ul class="email">
-              <strong>Email:</strong>
-              <br />
-              <ul>
-                hanine.alkhatib@gmail.com
-              </ul>
-            </ul>
-            <br />
-          </li>
-        </div>
-        <div class="fixed2">
-          <img class="imgprofile" src="images/profile.png" />
-        </div>
-        <br />
-      </div>
-      <div class="buttons">
-        <button class="bmydishes">Edit My Profile</button>
-        <button class="bmydishes">View My Incoming Orders</button>
-      </div>
-    </div>
-    <!--Profile Container End-->
-
-    <center>
-      <div class="container">
-        <div class="mydishesHeader">
-          <h2 class="dishesAvailable">My Dishes</h2>
-          <hr />
-        </div>
-        <div class="slider">
-          <center>
-            <div class="cardsList">
-              <div class="cardContainer">
-                <div class="card">
-                  <img src="images/kebbe.jpeg" alt="Kebbe Image" />
+          <div class="card" style="margin: 20px">
+            <div class="container">
+              <div class="row" style="padding: 20px">
+                <div class="col col-6">
+                  <div class="row">
+                    <div class="mt-3" style="font-size: 20px">
+                      (3) Kebbe Pieces
+                    </div>
+                    <div style="color: gray; font-style: italic">
+                      Mashewe Abdel Rahmane
+                    </div>
+                    <div class="row">
+                      <i
+                        class="fa fa-calendar my-3"
+                        aria-hidden="true"
+                        style="font-size: 40px; color: #fa2c02"
+                      ></i>
+                      <div class="date">20/10/2022</div>
+                    </div>
+                  </div>
                 </div>
-                <div class="cardDescription">
-                  <div class="name">Kebbe niyye</div>
-                  <div class="price">350.000L.L.</div>
-                </div>
-              </div>
-              <div class="cardContainer">
-                <div class="card">
-                  <img src="images/kebbe.jpeg" alt="Kebbe Image" />
-                </div>
-                <div class="cardDescription">
-                  <div class="name">Kebbe niyye</div>
-                  <div class="price">350.000L.L.</div>
-                </div>
-              </div>
-              <div class="cardContainer">
-                <div class="card">
-                  <img src="images/kebbe.jpeg" alt="Kebbe Image" />
-                </div>
-                <div class="cardDescription">
-                  <div class="name">Kebbe niyye</div>
-                  <div class="price">350.000L.L.</div>
-                </div>
-              </div>
-              <div class="cardContainer">
-                <div class="card">
-                  <img src="images/kebbe.jpeg" alt="Kebbe Image" />
-                </div>
-                <div class="cardDescription">
-                  <div class="name">Kebbe niyye</div>
-                  <div class="price">350.000L.L.</div>
-                </div>
-              </div>
-              <div class="cardContainer">
-                <div class="card">
-                  <img src="images/kebbe.jpeg" alt="Kebbe Image" />
-                </div>
-                <div class="cardDescription">
-                  <div class="name">Kebbe niyye</div>
-                  <div class="price">350.000L.L.</div>
+                <div class="col col-6 text-center">
+                  <i
+                    class="fa-solid fa-location-dot my-3"
+                    style="font-size: 40px; color: #fa2c02"
+                  ></i>
+                  <div class="location">
+                    Room 602, Santona Residence, Beirut, Lebanon.
+                  </div>
+                  <i
+                    class="fa-solid fa-coins my-3"
+                    style="font-size: 40px; color: #fa2c02"
+                  ></i>
+                  <div>$24.99</div>
+                  <button id="btt"
+                    class="my-2 btn"
+                  >
+                    Checkout
+                  </button>
+                  <br />
                 </div>
               </div>
             </div>
-          </center>
+          </div>
         </div>
       </div>
-    </center>
+    </div>
 
     <!-- Footer Start -->
 
     <br />
 
-    <footer class="footer vw-100" style="position: relative;">
+    <footer class="footer">
       <div class="footer-addr">
         <h1 class="footer-logo">Maida</h1>
 
@@ -242,7 +206,6 @@
     </footer>
 
     <!-- Footer End -->
-
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
       integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
@@ -256,12 +219,6 @@
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-      crossorigin="anonymous"
-    ></script>
-    <script src="navbar.js"></script>
-    <script
-      src="https://code.jquery.com/jquery-3.6.1.js"
-      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
       crossorigin="anonymous"
     ></script>
   </body>

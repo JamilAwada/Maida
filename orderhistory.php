@@ -12,20 +12,16 @@
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link
-      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
       integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <link rel="stylesheet" href="orderhistory.css" />
     <link rel="stylesheet" href="navbar.css" />
     <link rel="stylesheet" href="footer.css" />
-    <link rel="stylesheet" href="preauth.css" />
-    <link rel="stylesheet" href="ordertracking.css" />
-    <title>Order Tracking</title>
+    <title>Maida - Order History</title>
   </head>
   <body>
     <!-- NavBar Start -->
@@ -51,7 +47,7 @@
         </li>
         <li><a href="Profile.html">Susan Smith</a></li>
         <li>
-          <a href="home.html"
+          <a href="logout.php"
             >Log out <i class="fa-solid fa-right-from-bracket"></i
           ></a>
         </li>
@@ -82,42 +78,107 @@
     <!-- NavBar End -->
 
     <div class="container">
-      <div class="background">
-        <div class="row">
-          <h1>Order Status</h1>
-        </div>
-        <div class="shadow">
-          <div class="row">
-            <div class="bar-container">
-              <div class="progress-bar"></div>
+      <div class="row w-100">
+        <div class="col">
+          <h1
+            style="
+              line-height: 120px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            "
+          >
+            Past Orders
+          </h1>
+          <div class="historyContainer">
+            <div class="card" style="margin: 20px">
+              <div class="container">
+                <div class="row" style="padding: 20px">
+                  <div class="col col-6">
+                    <div class="row">
+                      <div class="mt-3" style="font-size: 20px">
+                        (3) Kebbe Pieces
+                      </div>
+                      <div style="color: gray; font-style: italic">
+                        Mashewe Abdel Rahmane
+                      </div>
+                      <div class="row">
+                        <i
+                          class="fa fa-calendar my-3"
+                          aria-hidden="true"
+                          style="font-size: 40px; color: #fa2c02"
+                        ></i>
+                        <div class="date">20/10/2022</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col col-6 text-center">
+                    <i
+                      class="fa-solid fa-location-dot my-3"
+                      style="font-size: 40px; color: #fa2c02"
+                    ></i>
+                    <div class="location">
+                      Room 602, Santona Residence, Beirut, Lebanon.
+                    </div>
+                    <i
+                      class="fa-solid fa-coins my-3"
+                      style="font-size: 40px; color: #fa2c02"
+                    ></i>
+                    <div>$24.99</div>
+                    <br />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card" style="margin: 20px">
+              <div class="container">
+                <div class="row" style="padding: 20px">
+                  <div class="col col-6">
+                    <div class="row">
+                      <div class="mt-3" style="font-size: 20px">
+                        (3) Kebbe Pieces
+                      </div>
+                      <div style="color: gray; font-style: italic">
+                        Mashewe Abdel Rahmane
+                      </div>
+                      <div class="row">
+                        <i
+                          class="fa fa-calendar my-3"
+                          aria-hidden="true"
+                          style="font-size: 40px; color: #fa2c02"
+                        ></i>
+                        <div class="date">20/10/2022</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col col-6 text-center">
+                    <i
+                      class="fa-solid fa-location-dot my-3"
+                      style="font-size: 40px; color: #fa2c02"
+                    ></i>
+                    <div class="location">
+                      Room 602, Santona Residence, Beirut, Lebanon.
+                    </div>
+                    <i
+                      class="fa-solid fa-coins my-3"
+                      style="font-size: 40px; color: #fa2c02"
+                    ></i>
+                    <div>$24.99</div>
+                    <br />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="row images">
-            <div class="image">
-              <img src="OrderTrackingLogos/ordered.png" alt="" />
-            </div>
-            <div class="image">
-              <img src="OrderTrackingLogos/confirmed.png" alt="" />
-            </div>
-            <div class="image">
-              <img src="OrderTrackingLogos/delivered.png" alt="" />
-            </div>
-            <div class="image">
-              <img src="OrderTrackingLogos/successful.png" alt="" />
-            </div>
-          </div>
-        </div>
-        <div class="row h4">
-          <h4>Your order will be delivered soon</h4>
-          <p>Order placed on Oct 17th, 2022</p>
         </div>
       </div>
     </div>
+
     <!-- Footer Start -->
 
     <br />
 
-    <footer class="footer vw-100" style="position: relative">
+    <footer class="footer">
       <div class="footer-addr">
         <h1 class="footer-logo">Maida</h1>
 
@@ -180,17 +241,6 @@
     </footer>
 
     <!-- Footer End -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-      crossorigin="anonymous"
-    ></script>
-    <script src="navbar.js"></script>
-    <script
-      src="https://code.jquery.com/jquery-3.6.1.js"
-      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
-      crossorigin="anonymous"
-    ></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
       integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"

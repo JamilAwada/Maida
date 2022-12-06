@@ -32,7 +32,7 @@
                 $_SESSION['email'] = $user['email'];
                 $_SESSION['password'] = $user['password'];
 
-                header("Location: home.html");
+                header("Location: home.php");
                 exit();
             }else{
                 header("Location: preauth.php?error=invalid");

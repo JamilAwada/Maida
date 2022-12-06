@@ -47,7 +47,7 @@
         </li>
         <li><a href="Profile.html">Susan Smith</a></li>
         <li>
-          <a href="home.html"
+          <a href="logout.php"
             >Log out <i class="fa-solid fa-right-from-bracket"></i
           ></a>
         </li>
@@ -166,7 +166,7 @@
               <input type="file" name="image" class="photo-file"/>
               <div class="container-fluid">
                 <div class="mt-5 text-center">
-                  <button class="clear-btn">Clear fields</button>
+                  <button name='clear' class="clear-btn">Clear fields</button>
                   <button
                     class="post-btn"
                     type="submit"

@@ -17,11 +17,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
-    <link rel="stylesheet" href="orderhistory.css" />
+    <link rel="stylesheet" href="incoming.css" />
     <link rel="stylesheet" href="navbar.css" />
     <link rel="stylesheet" href="footer.css" />
-    <title>Maida - Order History</title>
+    <title>Maida - Incoming orders</title>
   </head>
   <body>
     <!-- NavBar Start -->
@@ -33,21 +32,21 @@
       <label class="logo">Maida</label>
       <ul>
         <li>
-          <a href="search.html"
+          <a href="search.php"
             >Browse <i class="fa-solid fa-magnifying-glass"></i
           ></a>
         </li>
         <li>
-          <a href="posting.html"
+          <a href="posting.php"
             >New Post <i class="fa-solid fa-circle-plus"></i
           ></a>
         </li>
         <li>
           <a href="#">Cart <i class="fa-solid fa-cart-shopping"></i></a>
         </li>
-        <li><a href="Profile.html">Susan Smith</a></li>
+        <li><a href="Profile.php">Susan Smith</a></li>
         <li>
-          <a href="home.html"
+          <a href="logout.php"
             >Log out <i class="fa-solid fa-right-from-bracket"></i
           ></a>
         </li>
@@ -88,84 +87,67 @@
               align-items: center;
             "
           >
-            Past Orders
+            Incoming Orders
           </h1>
-          <div class="historyContainer">
-            <div class="card" style="margin: 20px">
-              <div class="container">
-                <div class="row" style="padding: 20px">
-                  <div class="col col-6">
-                    <div class="row">
-                      <div class="mt-3" style="font-size: 20px">
-                        (3) Kebbe Pieces
-                      </div>
-                      <div style="color: gray; font-style: italic">
-                        Mashewe Abdel Rahmane
-                      </div>
-                      <div class="row">
-                        <i
-                          class="fa fa-calendar my-3"
-                          aria-hidden="true"
-                          style="font-size: 40px; color: #fa2c02"
-                        ></i>
-                        <div class="date">20/10/2022</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col col-6 text-center">
+          <div class="card" style="margin: 20px">
+            <div class="container">
+              <div class="row" style="padding: 20px">
+                <div class="col-2">
+                  <div
+                    class="h-100 d-flex align-items-center justify-content-center"
+                  >
                     <i
-                      class="fa-solid fa-location-dot my-3"
-                      style="font-size: 40px; color: #fa2c02"
+                      class="fa-solid fa-circle-user my-3 d-none d-lg-block"
+                      style="font-size: 150px"
                     ></i>
-                    <div class="location">
-                      Room 602, Santona Residence, Beirut, Lebanon.
-                    </div>
-                    <i
-                      class="fa-solid fa-coins my-3"
-                      style="font-size: 40px; color: #fa2c02"
-                    ></i>
-                    <div>$24.99</div>
-                    <br />
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="card" style="margin: 20px">
-              <div class="container">
-                <div class="row" style="padding: 20px">
-                  <div class="col col-6">
-                    <div class="row">
-                      <div class="mt-3" style="font-size: 20px">
-                        (3) Kebbe Pieces
-                      </div>
-                      <div style="color: gray; font-style: italic">
-                        Mashewe Abdel Rahmane
-                      </div>
-                      <div class="row">
-                        <i
-                          class="fa fa-calendar my-3"
-                          aria-hidden="true"
-                          style="font-size: 40px; color: #fa2c02"
-                        ></i>
-                        <div class="date">20/10/2022</div>
-                      </div>
-                    </div>
+                <div class="col-4">
+                  <div class="mt-3" style="font-size: 24px">Johnny Smith</div>
+                  <div style="color: gray">
+                    would like X orders of
+                    <span style="color: #fa2c02">Dish</span>
                   </div>
-                  <div class="col col-6 text-center">
-                    <i
-                      class="fa-solid fa-location-dot my-3"
-                      style="font-size: 40px; color: #fa2c02"
-                    ></i>
-                    <div class="location">
-                      Room 602, Santona Residence, Beirut, Lebanon.
-                    </div>
-                    <i
-                      class="fa-solid fa-coins my-3"
-                      style="font-size: 40px; color: #fa2c02"
-                    ></i>
-                    <div>$24.99</div>
-                    <br />
+                  <i
+                    class="fa-solid fa-quote-left my-3"
+                    style="font-size: 20px; color: #fa2c02"
+                  ></i>
+                  <div style="color: gray; font-style: italic">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Quidem dolorum deleniti ratione eius dolores facere placeat
+                    ex culpa ducimus, porro excepturi tempora nostrum ad. Omnis
+                    atque deserunt cupiditate cum sit.
                   </div>
+                  <div class="w-100 d-flex justify-content-end">
+                    <i
+                      class="fa-solid fa-quote-right my-3"
+                      style="font-size: 20px; color: #fa2c02"
+                    ></i>
+                  </div>
+                </div>
+                <div class="col-6 text-center">
+                  <i
+                    class="fa-solid fa-location-dot my-3"
+                    style="font-size: 40px; color: #fa2c02"
+                  ></i>
+                  <div>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Vero voluptatum quibusdam mollitia. Cum accusantium
+                    pariatur, debitis tenetur alias vel. Magni recusandae
+                    veritatis neque tempora, deleniti explicabo ex eius
+                    reprehenderit obcaecati!
+                  </div>
+                  <i
+                    class="fa-solid fa-coins my-3"
+                    style="font-size: 40px; color: #fa2c02"
+                  ></i>
+                  <div>$24.99</div>
+                  <button
+                    class="my-2 btn"
+                    style="background-color: #fa2c02; color: white"
+                  >
+                    Fulfill
+                  </button>
                 </div>
               </div>
             </div>
@@ -241,6 +223,7 @@
     </footer>
 
     <!-- Footer End -->
+
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
       integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
