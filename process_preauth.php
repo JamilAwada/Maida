@@ -18,7 +18,7 @@
             header("Location: preauth.php?errors=empty");
             exit();
         }
-        print("email: $email");
+
         if(!$error){
 
             $sql = "SELECT * FROM users WHERE email = :email AND password = :password";

@@ -26,9 +26,10 @@
   <body>
     <!-- NavBar Start -->
     <nav id="header">
-        
+      
     </nav>
     <!-- NavBar End -->
+
     <div class="maincontainer">
       <div class="container">
         <div class="row w-100">
@@ -63,6 +64,7 @@
         </div>
       </div>
     </div>
+
     <!-- Footer Start -->
 
     <br />
@@ -73,14 +75,13 @@
 
     <!-- Footer End -->
 
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></scrpt>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
        <script type="text/javascript">
         $(function(){
-          alert("zeb");
           $("#header").load("navbar.php");
         });
       </script>
+      
       <script type="text/javascript">
         $(function(){
           $("#footer").load("footer.php");

@@ -1,3 +1,12 @@
+<?php
+    session_start();
+    //if user is not logged in, redirect to login page
+    if (!isset($_SESSION['username'])) {
+        header("Location: preauth.php");
+        exit;
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -25,8 +34,8 @@
   </head>
   <body>
     <!-- NavBar Start -->
-    <nav>
-      <input type="checkbox" id="check" />
+    <nav id="header">
+      <!-- <input type="checkbox" id="check" />
       <label for="check" class="checkbtn">
         <i class="fas fa-bars"></i>
       </label>
@@ -51,29 +60,8 @@
             >Log out <i class="fa-solid fa-right-from-bracket"></i
           ></a>
         </li>
-      </ul>
+      </ul> -->
     </nav>
-    <script src="navbar.js"></script>
-    <script
-      src="https://code.jquery.com/jquery-3.6.1.js"
-      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
-      integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-      crossorigin="anonymous"
-    ></script>
 
     <!-- NavBar End -->
 
@@ -253,6 +241,7 @@
     </footer>
 
     <!-- Footer End -->
+    
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
       integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
@@ -268,5 +257,16 @@
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
       crossorigin="anonymous"
     ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+       <script type="text/javascript">
+        $(function(){
+          $("#header").load("navbar.php");
+        });
+      </script>
+      <script type="text/javascript">
+        $(function(){
+          $("#footer").load("footer.php");
+        });
+      </script>
   </body>
 </html>

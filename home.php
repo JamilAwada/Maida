@@ -55,7 +55,7 @@
     
     <!-- Goals Container-->
     <div class="maincol" id="1">
-      <div class="o">
+      <div class="leftdiv">
       <span class="servegoal">What We Serve</span>
     </div>
     <br>
