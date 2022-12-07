@@ -41,6 +41,11 @@
       $dishprotein = $result[0]->protein;
       $dishcarbohydrates = $result[0]->carbohydrates;
       $dishfat = $result[0]->fat;
+      $dishchefid = $result[0]->chefid;
+      $dishrating = $result[0]->rating;
+
+
+      
 
       ?>
 
@@ -56,7 +61,7 @@
                 
               </div>
               <div class="">
-                <div align="center" style="color: orangered; text-indent: 10px;" class="d-flex align-items-center justify-content-center my-3"><i class="fa-regular fa-face-smile" style="font-size: 50px; color: orangered;"></i><a class="chef" href="account.html">Rissal Hedna</a></div>
+                <div align="center" style="color: orangered; text-indent: 10px;" class="d-flex align-items-center justify-content-center my-3"><i class="fa-regular fa-face-smile" style="font-size: 50px; color: orangered;"></i><a class="chef" href="account.html"><?php echo $dishchefid ?></a></div>
               </div>
           </div>
           <div class="col-lg-6">
@@ -64,7 +69,7 @@
                   <div class="col-lg-12"></div>
                   <div class="d-flex justify-content-between align-items-center">
                     <h2 align="left" class="mt-5 title"><?php echo $dishname ?></h2>
-                    <span style="color: orangered; font-size: larger;"><i class="fa-solid fa-star mt-" style="color: gold;"></i> 4.6</span>
+                    <span style="color: orangered; font-size: larger;"><i class="fa-solid fa-star mt-" style="color: gold;"></i> <?php echo $dishrating ?></span>
                   </div>
                   <div class="divider ms-2 my-2" style="width: 100%"></div>
                   <p class="description" style="font-size:small;"><?php echo $dishdescription ?></p><br/>
