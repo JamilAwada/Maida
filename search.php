@@ -96,7 +96,8 @@
 
                 if($query->rowCount() > 0){
                   foreach($result as $row){
-                    echo "<div class='cardContainer'>
+                    echo " <a href=\"process_order.php?id=$row->id\">
+                          <div class='cardContainer'>
                             <div class='card'>
                               <img src='ImageUploads/".$row->image."' alt='Kebbe Image' />
                             </div>
@@ -105,7 +106,8 @@
                               <div class='price'>".
                               $row->price."L.L.</div>
                             </div>
-                          </div>";
+                          </div>
+                          </a>";
                   }
                 }
 
@@ -120,8 +122,9 @@
           <h2 class="listheader">Turkish</h2>
           <center>
             <div class="cardsList">
+                
             <?php
-                // select all dishes with italian type
+                // select all dishes with turkish type
                 $sql = "SELECT * FROM dishes WHERE cuisine = 'Turkish'";
                 $query = $db->prepare($sql);
                 $query->execute();
@@ -131,16 +134,21 @@
 
                 if($query->rowCount() > 0){
                   foreach($result as $row){
-                    echo "<div class='cardContainer'>
-                            <div class='card'>
-                              <img src='ImageUploads/".$row->image."' alt='Kebbe Image' />
+                    echo "
+                          <a href=\"process_order.php?id=$row->id\">
+                            <div class='cardContainer'>
+                              <div class='card'>
+                                <img src='ImageUploads/".$row->image."' alt='Kebbe Image' />
+                              </div>
+                              <div class='cardDescription'>
+                                <div class='name'>".$row->name."</div>
+                                <div class='price'>".
+                                $row->price."L.L.</div>
+                              </div>
                             </div>
-                            <div class='cardDescription'>
-                              <div class='name'>".$row->name."</div>
-                              <div class='price'>".
-                              $row->price."L.L.</div>
-                            </div>
-                          </div>";
+                          </a>
+                          
+                          ";
                   }
                 }
 
@@ -155,7 +163,7 @@
           <center>
             <div class="cardsList">
             <?php
-                // select all dishes with italian type
+                // select all dishes with chinese type
                 $sql = "SELECT * FROM dishes WHERE cuisine = 'Chinese'";
                 $query = $db->prepare($sql);
                 $query->execute();
@@ -165,7 +173,8 @@
 
                 if($query->rowCount() > 0){
                   foreach($result as $row){
-                    echo "<div class='cardContainer'>
+                    echo " <a href=\"process_order.php?id=$row->id\">
+                          <div class='cardContainer'>
                             <div class='card'>
                               <img src='ImageUploads/".$row->image."' alt='Kebbe Image' />
                             </div>
@@ -174,9 +183,12 @@
                               <div class='price'>".
                               $row->price."L.L.</div>
                             </div>
-                          </div>";
+                          </div>
+                          </a>";
                   }
                 }
+
+                
 
                 
               ?>
@@ -199,7 +211,8 @@
 
                 if($query->rowCount() > 0){
                   foreach($result as $row){
-                    echo "<div class='cardContainer'>
+                    echo " <a href=\"process_order?id=$row->id.php\">
+                          <div class='cardContainer'>
                             <div class='card'>
                               <img src='ImageUploads/".$row->image."' alt='Kebbe Image' />
                             </div>
@@ -208,7 +221,8 @@
                               <div class='price'>".
                               $row->price."L.L.</div>
                             </div>
-                          </div>";
+                          </div>
+                          </a>";
                   }
                 }
 

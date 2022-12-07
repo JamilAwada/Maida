@@ -18,12 +18,41 @@
       </nav>
       <!-- NavBar End -->
 
+      <?php
+
+    include_once('config.php');
+
+?>
+
+      <?php 
+      // get id from url  
+      $id = $_GET['id'];
+
+      $sql = "SELECT * FROM dishes WHERE id = $id";
+
+      $query = $db->prepare($sql);
+      $query->execute();
+      $result = $query->fetchAll(PDO::FETCH_OBJ);
+      $dishname = $result[0]->name;
+      $dishprice = $result[0]->price;
+      $dishdescription = $result[0]->description;
+      $dishimage = $result[0]->image;
+      $dishcuisine = $result[0]->cuisine;
+      $dishprotein = $result[0]->protein;
+      $dishcarbohydrates = $result[0]->carbohydrates;
+      $dishfat = $result[0]->fat;
+
+      ?>
+
     <div class="container1">
       <div class="subcontainer">
         <div class="row w-100">
           <div class="col-lg-6">
               <div class="d-flex justify-content-center">
-                <i class="fa-solid fa-camera card p-5 mt-5" style="font-size: 250px; color: lightgray;"></i>
+                <div class="imagecontainer mt-5" style=" ">
+                  <img src="imageUploads/<?php echo $dishimage ?>" style="object-fit: contain;max-width:100%; max-height: 100%;border-top-right-radius: 10px; border-bottom-right-radius: 10px;"></img>
+                </div>
+                
                 
               </div>
               <div class="">
@@ -34,12 +63,12 @@
               <div class="row">
                   <div class="col-lg-12"></div>
                   <div class="d-flex justify-content-between align-items-center">
-                    <h2 align="left" class="mt-5 title">Food Title Here</h2>
+                    <h2 align="left" class="mt-5 title"><?php echo $dishname ?></h2>
                     <span style="color: orangered; font-size: larger;"><i class="fa-solid fa-star mt-" style="color: gold;"></i> 4.6</span>
                   </div>
                   <div class="divider ms-2 my-2" style="width: 100%"></div>
-                  <p class="description" style="font-size:small;">Lorem ipsum dolor. sit amet consectetur adipisicing elit. Hic, nam illum eligendi blanditiis temporibus cum eius incidunt alias. Voluptatibus laudantium quo ipsum blanditiis est eum cum odio eveniet rem quod. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur nemo porro laboriosam natus molestiae incidunt expedita sequi autem. Nemo asperiores neque id et rem enim repudiandae est, optio adipisci ab?</p><br/>
-                  <p style="color: orangered;">Nutrition Facts: X <i class="fa-solid fa-c"></i> Y <i class="fa-solid fa-p"></i> Z <i class="fa-solid fa-f"></i></p>
+                  <p class="description" style="font-size:small;"><?php echo $dishdescription ?></p><br/>
+                  <p style="color: orangered;">Nutrition Facts: <?php echo $dishcarbohydrates ?> <i class="fa-solid fa-c"></i> <?php echo $dishprotein ?>  <i class="fa-solid fa-p"></i> <?php echo $dishfat ?>  <i class="fa-solid fa-f"></i></p>
               </div>
               <div class="row justify-content-center">
                   <div class="col-lg-6">
@@ -61,6 +90,7 @@
   </div>
       </div>
         
+      
 
     <div class="divider"></div>
 
