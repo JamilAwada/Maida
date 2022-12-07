@@ -61,7 +61,7 @@
                 
               </div>
               <div class="">
-                <div align="center" style="color: orangered; text-indent: 10px;" class="d-flex align-items-center justify-content-center my-3"><i class="fa-regular fa-face-smile" style="font-size: 50px; color: orangered;"></i><a class="chef" href="account.html"><?php echo $dishchefid ?></a></div>
+                <div align="center" style="color: orangered; text-indent: 10px;" class="d-flex align-items-center justify-content-center my-3"><i class="fa-regular fa-face-smile mt-5" style="font-size: 50px; color: orangered;"></i><a class="chef mt-5" href="account.html"><?php echo $dishchefid ?></a></div>
               </div>
           </div>
           <div class="col-lg-6">
