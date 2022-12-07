@@ -1,27 +1,45 @@
-.container{
-    width: 80%;
-    height: 30rem;
-    border-radius: 10px;
-    background-color: white;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.container {
+  width: 80%;
+  height: 30rem;
+  border-radius: 10px;
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.maincontainer {
+  margin-top: 10%;
 }
 
-.dishesAvailable{
-    font-family: "Pacifico", cursive;
-    color: orangered;
+.iconstick {
+  height: 100px;
+  width: 100px;
+  background-color: white;
+  border-radius: 20px;
+  top: 20%;
+  position: sticky;
+  left: 10px;
+  text-align: center;
+  padding-top: 35px;
+  font-family: DD-TTNorms, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  font-weight: 800;
+  color: orangered;
 }
 
-.cardContainer{
-    width: 230px;
-    height: 250px;
-    padding-bottom: 15px;
+.dishesAvailable {
+  font-family: "Pacifico", cursive;
+  color: orangered;
 }
 
-hr{
-    width: 60%;
+.cardContainer {
+  width: 230px;
+  height: 250px;
+  padding-bottom: 15px;
 }
 
-
+hr {
+  width: 60%;
+}
