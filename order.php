@@ -87,7 +87,14 @@
                   <div class="col-lg-6">
                       
                   </div>
-                  <button class="w-25 py-2 mt-5 add-btn">Add to cart</button>
+                  <?php
+                    echo "<a href='process_place_order.php?id=$id'><
+                    <button class='w-25 py-2 mt-5 add-btn'>Add to cart</button>
+                    </a>";
+                  ?>
+                  
+                  
+                 
               </div>
               
           </div>
