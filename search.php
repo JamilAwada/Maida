@@ -76,8 +76,9 @@ if (!isset($_SESSION['username'])) {
 
             if ($query->rowCount() > 0) {
               foreach ($result as $row) {
-                echo " <a href=\"process_order.php?id=$row->id\">
+                echo " 
                           <div class='cardContainer'>
+                          <a href=\"process_order.php?id=$row->id\">
                             <div class='card'>
                               <img src='ImageUploads/" . $row->image . "' alt='Kebbe Image' />
                             </div>
@@ -86,8 +87,9 @@ if (!isset($_SESSION['username'])) {
                               <div class='price'>" .
                   $row->price . "L.L.</div>
                             </div>
+                            </a>
                           </div>
-                          </a>";
+                          ";
               }
             }
 
@@ -117,24 +119,24 @@ if (!isset($_SESSION['username'])) {
             if ($query->rowCount() > 0) {
               foreach ($result as $row) {
                 echo "
-                          <a href=\"process_order.php?id=$row->id\">
+                          
                             <div class='cardContainer'>
+                            <a href=\"process_order.php?id=$row->id\">
                               <div class='card'>
-                                <img src='ImageUploads/" . $row->image . "' alt='Kebbe Image' />
+                                <img src='ImageUploads/" . $row->image . "' alt='Image' />
                               </div>
                               <div class='cardDescription'>
                                 <div class='name'>" . $row->name . "</div>
                                 <div class='price'>" .
                   $row->price . "L.L.</div>
                               </div>
+                              </a>
                             </div>
-                          </a>
+                          
                           
                           ";
               }
             }
-
-
             ?>
           </div>
         </center>
@@ -157,8 +159,9 @@ if (!isset($_SESSION['username'])) {
 
             if ($query->rowCount() > 0) {
               foreach ($result as $row) {
-                echo " <a href=\"process_order.php?id=$row->id\">
+                echo " 
                           <div class='cardContainer'>
+                            <a href=\"process_order.php?id=$row->id\">
                             <div class='card'>
                               <img src='ImageUploads/" . $row->image . "' alt='Kebbe Image' />
                             </div>
@@ -167,8 +170,9 @@ if (!isset($_SESSION['username'])) {
                               <div class='price'>" .
                   $row->price . "L.L.</div>
                             </div>
+                            </a>
                           </div>
-                          </a>";
+                          ";
               }
             }
 
@@ -197,8 +201,9 @@ if (!isset($_SESSION['username'])) {
 
             if ($query->rowCount() > 0) {
               foreach ($result as $row) {
-                echo " <a href=\"process_order?id=$row->id.php\">
+                echo " 
                           <div class='cardContainer'>
+                          <a href=\"process_order?id=$row->id.php\">
                             <div class='card'>
                               <img src='ImageUploads/" . $row->image . "' alt='Kebbe Image' />
                             </div>
@@ -207,8 +212,9 @@ if (!isset($_SESSION['username'])) {
                               <div class='price'>" .
                   $row->price . "L.L.</div>
                             </div>
+                            </a>
                           </div>
-                          </a>";
+                          ";
               }
             }
 

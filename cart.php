@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="navbar.css" />
     <link rel="stylesheet" href="footer.css" />
     <title>Maida - My cart</title>
+
   </head>
   <body>
       <!-- NavBar Start -->
@@ -38,70 +39,55 @@
               display: flex;
               justify-content: center;
               align-items: center;
+              margin-top: 100px;
             "
           >
             My Cart
           </h1>
           <div class="card" style="margin: 20px">
             <div class="container">
-              <div class="row" style="padding: 20px">
-            
-                <div class="col-4">
-                  <div style="font-size: 24px">
-                    X order(s) of
-                    <span style="color: #fa2c02">Dish</span>
-                  </div>
-                  <i
-                    class="fa-solid fa-quote-left my-3"
-                    style="font-size: 20px; color: #fa2c02"
-                  ></i>
-                  <div style="color: gray; font-style: italic">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Quidem dolorum deleniti ratione eius dolores facere placeat
-                    ex culpa ducimus, porro excepturi tempora nostrum ad. Omnis
-                    atque deserunt cupiditate cum sit.
-                  </div>
-                  <div class="w-100 d-flex justify-content-end">
-                    <i
-                      class="fa-solid fa-quote-right my-3"
-                      style="font-size: 20px; color: #fa2c02"
-                    ></i>
-                  </div>
-                </div>
-                <div class="col-8 text-center">
-                  <i
-                    class="fa-solid fa-location-dot my-3"
-                    style="font-size: 40px; color: #fa2c02"
-                  ></i>
-                  <div>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Vero voluptatum quibusdam mollitia. Cum accusantium
-                    pariatur, debitis tenetur alias vel. Magni recusandae
-                    veritatis neque tempora, deleniti explicabo ex eius
-                    reprehenderit obcaecati!
-                  </div>
-                  <i
-                    class="fa-solid fa-coins my-3"
-                    style="font-size: 40px; color: #fa2c02"
-                  ></i>
-                  <div>$24.99</div>
-                  <button
-                    class="my-2 btn"
-                    style="background-color: #fa2c02; color: white"
-                  >
-                    Fulfill
-                  </button>
-                </div>
+              <div class="row d-flex justify-content-center" style="padding: 20px">
+
+                    <div class="ItemContainer row" style="width:95%; border:1px solid orangered; padding:10px; border-radius:5px; margin-bottom:5px;">
+                      <div class="col-3 d-flex align-items-center"><div class="imgcontainer" style="width:100px; height:50px; border-radius:5px; overflow:hidden;"><img width="100px" src="ImageUploads/kebbe-libanaise-3-780x470.jpg.webp"></div></div>
+                      <div class="col-2 d-flex align-items-center">Chef Rissal</div>
+                      <div class="col-4 d-flex align-items-center text-muted">Lorem ipsum dolor sit amet, consectetur adipis.</div>
+                      <div class="col-2 d-flex align-items-center" style="color:orangered;">150000L.L.</div>
+                      <div class="col-1 d-flex align-items-center justify-content-end">
+                      <i class="fa fa-window-close" style="color:red;" aria-hidden="true"></i>
+                      </div>
+                    </div>
+
+                    <div class="ItemContainer row" style="width:95%; border:1px solid orangered; padding:10px; border-radius:5px; margin-bottom:5px;">
+                      <div class="col-3 d-flex align-items-center"><div class="imgcontainer" style="width:100px; height:50px; border-radius:5px; overflow:hidden;"><img width="100px" src="ImageUploads/kebbe-libanaise-3-780x470.jpg.webp"></div></div>
+                      <div class="col-2 d-flex align-items-center">Chef Rissal</div>
+                      <div class="col-4 d-flex align-items-center text-muted">Lorem ipsum dolor sit amet, consectetur adipis.</div>
+                      <div class="col-2 d-flex align-items-center"  style="color:orangered;">150000L.L.</div>
+                      <div class="col-1 d-flex align-items-center justify-content-end">
+                      <i class="fa fa-window-close" style="color:red;" aria-hidden="true"></i>
+                      </div>
+                    </div>
+
+                    <div class="ItemContainer row" style="width:95%; border:1px solid orangered; padding:10px; border-radius:5px; margin-bottom:5px;">
+                      <div class="col-3 d-flex align-items-center"><div class="imgcontainer" style="width:100px; height:50px; border-radius:5px; overflow:hidden;"><img width="100px" src="ImageUploads/kebbe-libanaise-3-780x470.jpg.webp"></div></div>
+                      <div class="col-2 d-flex align-items-center">Chef Rissal</div>
+                      <div class="col-4 d-flex align-items-center text-muted">Lorem ipsum dolor sit amet, consectetur adipis.</div>
+                      <div class="col-2 d-flex align-items-center"  style="color:orangered;">150000L.L.</div>
+                      <div class="col-1 d-flex align-items-center justify-content-end">
+                      <i class="fa fa-window-close" style="color:red;" aria-hidden="true"></i>
+                      </div>
+                    </div>
+               
               </div>
+              
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-             <!-- Footer Start -->
+        <!-- Footer Start -->
     
-             <footer id="footer">
+        <footer id="footer">
         
         </footer>
     
