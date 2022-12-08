@@ -36,19 +36,19 @@ if (!isset($_SESSION['username'])) {
     <div class="row searchSection">
       <div class="header">
         <h1 style="font-family: 'Poppins', sans-serif">Search</h1>
-        <p>
+        <p style="color: gray;">
           Browse through an extensive variety of local and foreign
           deliciousness!
         </p>
       </div>
       <div style="height:100px; text-align:center;">
-        <div class="searchContainer">
+        <div class="searchContainer" style="z-index: 999;">
           <img src="images/searchicon.png" alt="Search Icon" width="30px" class="searchIcon" />
           <input style="font-family: 'Poppins', sans-serif" type="text" class="searchBar" id="search" placeholder="Search meals" />
           <br>
         </div>
         <br>
-        <ul style="height:100px;width:28.5rem;margin-top:-25px;border-bottom-left-radius:5px;border-bottom-right-radius:5px;" id="result">
+        <ul style="height:100px;width:28.5rem;margin-top:-25px;border-radius:20px;" id="result">
         </ul>
       </div>
 

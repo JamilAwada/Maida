@@ -1,103 +1,104 @@
 * {
-    font-family: DD-TTNorms, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-      "Segoe UI Symbol";
-  }
-
-
-  h1{
-    color: white;
-    font-size: 5em;
-    margin-top: 5rem;
-  }
-
-  p{
-    background-color: white;
-    width: 800px;
-    text-align: center;
-    border-radius: 5px;
-    padding: 1rem;
-    margin-top: 20px;
-  }
-
-  .searchSection{
-    background-color: orangered;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 70vh;
-    width:100vw;
-    padding-bottom: 3em;
-    justify-content: space-between;
-  }
-
-  .sortnfilter {
-    font-family: "Poppins", sans-serif;
-    color: orangered;
-    background-color: white;
-    float: left;
-    border: 0px;
-    height: auto;
-    width: 135px;
-    height: 45px;
-    padding: 13px;
-    border-radius: 15px;
-    transition-duration: 0.3s;
-    margin: 20px;
-    font-size: 15px;
-  }
-  .sortnfilter:hover{
-    cursor: pointer;
-    background-color: orangered;
-    color: white;
-    box-shadow: 0px 1px 30px 2px rgba(0, 0, 0, 0.221);
-    font-weight: bolder;
-  }
-  
-  .sortnfilter:hover i {
-    color: white;
-  }
-
-  .header{
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .searchBar{
-    padding: 10px 20px;
-    width: 25rem;
-    border-radius: 5px;
-    border: none;
-    font-size: 10pt;
-  }
-
-  .searchContainer{
-    background-color: white;
-    margin-top: 1em;
-    height: 3rem;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    padding: 10px;
-  }
-
-.searchBar:focus{
-    outline: none;
+  font-family: DD-TTNorms, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
 }
 
-.cardContainer{
+h1 {
+  color: white;
+  font-size: 5em;
+  margin-top: 5rem;
+}
+.container {
+  margin-top: 5%;
+}
+
+p {
+  background-color: white;
+  width: 800px;
+  text-align: center;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-top: 20px;
+}
+
+.searchSection {
+  background-color: orangered;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 70vh;
+  width: 100vw;
+  padding-bottom: 3em;
+  justify-content: space-between;
+}
+
+.sortnfilter {
+  font-family: "Poppins", sans-serif;
+  color: orangered;
+  background-color: white;
+  float: left;
+  border: 0px;
+  height: auto;
+  width: 135px;
+  height: 45px;
+  padding: 13px;
+  border-radius: 15px;
+  transition-duration: 0.3s;
+  margin: 20px;
+  font-size: 15px;
+}
+.sortnfilter:hover {
+  cursor: pointer;
+  background-color: orangered;
+  color: white;
+  box-shadow: 0px 1px 30px 2px rgba(0, 0, 0, 0.221);
+  font-weight: bolder;
+}
+
+.sortnfilter:hover i {
+  color: white;
+}
+
+.header {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.searchBar {
+  padding: 10px 20px;
+  width: 25rem;
+  border-radius: 5px;
+  border: none;
+  font-size: 10pt;
+}
+
+.searchContainer {
+  background-color: white;
+  margin-top: 1em;
+  height: 3rem;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.searchBar:focus {
+  outline: none;
+}
+
+.cardContainer {
   height: 300px;
   width: 250px;
   background-color: white;
   border-radius: 10px;
   margin-right: 4rem;
-  box-shadow: 5px 5px 15px -6px rgba(0,0,0,0.59);
-  
+  box-shadow: 5px 5px 15px -6px rgba(0, 0, 0, 0.59);
 }
 
-.card{
+.card {
   background-color: grey;
   height: 85%;
   border-top-left-radius: 10px;
@@ -105,18 +106,18 @@
   overflow: hidden;
 }
 
-img{
+img {
   height: 100%;
 }
 
-hr{
+hr {
   margin-top: 30px;
   margin-bottom: 20px;
   width: 90%;
   border: 0.5px solid orangered;
 }
 
-.categoriesSection{
+.categoriesSection {
   padding: 3rem;
 }
 
@@ -126,29 +127,28 @@ hr{
   margin-left: 5rem;
 }
 
-.cardDescription{
+.cardDescription {
   display: flex;
   margin-top: auto;
   height: 100%;
   width: 100%;
   justify-content: space-between;
   padding: 15px;
+  color: orangered;
 }
 
-
-.name{
-  font-family: 'Poppins', sans-serif;
+.name {
+  font-family: "Poppins", sans-serif;
   font-weight: bold;
   font-size: 1rem;
 }
-.price{
-  font-family: 'Poppins', sans-serif;
+.price {
+  font-family: "Poppins", sans-serif;
   color: orangered;
   font-size: 1rem;
-
 }
 
-.cardsList{
+.cardsList {
   display: flex;
   overflow-x: scroll;
   overflow-y: hidden;
@@ -156,7 +156,6 @@ hr{
   height: 320px;
 }
 
-.section{
+.section {
   margin-top: 20px;
 }
-
