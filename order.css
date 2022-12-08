@@ -32,6 +32,7 @@ body {
 	background-color: orangered;
 	padding: 2em 4em;
 }
+
 .container2 {
 	padding: 2em 4em;
 	width: 80vw;
@@ -45,7 +46,6 @@ body {
 	padding-bottom: 1em;
 	border-bottom: 4px solid rgb(210, 56, 0);
 	width: 60vw;
-	height: 80vh;
 	margin: auto;
 }
 
@@ -87,19 +87,19 @@ i {
 		min-height: 350px;
 		margin: 0;
 		outline: 1px solid #ccc;
-	}
+}
 	.pie-chart h2 {
 		position: absolute;
 		margin: 1rem;
-	}
-	.pie-chart figcaption {
+}
+.pie-chart figcaption {
 		position: absolute;
 		bottom: 1em;
 		right: 1em;
 		font-size: smaller;
 		text-align: right;
-	}
-	.pie-chart span:after {
+}
+.pie-chart span:after {
 		display: inline-block;
 		content: "";
 		width: 0.8em;
@@ -108,4 +108,4 @@ i {
 		height: 0.8em;
 		border-radius: 0.2em;
 		background: currentColor;
-	}
+}

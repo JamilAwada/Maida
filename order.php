@@ -49,37 +49,37 @@
 
       ?>
 
-    <div class="container1">
-      <div class="subcontainer">
+    <div class="container1 mt-5">
+      <div class="subcontainer d-flex p-3">
         <div class="row w-100">
           <div class="col-lg-6">
               <div class="d-flex justify-content-center">
                 <div class="imagecontainer mt-5" style=" ">
-                  <img src="imageUploads/<?php echo $dishimage ?>" style="object-fit: contain;max-width:100%; max-height: 100%;border-top-right-radius: 10px; border-bottom-right-radius: 10px;"></img>
+                  <img src="imageUploads/<?php echo $dishimage ?>" style="object-fit: contain;max-width:100%; max-height: 100%;border-radius: 10px; width: 300px;"></img>
                 </div>
                 
                 
               </div>
-              <div class="">
-                <div align="center" style="color: orangered; text-indent: 10px;" class="d-flex align-items-center justify-content-center my-3"><i class="fa-regular fa-face-smile mt-5" style="font-size: 50px; color: orangered;"></i><a class="chef mt-5" href="account.html"><?php echo $dishchefid ?></a></div>
-              </div>
+              
+              <div align="center" style="color: orangered; text-indent: 10px;" class="d-flex align-items-center justify-content-center my-3"><i class="fa-regular fa-face-smile mt-5" style="font-size: 50px; color: orangered;"></i><a class="chef mt-5" href="account.html"><?php echo $dishchefid ?></a></div>
+              
           </div>
           <div class="col-lg-6">
               <div class="row">
-                  <div class="col-lg-12"></div>
                   <div class="d-flex justify-content-between align-items-center">
                     <h2 align="left" class="mt-5 title"><?php echo $dishname ?></h2>
                     <span style="color: orangered; font-size: larger;"><i class="fa-solid fa-star mt-" style="color: gold;"></i> <?php echo $dishrating ?></span>
                   </div>
                   <div class="divider ms-2 my-2" style="width: 100%"></div>
                   <p class="description" style="font-size:small;"><?php echo $dishdescription ?></p><br/>
-                  <p style="color: orangered;">Nutrition Facts: <?php echo $dishcarbohydrates ?> <i class="fa-solid fa-c"></i> <?php echo $dishprotein ?>  <i class="fa-solid fa-p"></i> <?php echo $dishfat ?>  <i class="fa-solid fa-f"></i></p>
+                  <p style="color: orangered;">Nutrition Facts: <br> <?php echo $dishcarbohydrates ?>g <i class="fa-solid fa-c"></i> <br> <?php echo $dishprotein ?>g  <i class="fa-solid fa-p"></i> <br> <?php echo $dishfat ?>g  <i class="fa-solid fa-f"></i></p>
               </div>
               <div class="row justify-content-center">
                   <div class="col-lg-6">
                       <label>Quantity</label>
                       <br>
-                      <input type="number"><br>
+                      <input name="quantity" type="number">
+                      <br>
                       <label class="mt-2">Any requests?</label>
                       <br>
                       <textarea type="text" id="request" name="request" style="width: 15em"></textarea>
@@ -87,11 +87,10 @@
                   <div class="col-lg-6">
                       
                   </div>
-                  <?php
-                    echo "<a href='process_place_order.php?id=$id'><
-                    <button class='w-25 py-2 mt-5 add-btn'>Add to cart</button>
-                    </a>";
-                  ?>
+                  <a href='process_place_order.php?id=$'.<?php echo $id?>>
+                    <button name="" class='w-25 py-2 mt-5 add-btn'>Add to cart</button>
+                  </a>
+                  
                   
                   
                  
