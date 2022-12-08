@@ -16,7 +16,7 @@ nav {
   box-shadow: 1px 1px 10px 1px rgb(182, 182, 182);
   z-index: 999;
   position: fixed;
-  top:0;
+  top: 0;
 }
 
 label.logo {
@@ -129,4 +129,3 @@ nav ul li a i {
     left: 0;
   }
 }
-

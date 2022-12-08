@@ -22,13 +22,14 @@ div {
   background-color: orangered;
   margin-bottom: 15px;
   border: 4px solid rgb(226, 60, 0);
+  margin-top: 10vh;
 }
 .leftdiv {
   width: 100%;
   display: flex;
   justify-content: start;
   align-items: flex-end;
-  margin-left:30vw;
+  margin-left: 30vw;
 }
 .welcometext {
   font-size: 64px;
@@ -54,35 +55,32 @@ div {
 .servegoal {
   font-size: 40px;
   font-weight: 600;
-  color:rgb(158, 158, 158);
+  color: rgb(158, 158, 158);
   line-height: 80px;
-  text-decoration: none; 
-  position: relative; 
+  text-decoration: none;
+  position: relative;
   transition: 0.5s;
 }
- 
 
 .servegoal:after {
-   position: absolute;
-   content: '';
-   height: 2px;
-   bottom: -4px; 
-   margin: 0 auto;
-   left: 0;
-    width: 30%;
-    background: #999;
-  -o-transition:.5s;
-   -ms-transition:.5s;
-   -moz-transition:.5s;
-   -webkit-transition:.5s;
-   transition:.7s;
+  position: absolute;
+  content: "";
+  height: 2px;
+  bottom: -4px;
+  margin: 0 auto;
+  left: 0;
+  width: 30%;
+  background: #999;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.7s;
 }
 
-
-
 .servegoal:hover:after {
- width: 100%;
- background: orangered;
+  width: 100%;
+  background: orangered;
 }
 
 .servegoal:hover {
@@ -169,6 +167,10 @@ div {
 .dish2:hover {
   transform: scale(1.1);
 }
+.links:visited {
+  text-decoration: none;
+  color: orangered;
+}
 
 .links {
   max-width: 100%;
@@ -181,6 +183,11 @@ div {
   cursor: pointer;
   transition: 0.15s;
   text-decoration: none;
+  color: orangered;
+}
+.links:hover {
+  text-decoration: underline;
+  color: orangered;
 }
 .spanup {
   color: orangered;
@@ -211,7 +218,7 @@ div {
 }
 
 .popdish:hover {
-  transform: scale(1.4);
+  transform: scale(1.2);
   cursor: pointer;
 }
 

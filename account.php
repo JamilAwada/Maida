@@ -18,7 +18,6 @@
 <body>
   <!-- NavBar Start -->
   <nav id="header">
-
   </nav>
   <!-- NavBar End -->
   <!-- sticky icon start -->

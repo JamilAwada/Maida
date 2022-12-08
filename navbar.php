@@ -1,9 +1,9 @@
 <?php
-  session_start();
+session_start();
 ?>
-    <?php
-      if (isset($_SESSION['username'])) {
-        echo '
+<?php
+if (isset($_SESSION['username'])) {
+  echo '
         <div>
         <input type="checkbox" id="check" />
         <label for="check" class="checkbtn">
@@ -20,16 +20,24 @@
              <li>
               <a href="cart.php">Cart <i class="fa-solid fa-cart-shopping"></i></a>
              </li>
-             <li><a href="account.php">'.$_SESSION['username'].'</a></li>
+             <li><a href="account.php">' . $_SESSION['username'] . '</a></li>
              <li>
                <a href="logout.php">Log out <i class="fa-solid fa-right-from-bracket"></i></a>
              </li>
            </ul>
            </div>
            ';
-         }else{
-           echo '<label class="logo">Maida</label>';
-         }
-    ?>
+} else {
+  echo '<label class="logo">Maida</label>';
+  echo ' <ul><li>
+           <a href="signup.php">Sign Up<i class="fa-solid "></i></a>
+         </li>
+         <li>
+               <a href="preauth.php">Log In<i class="fa-solid "></i></a>
+             </li>
+         </ul>
+         ';
+}
+?>
 
-  <script src="navbar.js"></script>
+<script src="navbar.js"></script>
