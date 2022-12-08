@@ -22,8 +22,13 @@
   </nav>
   <!-- NavBar End -->
   <!-- sticky icon start -->
-  <div class=" text-center iconstick">Number
+  <div class="iconstick"><a class="notbutn" href="notifications.php">Orders</a>
+
+    <div class=" text-center numorders">
+      <p class="num">1</p>
+    </div>
   </div>
+
   <!--Profile Container-->
   <div class="maincontainer">
     <div class="maintext">
