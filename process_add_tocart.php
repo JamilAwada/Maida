@@ -5,6 +5,7 @@
 
 
 <?php
+    
     if(isset($_POST)){
         // get dish image, name, price, request, quantity from post method
         $id = $_POST['id'];

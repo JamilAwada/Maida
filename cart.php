@@ -57,19 +57,18 @@
                       session_start();
                        // get the image, dishname, request, and price from cart in session variables
                         if(isset($_SESSION['cart'])){
-                            
                             $cart = $_SESSION['cart'];
                             $total = 0;
                             foreach($cart as $key => $value){
                               $total = (int)$value['price'] * (int)$value['quantity'];
                                 echo '
-                                <div class="ItemContainer row" style="width:95%; border:1px solid orangered; padding:10px; border-radius:5px; margin-bottom:5px;">
+                                <div id='.$value['id'].' class="ItemContainer row" style="width:95%; border:1px solid orangered; padding:10px; border-radius:5px; margin-bottom:5px;">
                                   <div class="col-2 d-flex align-items-center"><div class="imgcontainer" style="width:100px; height:50px; border-radius:5px; overflow:hidden;"><img width="100px" src="ImageUploads/'.$value['image'].'"></div></div>
                                   <div class="col-3 d-flex align-items-center">'.$value['name'].'<span style ="color:orangered;">x'.$value['quantity'].'</span></div>
                                   <div class="col-4 d-flex align-items-center text-muted">'.$value['request'].'</div>
                                   <div class="col-2 d-flex align-items-center" style="color:orangered;">'.$total.'L.L.</div>
                                   <div class="col-1 d-flex align-items-center justify-content-end">
-                                  <i class="fa fa-window-close" style="color:red;" aria-hidden="true"></i>
+                                  <i id="delete" class="fa fa-window-close" style="color:red;" aria-hidden="true"></i>
                                   </div>
                                 </div>
                                 ';
@@ -104,6 +103,27 @@
           <script type="text/javascript">
             $(function(){
               $("#footer").load("footer.php");
+            });
+          </script>
+
+          <script>
+            $(document).ready(function(){
+              $(".ItemContainer").on("click", "#delete", function(){
+                
+                var id = $(this).parent().parent().attr("id");
+
+                $.ajax({
+                  url: "delete_cart_item.php",
+                  type: "POST",
+                  data: {id: id},
+                  success: function(data){
+                    if(data == "deleted"){
+                      $("#"+id).remove();
+                    }
+                  }
+                });
+                
+              });
             });
           </script>
 
