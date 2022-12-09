@@ -35,7 +35,7 @@ if (!isset($_SESSION['username'])) {
   <div class="container">
     <div class="row searchSection">
       <div class="header">
-        <h1 style="font-family: 'Poppins', sans-serif">Search</h1>
+        <h1 style="font-family: 'Poppins', sans-serif;  margin-top: 5rem;">Search</h1>
         <p style="color: gray;  text-align: center;  background-color: white;
   width: 800px;
   border-radius: 5px;

@@ -23,7 +23,7 @@ session_start();
   <title>Maida - Home</title>
 </head>
 
-<body class="maincol">
+<body>
   <!-- NavBar Start -->
   <nav id="header">
 
@@ -137,24 +137,24 @@ session_start();
           </div>
         </div>
       </div>
-
-      <!-- Footer Start -->
-      <footer id="footer">
-      </footer>
-      <!-- Footer End -->
-
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-      <script type="text/javascript">
-        $(function() {
-          $("#header").load("navbar.php");
-        });
-      </script>
-      <script type="text/javascript">
-        $(function() {
-          $("#footer").load("footer.php");
-        });
-      </script>
     </div>
+  </div>
+  <!-- Footer Start -->
+  <footer id="footer">
+  </footer>
+  <!-- Footer End -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      $("#header").load("navbar.php");
+    });
+  </script>
+  <script type="text/javascript">
+    $(function() {
+      $("#footer").load("footer.php");
+    });
+  </script>
 </body>
 
 </html>
