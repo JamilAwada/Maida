@@ -76,7 +76,7 @@
                 <option value="paleo">Paleo</option>
                 <option value="pescatarian">Pescatarian</option>
                 <option value="whole30">Whole30</option>
-                
+
               </select><br />
             </div>
 
@@ -107,10 +107,13 @@
           <div class="col-xl-6 col-xs-12">
             <div class="col-lg col-sm-12 text-sm-center">
               <div class="w-100">
-                <h2 class="py-4" style="color: #fa2c02">Photos</h2>
-                <i id="pic" class="fa-solid fa-camera" style="font-size: 250px; color: lightgray"></i>
+                <h2 class="py-4" style="color: #fa2c02">Photo</h2>
+                <div class="imagecontainer mt-5 ms-5" id="imagecontainer">
+
+                </div>
+                
                 <br>
-                <input type="file" name="image" class="photo-file" />
+                <input type="file" name="image" class="photo-file" id="image_input"/>
                 <div class="container-fluid">
                   <div class="mt-5 text-center">
                     <button name='clear' class="clear-btn">Clear fields</button>
@@ -206,6 +209,27 @@
       $("#footer").load("footer.php");
     });
   </script>
+
+  <script>
+
+    const image_input = document.getElementById('image_input');
+
+
+    image_input.addEventListener('change', function(e) {
+        var image = URL.createObjectURL(e.target.files[0]);
+        var imageContainer = document.getElementById('imagecontainer');
+        var newImage = document.createElement('img');
+        newImage.style.objectFit = "contain";
+        newImage.style.maxWidth = "100%";
+        newImage.style.maxHeight = "100%";
+        newImage.style.borderRadius = "10px";
+        newImage.style.width = "300px";
+        imageContainer.innerHTML = "";
+        newImage.src = image;
+        imageContainer.appendChild(newImage);
+    });
+  </script>
+
 </body>
 
 </html>
