@@ -19,7 +19,7 @@ session_start();
     <link rel="stylesheet" href="payment.css" />
     <link rel="stylesheet" href="navbar.css" />
     <link rel="stylesheet" href="footer.css" />
-    <title>Maida - Payment</title>
+    <title>Maida - Incoming Orders</title>
 </head>
 
 <body class="maincol">

@@ -36,7 +36,11 @@ if (!isset($_SESSION['username'])) {
     <div class="row searchSection">
       <div class="header">
         <h1 style="font-family: 'Poppins', sans-serif">Search</h1>
-        <p style="color: gray;">
+        <p style="color: gray;  text-align: center;  background-color: white;
+  width: 800px;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-top: 20px;">
           Browse through an extensive variety of local and foreign
           deliciousness!
         </p>
@@ -60,34 +64,34 @@ if (!isset($_SESSION['username'])) {
           Filter <i class="fa-solid fa-filter"></i></button></span>
     </div>
     <div class="categoriesSection">
-       <div class="section">
+      <div class="section">
         <h2 class="listheader">Results</h2>
+        <br>
         <center>
           <div class="cardsList">
 
-          <?php 
+            <?php
 
-  if (empty($_GET['name'])) {
-    echo "<h2>Search for something using the search bar above! Or take a look at our categories below!</h2>";
-  }
-  else {
-    // get name from url
-    $name = $_GET['name'];
+            if (empty($_GET['name'])) {
+              echo "<h2>Nothing to display yet. Look for Maida meals using the search bar above, or check the categories below!</h2>";
+            } else {
+              // get name from url
+              $name = $_GET['name'];
 
-    // if name exists
-    if (isset($name)) {
-    
-      // select all dishes with name
-      $sql = "SELECT * FROM dishes WHERE name LIKE '%$name%'";
-      $query = $db->prepare($sql);
-      $query->execute();
-      $result = $query->fetchAll(PDO::FETCH_OBJ);
-    
-      // if result is not empty
-      if ($query->rowCount() > 0) {
+              // if name exists
+              if (isset($name)) {
 
-        foreach ($result as $row) {
-          echo " <a href=\"process_order.php?id=$row->id\">
+                // select all dishes with name
+                $sql = "SELECT * FROM dishes WHERE name LIKE '%$name%'";
+                $query = $db->prepare($sql);
+                $query->execute();
+                $result = $query->fetchAll(PDO::FETCH_OBJ);
+
+                // if result is not empty
+                if ($query->rowCount() > 0) {
+
+                  foreach ($result as $row) {
+                    echo " <a href=\"process_order.php?id=$row->id\">
                     <div class='cardContainer'>
                       <div class='card'>
                         <img src='ImageUploads/" . $row->image . "' alt='Kebbe Image' />
@@ -95,23 +99,16 @@ if (!isset($_SESSION['username'])) {
                       <div class='cardDescription'>
                         <div class='name'>" . $row->name . "</div>
                         <div class='price'>" .
-            $row->price . "L.L.</div>
+                      $row->price . "L.L.</div>
                       </div>
                     </div>
                     </a>";
-        }
-      }
-    
-    }
+                  }
+                }
+              }
+            }
 
-
-      }
-
-
-
-
-
-?>
+            ?>
 
           </div>
         </center>
@@ -282,21 +279,21 @@ if (!isset($_SESSION['username'])) {
     </div>
   </div>
   <!-- Footer Start -->
-  <br>
+
   <footer id="footer">
 
   </footer>
+
+  <!-- Footer End -->
 
   <!-- include the jquery cdn -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <!-- add the jquery code for header and footer -->
   <script>
-    
     $(function() {
       $("#header").load("navbar.php");
       $("#footer").load("footer.php");
     });
-
   </script>
 
   <script>
@@ -320,7 +317,6 @@ if (!isset($_SESSION['username'])) {
       })
     })
   </script>
-  <!-- Footer End -->
 </body>
 
 </html>

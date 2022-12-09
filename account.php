@@ -43,7 +43,7 @@ if (!isset($_SESSION['username'])) {
     <div class="maintext">
       <span class="profile">My Profile</span>
     </div>
-    
+
     <div class="mainfixed">
       <div class="fixed">
         <li>
@@ -51,16 +51,16 @@ if (!isset($_SESSION['username'])) {
             <strong>Username:</strong>
             <br />
             <ul>
-              <div contenteditable = "false" id="usernamefield" name="username"><?php echo $_SESSION['username'] ?></div>
+              <div contenteditable="false" id="usernamefield" name="username"><?php echo $_SESSION['username'] ?></div>
             </ul>
           </ul>
           <br />
 
           <ul class="numberoforders">
-            <strong>Number of Incoming Orders:</strong>
+            <strong>My Standing:</strong>
             <br />
             <ul>
-              17
+              Gold
             </ul>
           </ul>
           <br />
@@ -68,7 +68,7 @@ if (!isset($_SESSION['username'])) {
             <strong>Email:</strong>
             <br />
             <ul>
-              <div contenteditable = "false" id="emailfield" name="email"><?php echo $_SESSION['email'] ?></div>
+              <div contenteditable="false" id="emailfield" name="email"><?php echo $_SESSION['email'] ?></div>
             </ul>
           </ul>
           <br />
@@ -81,11 +81,8 @@ if (!isset($_SESSION['username'])) {
     </div>
     <div class="buttons">
       <input type="submit" class="changes1" name="save" style="display: none;" value="Save">
-    
-
       <button class="changes2" style="display: none;"><i class="fa-solid fa-x"></i></button>
       <button class="bmydishes" id="editbtn">Edit My Profile</button>
-      <button class="bmydishes">View My Incoming Orders</button>
     </div>
   </div>
   <!--Profile Container End-->
@@ -95,11 +92,12 @@ if (!isset($_SESSION['username'])) {
       <div class="mydishesHeader">
         <h2 class="dishesAvailable">My Dishes</h2>
         <hr />
+
       </div>
       <div class="slider">
         <center>
           <div class="cardsList">
-            <?php 
+            <?php
             // select all dishes from the database with chefid = $_SESSION['username']
             // for each dish, create a card with the dish name and price
             $sql = "SELECT * FROM dishes WHERE chefid LIKE '%{$_SESSION['username']}%'";
@@ -121,59 +119,52 @@ if (!isset($_SESSION['username'])) {
               </div>";
               }
             }
-            
+
             ?>
-            
+
           </div>
         </center>
       </div>
     </div>
+    <br>
+    <br>
   </center>
 
-  <!-- Footer Start -->
 
-  <footer id="footer">
+  <script>
+    const editBtn = document.getElementById('editbtn');
+    const usernameField = document.getElementById('usernamefield');
+    const emailField = document.getElementById('emailfield');
+    const saveBtn = document.querySelector(".changes1");
+    const cancelBtn = document.querySelector(".changes2");
 
-  </footer>
+    var username = usernameField.innerHTML;
+    var email = emailField.innerHTML;
 
-  <!-- Footer End -->
+    var toggle = 0;
 
-  <script> 
-  const editBtn = document.getElementById('editbtn');
-  const usernameField = document.getElementById('usernamefield');
-  const emailField = document.getElementById('emailfield');
-  const saveBtn = document.querySelector(".changes1");
-  const cancelBtn = document.querySelector(".changes2");
+    editBtn.addEventListener('click', () => {
+      if (toggle == 0) {
+        saveBtn.style.display = "block";
+        cancelBtn.style.display = "block";
+        usernameField.contentEditable = true;
+        emailField.contentEditable = true;
+        toggle = 1;
+      } else {
 
-  var username = usernameField.innerHTML;
-  var email = emailField.innerHTML;
+        toggle = 0;
+      }
 
-  var toggle = 0;
-            
-  editBtn.addEventListener('click', () => {
-    if (toggle == 0) {
-      saveBtn.style.display = "block";
-      cancelBtn.style.display = "block";
-      usernameField.contentEditable = true;
-      emailField.contentEditable = true;
-      toggle = 1;
-    }
-    else {
-      
-      toggle = 0;
-    }
-    
-  });
+    });
 
-  cancelBtn.addEventListener('click', () => {
+    cancelBtn.addEventListener('click', () => {
       saveBtn.style.display = "none";
       cancelBtn.style.display = "none";
       usernameField.contentEditable = false;
       emailField.contentEditable = false;
       usernameField.innerHTML = username;
       emailField.innerHTML = email;
-  });
-
+    });
   </script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
@@ -213,7 +204,7 @@ if (!isset($_SESSION['username'])) {
       });
     });
   </script>
-  
+
 </body>
 
 </html>

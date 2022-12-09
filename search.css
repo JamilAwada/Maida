@@ -12,16 +12,6 @@ h1 {
 .container {
   margin-top: 5%;
 }
-
-p {
-  background-color: white;
-  width: 800px;
-  text-align: center;
-  border-radius: 5px;
-  padding: 1rem;
-  margin-top: 20px;
-}
-
 .searchSection {
   background-color: orangered;
   display: flex;
