@@ -259,7 +259,7 @@ if (!isset($_SESSION['username'])) {
               foreach ($result as $row) {
                 echo " 
                           <div class='cardContainer'>
-                          <a href=\"process_order?id=$row->id.php\">
+                          <a href=\"process_order.php?id=$row->id\">
                             <div class='card'>
                               <img src='ImageUploads/" . $row->image . "' alt='Kebbe Image' />
                             </div>
