@@ -74,9 +74,7 @@
                                 ';
                             }
                         }
-                       
                     ?>
-               
               </div>
               
             </div>
@@ -86,9 +84,9 @@
 
         <!-- Footer Start -->
     
-        <footer id="footer">
+        <div id="footer">
         
-        </footer>
+        </div>
     
         <!-- Footer End -->
     
@@ -109,9 +107,7 @@
           <script>
             $(document).ready(function(){
               $(".ItemContainer").on("click", "#delete", function(){
-                
                 var id = $(this).parent().parent().attr("id");
-
                 $.ajax({
                   url: "delete_cart_item.php",
                   type: "POST",
@@ -126,6 +122,5 @@
               });
             });
           </script>
-
   </body>
 </html>

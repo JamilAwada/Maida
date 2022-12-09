@@ -1,7 +1,7 @@
 <!-- Footer Start -->
 <br />
 
-<footer class="footer vw-100" style="position: relative;">
+<footer class="footer" style="position: relative;">
   <div class="footer-addr">
     <h1 class="footer-logo">Maida</h1>
 
