@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -58,9 +56,10 @@
                        // get the image, dishname, request, and price from cart in session variables
                         if(isset($_SESSION['cart'])){
                             $cart = $_SESSION['cart'];
-                            $total = 0;
+                            $fulltotal = 0;
                             foreach($cart as $key => $value){
                               $total = (int)$value['price'] * (int)$value['quantity'];
+                              $fulltotal += $total;
                                 echo '
                                 <div id='.$value['id'].' class="ItemContainer row" style="width:95%; border:1px solid orangered; padding:10px; border-radius:5px; margin-bottom:5px;">
                                   <div class="col-2 d-flex align-items-center"><div class="imgcontainer" style="width:100px; height:50px; border-radius:5px; overflow:hidden;"><img width="100px" src="ImageUploads/'.$value['image'].'"></div></div>
@@ -77,8 +76,16 @@
                     ?>
               </div>
               
+              
             </div>
+            
           </div>
+          
+          <center>
+            <span style="font-weight:bold; font-size:15pt;">Total:</span><span style="font-size:15pt; color:orangered;"><?php echo $fulltotal?>L.L.</span>
+            <br>
+            <button onclick="location.href='payment.php'" class='btn' style='width:80%; margin-top:50px;background-color:orangered; color:white; font-weight:bold;'>Checkout</button>
+          </center>
         </div>
       </div>
 
