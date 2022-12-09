@@ -9,7 +9,7 @@ if (isset($_SESSION['username'])) {
         <label for="check" class="checkbtn">
         <i class="fas fa-bars"></i>
         </label>
-        <label class="logo" onclick="location.href=\'home.php\'">Maida</label>
+        <label class="logo" onclick="window.location.href=\'home.php\'">Maida</label>
            <ul>
             <li>
               <a href="search.php">Browse <i class="fa-solid fa-magnifying-glass"></i></a>
