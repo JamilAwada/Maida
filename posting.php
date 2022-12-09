@@ -1,11 +1,4 @@
-<?php
-session_start();
-//if user is not logged in, redirect to login page
-if (!isset($_SESSION['username'])) {
-  header("Location: preauth.php");
-  exit;
-}
-?>
+
 
 <!DOCTYPE html>
 <html lang="en">
