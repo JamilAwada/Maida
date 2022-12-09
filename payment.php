@@ -27,12 +27,15 @@ session_start();
     <nav id="header">
         <!-- Loaded the Header through JQuery -->
     </nav>
-    <div class="main">
-        <div class="container">
+    <div class="container">
+        <div class="container-fluid">
+            <div class="row">
+            <div class="col col-md-6 col-12">
+            <div class="right-container">
             <div class="total">
                 <div class="leftbx">Cart Total: X$</div>
                 <div class="rightbx">
-                    <button class="bcart" onclick="window.location.href='checkout.php';">Back To Cart</button>
+                    <button class="bcart" onclick="window.location.href='cart.php';">Back To Cart</button>
                 </div>
             </div>
             <div class="listitems">
@@ -46,7 +49,7 @@ session_start();
                 <select id="kazaa" name="kazaa">
                     <option value="beirut">Beirut</option>
                     <option value="chouf">Chouf</option>
-                    <option value=south">South</option>
+                    <option value="south">South</option>
                 </select>
                 <label for="city">City</label>
                 <select id="city" name="city">
@@ -67,17 +70,30 @@ session_start();
                 <br>
                 <input type="text" id="numb" name="numb" placeholder="Your number here...">
                 <button class="bcart" id="subb" onclick="window.location.href='shipping.php';">Submit</button>
+                </div>
+                </div>
+            </div>
+            <div class="col col-md-6 col-12">
+                <img width="400px" src="images/address.png" alt="hooman">
+            </div>
             </div>
         </div>
-        <div class="rightimg">
-            <img src="images/hooman.png" alt="hooman">
-        </div>
     </div>
+
+    <!-- Footer Start -->
+    <footer id="footer">
+        <!-- Loaded the Footer through JQuery -->
+    </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script type="text/javascript">
         $(function() {
             $("#header").load("navbar.php");
+        });
+    </script>
+    <script type="text/javascript">
+        $(function() {
+            $("#footer").load("footer.php");
         });
     </script>
 </body>

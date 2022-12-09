@@ -3,28 +3,21 @@
     Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol";
 }
-.main {
-  float: left;
-  width: 100%;
-}
-.container {
+
+
+.right-container {
   border: solid 1px gray;
   border-radius: 20px;
   margin-top: 120px;
   padding: 15px;
   display: block;
-  width: 40vw;
-  margin-left: 10vw;
   height: auto;
-  margin-bottom: 20px;
-  padding-bottom: 0;
-  float: left;
 }
+
 
 .leftbx {
   margin-left: 5px;
   margin-top: 10px;
-  position: absolute;
   float: left;
 }
 .rightbx {
@@ -32,7 +25,6 @@
 }
 .rightimg {
   float: right;
-  position: relative;
   margin-top: 150px;
   margin-right: 200px;
 }
@@ -44,13 +36,16 @@
   color: white;
   border: 0;
 }
+
 #subb {
   margin-left: 40%;
   margin-bottom: 10px;
 }
+
 .bcart:hover {
   box-shadow: 0px 1px 5px 2px rgb(196, 196, 196);
 }
+
 input[type="text"],
 select {
   width: 100%;
@@ -64,4 +59,10 @@ select {
 }
 input[type="text"]:focus {
   background-color: rgb(224, 224, 224);
+}
+
+.col{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
