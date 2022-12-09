@@ -27,51 +27,51 @@ session_start();
     <nav id="header">
         <!-- Loaded the Header through JQuery -->
     </nav>
+    <div class="main">
+        <div class="container">
+            <div class="total">
+                <div class="leftbx">Cart Total: X$</div>
+                <div class="rightbx">
+                    <button class="bcart" onclick="window.location.href='checkout.php';">Back To Cart</button>
+                </div>
+            </div>
+            <div class="listitems">
+                <br>
+                <br>
+                <input type="text" id="fname" name="fname" placeholder="Your first name here...">
+                <br>
+                <input type="text" id="lname" name="lname" placeholder="Your last name here...">
 
-    <div class="container">
-        <div class="total">
-            <div class="leftbx">Cart Total: X$</div>
-
-            <div class="rightbx">
-                <button class="bcart" onclick="window.location.href='checkout.php';">Back To Cart</button>
+                <label for="kazaa">Kazaa</label>
+                <select id="kazaa" name="kazaa">
+                    <option value="beirut">Beirut</option>
+                    <option value="chouf">Chouf</option>
+                    <option value=south">South</option>
+                </select>
+                <label for="city">City</label>
+                <select id="city" name="city">
+                    <option value="akkar">Akkar</option>
+                    <option value="aley">Aley</option>
+                    <option value="baabda">Baabda</option>
+                    <option value="baalbek">Baalbek</option>
+                    <option value="batroun">Batroun</option>
+                    <option value="bcharreh">Bcharreh</option>
+                    <option value="bentjbeil">Bent Jbeil</option>
+                    <option value="beqaa">Beqaa</option>
+                    <option value="beirut">Beirut</option>
+                    <option value="chouf">Chouf</option>
+                    <option value="hasbaiya">Hasbaiya</option>
+                </select>
+                <br>
+                <input type="text" id="addr" name="ad1" placeholder="Your address description here...">
+                <br>
+                <input type="text" id="numb" name="numb" placeholder="Your number here...">
+                <button class="bcart" id="subb" onclick="window.location.href='shipping.php';">Submit</button>
             </div>
         </div>
-        <div class="listitems">
-            <br>
-            <br>
-            <input type="text" id="fname" name="fname" placeholder="Your first name here...">
-            <br>
-            <input type="text" id="lname" name="lname" placeholder="Your last name here...">
-
-            <label for="kazaa">Kazaa</label>
-            <select id="kazaa" name="kazaa">
-                <option value="beirut">Beirut</option>
-                <option value="chouf">Chouf</option>
-                <option value=south">South</option>
-            </select>
-            <label for="city">City</label>
-            <select id="city" name="city">
-                <option value="akkar">Akkar</option>
-                <option value="aley">Aley</option>
-                <option value="baabda">Baabda</option>
-                <option value="baalbek">Baalbek</option>
-                <option value="batroun">Batroun</option>
-                <option value="bcharreh">Bcharreh</option>
-                <option value="bentjbeil">Bent Jbeil</option>
-                <option value="beqaa">Beqaa</option>
-                <option value="beirut">Beirut</option>
-                <option value="chouf">Chouf</option>
-                <option value="hasbaiya">Hasbaiya</option>
-            </select>
-            <br>
-            <input type="text" id="addr" name="ad1" placeholder="Your address description here...">
-            <br>
-            <input type="text" id="numb" name="numb" placeholder="Your number here...">
-            <button class="bcart" id="subb" onclick="window.location.href='shipping.php';">Submit</button>
-
+        <div class="rightimg">
+            <img src="images/hooman.png" alt="hooman">
         </div>
-
-
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>

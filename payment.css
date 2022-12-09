@@ -3,6 +3,10 @@
     Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol";
 }
+.main {
+  float: left;
+  width: 100%;
+}
 .container {
   border: solid 1px gray;
   border-radius: 20px;
@@ -10,10 +14,11 @@
   padding: 15px;
   display: block;
   width: 40vw;
-  margin-left: 5vw;
+  margin-left: 10vw;
   height: auto;
   margin-bottom: 20px;
   padding-bottom: 0;
+  float: left;
 }
 
 .leftbx {
@@ -25,6 +30,13 @@
 .rightbx {
   float: right;
 }
+.rightimg {
+  float: right;
+  position: relative;
+  margin-top: 150px;
+  margin-right: 200px;
+}
+
 .bcart {
   padding: 10px;
   border-radius: 10px;
