@@ -55,6 +55,10 @@
                 <option value="french">French</option>
                 <option value="chinese">Chinese</option>
                 <option value="japanese">Japanese</option>
+                <option value="indian">Indian</option>
+                <option value="spanish">Spanish</option>
+                <option value="arabic">Arabic</option>
+                <option value="thai">Thai</option>
                 <option value="mexican">Mexican</option>
                 <option value="turkish">Turkish</option>
               </select><br />
@@ -69,6 +73,10 @@
                 <option value="glutenfree">Gluten Free</option>
                 <option value="keto">Keto</option>
                 <option value="lactosefree">Lactose Free</option>
+                <option value="paleo">Paleo</option>
+                <option value="pescatarian">Pescatarian</option>
+                <option value="whole30">Whole30</option>
+                
               </select><br />
             </div>
 
