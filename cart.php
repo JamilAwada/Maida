@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -21,9 +23,12 @@
     <link rel="stylesheet" href="navbar.css" />
     <link rel="stylesheet" href="footer.css" />
     <title>Maida - My cart</title>
+  
 
   </head>
   <body>
+    
+    
       <!-- NavBar Start -->
       <nav id="header">
       
@@ -47,40 +52,31 @@
           <div class="card" style="margin: 20px">
             <div class="container" style = "height:23rem; overflow-y: scroll;">
               <div class="row d-flex justify-content-center" style="padding: 20px">
-
+    
                     <?php
-                       
+                      session_start();
+                       // get the image, dishname, request, and price from cart in session variables
+                        if(isset($_SESSION['cart'])){
+                            
+                            $cart = $_SESSION['cart'];
+                            $total = 0;
+                            foreach($cart as $key => $value){
+                              $total = (int)$value['price'] * (int)$value['quantity'];
+                                echo '
+                                <div class="ItemContainer row" style="width:95%; border:1px solid orangered; padding:10px; border-radius:5px; margin-bottom:5px;">
+                                  <div class="col-2 d-flex align-items-center"><div class="imgcontainer" style="width:100px; height:50px; border-radius:5px; overflow:hidden;"><img width="100px" src="ImageUploads/'.$value['image'].'"></div></div>
+                                  <div class="col-3 d-flex align-items-center">'.$value['name'].'<span style ="color:orangered;">x'.$value['quantity'].'</span></div>
+                                  <div class="col-4 d-flex align-items-center text-muted">'.$value['request'].'</div>
+                                  <div class="col-2 d-flex align-items-center" style="color:orangered;">'.$total.'L.L.</div>
+                                  <div class="col-1 d-flex align-items-center justify-content-end">
+                                  <i class="fa fa-window-close" style="color:red;" aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                                ';
+                            }
+                        }
                        
                     ?>
-                    <div class="ItemContainer row" style="width:95%; border:1px solid orangered; padding:10px; border-radius:5px; margin-bottom:5px;">
-                      <div class="col-3 d-flex align-items-center"><div class="imgcontainer" style="width:100px; height:50px; border-radius:5px; overflow:hidden;"><img width="100px" src="ImageUploads/kebbe-libanaise-3-780x470.jpg.webp"></div></div>
-                      <div class="col-2 d-flex align-items-center">Chef Rissal</div>
-                      <div class="col-4 d-flex align-items-center text-muted">Lorem ipsum dolor sit amet, consectetur adipis.</div>
-                      <div class="col-2 d-flex align-items-center" style="color:orangered;">150000L.L.</div>
-                      <div class="col-1 d-flex align-items-center justify-content-end">
-                      <i class="fa fa-window-close" style="color:red;" aria-hidden="true"></i>
-                      </div>
-                    </div>
-
-                    <div class="ItemContainer row" style="width:95%; border:1px solid orangered; padding:10px; border-radius:5px; margin-bottom:5px;">
-                      <div class="col-3 d-flex align-items-center"><div class="imgcontainer" style="width:100px; height:50px; border-radius:5px; overflow:hidden;"><img width="100px" src="ImageUploads/kebbe-libanaise-3-780x470.jpg.webp"></div></div>
-                      <div class="col-2 d-flex align-items-center">Chef Rissal</div>
-                      <div class="col-4 d-flex align-items-center text-muted">Lorem ipsum dolor sit amet, consectetur adipis.</div>
-                      <div class="col-2 d-flex align-items-center"  style="color:orangered;">150000L.L.</div>
-                      <div class="col-1 d-flex align-items-center justify-content-end">
-                      <i class="fa fa-window-close" style="color:red;" aria-hidden="true"></i>
-                      </div>
-                    </div>
-
-                    <div class="ItemContainer row" style="width:95%; border:1px solid orangered; padding:10px; border-radius:5px; margin-bottom:5px;">
-                      <div class="col-3 d-flex align-items-center"><div class="imgcontainer" style="width:100px; height:50px; border-radius:5px; overflow:hidden;"><img width="100px" src="ImageUploads/kebbe-libanaise-3-780x470.jpg.webp"></div></div>
-                      <div class="col-2 d-flex align-items-center">Chef Rissal</div>
-                      <div class="col-4 d-flex align-items-center text-muted">Lorem ipsum dolor sit amet, consectetur adipis.</div>
-                      <div class="col-2 d-flex align-items-center"  style="color:orangered;">150000L.L.</div>
-                      <div class="col-1 d-flex align-items-center justify-content-end">
-                      <i class="fa fa-window-close" style="color:red;" aria-hidden="true"></i>
-                      </div>
-                    </div>
                
               </div>
               

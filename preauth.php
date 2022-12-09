@@ -5,6 +5,11 @@
     header("Location: home.php");
     exit();
   }
+
+  // create a cart array and add it to the session variable
+  if (!isset($_SESSION['cart'])) {
+    $_SESSION['cart'] = array();
+  }
 ?>
 
 <!DOCTYPE html>
