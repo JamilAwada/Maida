@@ -60,6 +60,62 @@ if (!isset($_SESSION['username'])) {
           Filter <i class="fa-solid fa-filter"></i></button></span>
     </div>
     <div class="categoriesSection">
+       <div class="section">
+        <h2 class="listheader">Results</h2>
+        <center>
+          <div class="cardsList">
+
+          <?php 
+
+  if (empty($_GET['name'])) {
+    echo "<h2>Search for something using the search bar above! Or take a look at our categories below!</h2>";
+  }
+  else {
+    // get name from url
+    $name = $_GET['name'];
+
+    // if name exists
+    if (isset($name)) {
+    
+      // select all dishes with name
+      $sql = "SELECT * FROM dishes WHERE name LIKE '%$name%'";
+      $query = $db->prepare($sql);
+      $query->execute();
+      $result = $query->fetchAll(PDO::FETCH_OBJ);
+    
+      // if result is not empty
+      if ($query->rowCount() > 0) {
+
+        foreach ($result as $row) {
+          echo " <a href=\"process_order.php?id=$row->id\">
+                    <div class='cardContainer'>
+                      <div class='card'>
+                        <img src='ImageUploads/" . $row->image . "' alt='Kebbe Image' />
+                      </div>
+                      <div class='cardDescription'>
+                        <div class='name'>" . $row->name . "</div>
+                        <div class='price'>" .
+            $row->price . "L.L.</div>
+                      </div>
+                    </div>
+                    </a>";
+        }
+      }
+    
+    }
+
+
+      }
+
+
+
+
+
+?>
+
+          </div>
+        </center>
+      </div>
       <div class="section">
         <h2 class="listheader">Italian</h2>
         <center>
