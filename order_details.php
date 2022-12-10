@@ -1,3 +1,6 @@
+<?php
+  include_once("config.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -17,7 +20,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="incoming.css" />
+    <link rel="stylesheet" href="order_details.css" />
     <link rel="stylesheet" href="navbar.css" />
     <link rel="stylesheet" href="footer.css" />
     <title>Maida - Incoming orders</title>
@@ -28,6 +31,42 @@
       
       </nav>
       <!-- NavBar End -->
+
+      <?php
+        
+        // session_start();
+        
+        $order_id = $_GET['id'];
+        // select the order with order_id from the database
+        // use pdo
+        $sql = "SELECT * FROM orders WHERE id = :order_id";
+        $stmt = $db->prepare($sql);
+        $stmt->execute(['order_id' => $order_id]);
+        $order = $stmt->fetch();
+
+        // get the customerid from the order
+        $customer_id = $order['customerid'];
+        $sql = "SELECT * FROM users WHERE id = :customer_id";
+        $stmt = $db->prepare($sql);
+        $stmt->execute(['customer_id' => $customer_id]);
+        $customer = $stmt->fetch();
+
+        // get address, city, district, and phone from customer
+        $address = $customer['address'];
+        $city = $customer['city'];
+        $district = $customer['district'];
+        $phone = $customer['phone'];
+        $username = $customer['username'];
+
+        // get the order price, quantity, dishname, request from order
+        $price = $order['price'];
+        $quantity = $order['quantity'];
+        $dishname = $order['dishname'];
+        $request = $order['request'];
+
+        $total = (int)$price * (int)$quantity;
+
+      ?>
 
     <div class="container">
       <div class="row w-100">
@@ -40,7 +79,7 @@
               align-items: center;
             "
           >
-            Incoming Orders
+            Order Details
           </h1>
           <div class="card" style="margin: 20px">
             <div class="container">
@@ -56,20 +95,17 @@
                   </div>
                 </div>
                 <div class="col-4">
-                  <div class="mt-3" style="font-size: 24px">Johnny Smith</div>
+                  <div class="mt-3" style="font-size: 24px"><?php echo $username?></div>
                   <div style="color: gray">
-                    would like X orders of
-                    <span style="color: #fa2c02">Dish</span>
+                    would like <?php echo $quantity?> orders of
+                    <span style="color: #fa2c02"><?php echo $dishname?></span>
                   </div>
                   <i
                     class="fa-solid fa-quote-left my-3"
                     style="font-size: 20px; color: #fa2c02"
                   ></i>
                   <div style="color: gray; font-style: italic">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Quidem dolorum deleniti ratione eius dolores facere placeat
-                    ex culpa ducimus, porro excepturi tempora nostrum ad. Omnis
-                    atque deserunt cupiditate cum sit.
+                    <?php echo $request ?>
                   </div>
                   <div class="w-100 d-flex justify-content-end">
                     <i
@@ -84,22 +120,19 @@
                     style="font-size: 40px; color: #fa2c02"
                   ></i>
                   <div>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Vero voluptatum quibusdam mollitia. Cum accusantium
-                    pariatur, debitis tenetur alias vel. Magni recusandae
-                    veritatis neque tempora, deleniti explicabo ex eius
-                    reprehenderit obcaecati!
+                    <?php echo $address?>, <?php echo $city?>, <?php echo $district?>
                   </div>
                   <i
                     class="fa-solid fa-coins my-3"
                     style="font-size: 40px; color: #fa2c02"
                   ></i>
-                  <div>$24.99</div>
+                  <div><?php echo $total?>L.L.</div>
                   <button
                     class="my-2 btn"
-                    style="background-color: #fa2c02; color: white"
+                    style="background-color: green; color: white"
+                    onclick = "location.href='accept_order.php?id=<?php echo $order_id?>'"
                   >
-                    Fulfill
+                    Accept
                   </button>
                 </div>
               </div>

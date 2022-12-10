@@ -80,7 +80,10 @@
             Edit dish
           </h1>
           <div class="col-lg col-sm-12">
-            <form>
+            <form action = "process_edit.php" method="POST" enctype="multipart/form-data">
+
+            <div class="row">
+            <div class="col-xl-6 col-xs-12">
               <div class="input-container ps-5 my-3">
                 <label for="name">Name</label><br />
                 <input type="text" id="name" name="name" value="<?php echo $dishname ?>" /><br />
@@ -156,9 +159,9 @@
                   <input type="number" id="fat" name="fat" value="<?php echo $dishfat ?>" /><br />
                 </p>
               </div>
-            </form>
-          </div>
-          <div class="col-lg col-sm-12 text-sm-center">
+  </div>
+            <div class="col-xl-6 col-xs-12">
+            <div class="col-lg col-sm-12 text-sm-center">
             <div class="w-100">
               <h2 class="py-4" style="color: #fa2c02">Photo</h2>
               <div class="imagecontainer mt-5 ms-5" id="imagecontainer">
@@ -172,12 +175,18 @@
                   <button class="clear-btn">
                     Cancel
                   </button>
-  </a>
-                  <button class="post-btn" type="button">Save Changes</button>
+              </a>
+                  <button name='submit' class="post-btn" type="submit">Save Changes</button>
                 </div>
               </div>
             </div>
+            </div>
+            </div>
+            </div>
+            
+            </form>
           </div>
+          
         </div>
       </div>
     </div>
@@ -204,33 +213,6 @@
           </script>
 
           <script>
-            // clicking on the save changes button takes dish details and updates the database using jquery
-            $(".post-btn").click(function(){
-              var dishname = $("#name").val();
-              var description = $("#desc").val();
-              var cuisine = $("#cuisine").val();
-              var diet = $("#diet").val();
-              var price = $("#price").val();
-              var carbs = $("#carbs").val();
-              var protein = $("#protein").val();
-              var fat = $("#fat").val();
-              var image = $("#image").val();
-              alert(image);
-    
-              $.ajax({
-                url: "process_edit.php",
-                method: "POST",
-                data: {dishname:dishname, description:description, cuisine:cuisine, diet:diet, price:price, carbs:carbs, protein:protein, fat:fat, image:image, id:<?php echo $id ?>},
-                success: function(data){
-                  alert(data);
-                  window.location.href = "account.php";
-                }
-              });
-            });
-            </script>
-
-          <script>
-          
           const image_input = document.getElementById('image_input');
                     
                     

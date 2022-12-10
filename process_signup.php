@@ -75,9 +75,9 @@
 
         if(!$error){
             // insert into database
-            $sql = "INSERT INTO users (username, password, email) VALUES (?, ?, ?)";
+            $sql = "INSERT INTO users (username, password, email, address, district, city, phone) VALUES (?, ?, ?, ?, ?, ?, ?)";
             $stmt = $db->prepare($sql);
-            $result = $stmt -> execute([$username, $password, $email]);
+            $result = $stmt -> execute([$username, $password, $email, "", "", "", ""]);
             if($result){
                 print("<script>
                 Swal.fire({

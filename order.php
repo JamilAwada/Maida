@@ -216,6 +216,8 @@ include_once('config.php');
               title: data,
               showConfirmButton: false,
               timer: 1500,
+            }).then(function() {
+              window.location = "cart.php";
             });
           }
         });

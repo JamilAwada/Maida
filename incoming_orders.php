@@ -66,18 +66,19 @@
                   $name = $value['dishname'];
                   $image = $value['image'];
                   
-                  $total = (int)$price * (int)$quantity;
+                  if($status == "Pending"){
+                    $total = (int)$price * (int)$quantity;
                   echo '<div id=' . $orderid . ' class="ItemContainer row" style="width:95%; border:1px solid orangered; padding:10px; border-radius:5px; margin-bottom:5px;">
                   <div class="col-2 d-flex align-items-center"><div class="imgcontainer" style="width:100px; height:50px; border-radius:5px; overflow:hidden;"><img width="100px" src="ImageUploads/' . $image . '"></div></div>
                   <div class="col-3 d-flex align-items-center">' . $name . '<span style ="color:orangered;">x' . $quantity . '</span></div>
                   <div class="col-3 d-flex align-items-center text-muted">' . $request . '</div>
                   <div class="col-2 d-flex align-items-center" style="color:orangered;">' . $total . 'L.L.</div>
                   <div class="col-2 d-flex align-items-center justify-content-end">
-                  <button class="btn btn-danger">View</button>
+                  <button onclick="location.href=\'order_details.php?id='.$orderid.'\'" class="btn btn-danger">View</button>
                   </div>
                 </div>';
                 }
-
+                  }
 
               ?>
             </div>
