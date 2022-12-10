@@ -7,6 +7,7 @@
     <title>Maida - Credit Card </title>
 </head>
 <body>             
+                <form action="process_checkout.php" method="POST">
                 <div class="pay">
                         <input type="radio" id="cod" name="cod">
                         <label for="cod">Cash On Delivery</label>
@@ -39,6 +40,7 @@
                     <div class="checkout">
                         <button class="btn" type="submit" name="checkout" style="color:white; font-weight:bold;margin-top:10px;width: 100%;height: 50px;border-radius: 10px;background-color: orangered;cursor: pointer;">Checkout</button>
                     </div>
+                </form>
 
                     <!-- We get the address and the rest of the information from this page and send it to the chef while redirecting to the order tracking page -->
 </body>

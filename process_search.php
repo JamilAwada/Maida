@@ -9,7 +9,7 @@
     if(isset($_POST['input'])){
         $name = $_POST['input'];
 
-        $sql = "SELECT * FROM search WHERE name LIKE '%$name%'";
+        $sql = "SELECT * FROM dishes WHERE name LIKE '%$name%'";
         
         //fetch query using pdo
         $query = $db->prepare($sql);

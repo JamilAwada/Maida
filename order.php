@@ -28,7 +28,7 @@ include_once('config.php');
   <?php
 
 
-  // get id from url  
+  // get id of the dish from url  
   $id = $_GET['id'];
 
   $sql = "SELECT * FROM dishes WHERE id = $id";
@@ -39,17 +39,12 @@ include_once('config.php');
 
   $dishname = $result[0]->name;
   $dishprice = $result[0]->price;
-  $dishdescription = $result[0]->description;
   $dishimage = $result[0]->image;
-  $dishcuisine = $result[0]->cuisine;
-  $dishprotein = $result[0]->protein;
-  $dishcarbohydrates = $result[0]->carbohydrates;
   $dishfat = $result[0]->fat;
-  $dishchefid = $result[0]->chefid;
+  
+  $dishchefname = $result[0]->chefid;
+
   $dishrating = $result[0]->rating;
-
-
-
 
   ?>
 
@@ -187,6 +182,7 @@ include_once('config.php');
     $(document).ready(function() {
       $("#cart").click(function() {
 
+
         var id = <?php echo $id ?>;
         var quantity = $("#quantity").val();
         var request = $("#request").val();
@@ -194,16 +190,24 @@ include_once('config.php');
         var price = <?php echo $dishprice ?>;
         var dishname = "<?php echo $dishname ?>";
         var image = "<?php echo $dishimage ?>";
+
+        var chefname = "<?php echo $dishchefname ?>";
+        var name = "<?php echo $dishname ?>";
+
         $.ajax({
           url: "process_add_tocart.php",
           method: "POST",
           data: {
+
             id: id,
             quantity: quantity,
             request: request,
             name: dishname,
             image: image,
             price: price,
+            image: image,
+            chefname: chefname,
+  
           },
           success: function(data) {
 

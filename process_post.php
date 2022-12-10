@@ -69,12 +69,13 @@
 
             $stmt = $db->prepare($sql);
             $stmt2 = $db->prepare($sql2);
+            
             //execute the query
             $stmt->execute(['name' => $name, 'description' => $description, 'cuisine' => $cuisine, 'diet' => $diet, 'price' => $price, 'carbohydrates' => $carbs, 'protein' => $protein, 'fat' => $fat, 'image' => $image, 'chefid' => $chefid]);
             $stmt2->execute(['name' => $name]);
 
             // if successfully inserted into database
-            if($stmt){
+            if($stmt2){
 
                 echo "
                 <!-- CDN for SweetAlert: Shows an alert when the user registers successfully -->
