@@ -20,10 +20,10 @@ if (isset($_SESSION['username'])) {
              <li>
               <a href="cart.php">Cart <i class="fa-solid fa-cart-shopping"></i></a>
              </li>
-             <li>
-              <a href="incoming_orders.php">Orders <i class="fa-solid fa-hat-chef"></i></a>
+             <li style="position:relative;">
+              <a href="incoming_orders.php">Orders</a>
              </li>
-             <li><a href="account.php">' . $_SESSION['username'] . '</a></li>
+             <li><a href="account.php">'.$_SESSION['username'].'</a></li>
              <li>
                <a href="logout.php">Log out <i class="fa-solid fa-right-from-bracket"></i></a>
              </li>
