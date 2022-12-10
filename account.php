@@ -108,7 +108,9 @@ if (!isset($_SESSION['username'])) {
             // if result is not empty
             if ($query->rowCount() > 0) {
               foreach ($result as $row) {
-                echo "<div class='cardContainer'>
+                // wrap the container with a link that takes me to process_edit.php?dishid=$row->dishid
+                echo "<a href=" . "editing.php?dishid=$row->id" . ">
+                <div class='cardContainer'>
                 <div class='card'>
                   <img src='imageUploads/$row->image' alt='' />
                 </div>
@@ -116,7 +118,8 @@ if (!isset($_SESSION['username'])) {
                   <div class='name'>$row->name</div>
                   <div class='price'>$row->price</div>
                 </div>
-              </div>";
+              </div>
+              </a>";
               }
             }
 

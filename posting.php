@@ -35,7 +35,7 @@
         <div class="row">
           <div class="col-xl-6 col-xs-12">
             <div class="input-container ps-5 my-3">
-              <label for="name">Dish name</label><br />
+              <label for="name">Name</label><br />
               <input type="text" id="name" name="name" /><br />
             </div>
 
@@ -61,6 +61,13 @@
                 <option value="thai">Thai</option>
                 <option value="mexican">Mexican</option>
                 <option value="turkish">Turkish</option>
+                <option value="greek">Greek</option>
+                <option value="german">German</option>
+                <option value="korean">Korean</option>
+                <option value="vietnamese">Vietnamese</option>
+                <option value="carribean">Carribean</option>
+                <option value="middleeastern">Middle Eastern</option>
+                <option value="african">African</option>
               </select><br />
             </div>
 
