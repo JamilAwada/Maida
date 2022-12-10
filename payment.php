@@ -125,7 +125,7 @@ session_start();
                     document.getElementById("rightColumn").innerHTML = this.responseText;
                 }
             };
-            xhttp.open("GET", "credit_card.php?fname=".fname."&lname=".lname, true);
+            xhttp.open("GET", "credit_card.php?fname="+fname+"&lname="+lname, true);
             xhttp.send();
         });
 
