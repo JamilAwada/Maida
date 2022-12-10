@@ -30,54 +30,86 @@ session_start();
     <div class="container">
         <div class="container-fluid">
             <div class="row">
-            <div class="col col-md-6 col-12">
-            <div class="right-container">
-            <div class="total">
-                <div class="leftbx">Cart Total: X$</div>
-                <div class="rightbx">
-                    <button class="bcart" onclick="window.location.href='cart.php';">Back To Cart</button>
-                </div>
-            </div>
-            <div class="listitems">
-                <br>
-                <br>
-                <input type="text" id="fname" name="fname" placeholder="Your first name here...">
-                <br>
-                <input type="text" id="lname" name="lname" placeholder="Your last name here...">
+                <div class="col col-md-6 col-12">
+                    <div class="right-container">
+                        <div class="total">
+                            <div class="leftbx">Cart Total: X$
+                            </div>
+                            <div class="rightbx">
+                                <button class="bcart" onclick="window.location.href='cart.php';">Back To Cart</button>
+                            </div>
+                        </div>
+                        <div class="listitems">
+                            <br>
+                            <br>
+                            <input type="text" id="fname" name="fname" placeholder="Your first name here...">
+                            <br>
+                            <input type="text" id="lname" name="lname" placeholder="Your last name here...">
 
-                <label for="kazaa">Kazaa</label>
-                <select id="kazaa" name="kazaa">
-                    <option value="beirut">Beirut</option>
-                    <option value="chouf">Chouf</option>
-                    <option value="south">South</option>
-                </select>
-                <label for="city">City</label>
-                <select id="city" name="city">
-                    <option value="akkar">Akkar</option>
-                    <option value="aley">Aley</option>
-                    <option value="baabda">Baabda</option>
-                    <option value="baalbek">Baalbek</option>
-                    <option value="batroun">Batroun</option>
-                    <option value="bcharreh">Bcharreh</option>
-                    <option value="bentjbeil">Bent Jbeil</option>
-                    <option value="beqaa">Beqaa</option>
-                    <option value="beirut">Beirut</option>
-                    <option value="chouf">Chouf</option>
-                    <option value="hasbaiya">Hasbaiya</option>
-                </select>
-                <br>
-                <input type="text" id="addr" name="ad1" placeholder="Your address description here...">
-                <br>
-                <input type="text" id="numb" name="numb" placeholder="Your number here...">
-                <button class="bcart" id="subb" onclick="window.location.href='shipping.php';">Submit</button>
+                            <label for="kazaa">Kazaa</label>
+                            <select id="kazaa" name="kazaa">
+                                <option value="beirut">Beirut</option>
+                                <option value="chouf">Chouf</option>
+                                <option value="south">South</option>
+                            </select>
+                            <label for="city">City</label>
+                            <select id="city" name="city">
+                                <option value="akkar">Akkar</option>
+                                <option value="aley">Aley</option>
+                                <option value="baabda">Baabda</option>
+                                <option value="baalbek">Baalbek</option>
+                                <option value="batroun">Batroun</option>
+                                <option value="bcharreh">Bcharreh</option>
+                                <option value="bentjbeil">Bent Jbeil</option>
+                                <option value="beqaa">Beqaa</option>
+                                <option value="beirut">Beirut</option>
+                                <option value="chouf">Chouf</option>
+                                <option value="hasbaiya">Hasbaiya</option>
+                            </select>
+                            <br>
+                            <input type="text" id="addr" name="ad1" placeholder="Your address description here...">
+                            <br>
+                            <input type="text" id="numb" name="numb" placeholder="Your number here...">
+                            <button class="bcart" id="subb" onclick="window.location.href='shipping.php';">Submit</button>
+                        </div>
+                    </div>
                 </div>
+                <div class="col col-md-6 col-12">
+                    <img width="400px" src="images/address.png" alt="hooman">
                 </div>
-            </div>
-            <div class="col col-md-6 col-12">
-                <img width="400px" src="images/address.png" alt="hooman">
-            </div>
             </div>
         </div>
+    </div>
+    <br>
+    <div class="pay">
+        <input type="radio" id="cod" name="cod">
+        <label for="cod">Cash On Delivery</label>
+        <input type="radio" id="card" name="card">
+        <label for="cod">Credit Card</label>
+        <div class="rect">
+            <div style="width: 100%;height:30px;">
+                <div style="position:relative; float:left;left:30px;top:15px;font-size:20px; font-family:DD-TTNorms, -apple-system, BlinkMacSystemFont, " Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji" , "Segoe UI Emoji" , "Segoe UI Symbol" ;">
+                    Card Details
+                </div>
+                <div style="position:relative;float:right;top: 5px;right:30px;">
+                    <img src="images/visa.png" alt="visaicon" style="width:50px;height:50px;">
+                    <img src="images/mastercard.png" alt="mastercardicon" style="margin-left:15px;width:50px;height:50px;">
+
+                </div>
+            </div>
+            <br>
+            <div style="margin-left: 30px; margin-top:5px">
+                <label for="ccnum">Credit card number</label><br>
+                <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444" style="width:300px;padding:5px;border-radius:10px;text-align:center;border:2px solid white;"><br>
+                <label for="expyear">Exp Date</label><br>
+                <input type="month" id="expyear" name="expyear" style="width:150px;padding:5px;border-radius:10px;border:2px solid white;"><br>
+                <label for="cvv">CVV</label><br>
+                <input type="text" id="cvv" name="cvv" placeholder="352" style="width:60px;padding:5px;border-radius:10px;text-align:center;border:2px solid white;">
+                <br><br>
+            </div>
+        </div>
+    </div>
+
     </div>
 
     <!-- Footer Start -->

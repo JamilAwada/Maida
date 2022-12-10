@@ -83,7 +83,7 @@ if (isset($_SESSION['username'])) {
                   <input type="password" name="password" required />
                   <span>Password</span>
                 </div>
-                <button class="login-btn primary-bg my-4" type="submit" name="submit" id="submit">
+                <button class="login-btn primary-bg my-4" type="submit" name="submit" id="submit" onclick="location.href='home.php'">
                   Sign Up
                 </button>
                 <div class="forgot-pass mt-2">

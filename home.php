@@ -128,7 +128,7 @@ session_start();
         <div class="row">
           <div class="col">
 
-            <h6 style="color: orangered">by &nbsp;<i class="fa-solid fa-crown" style="color:gold;"></i>&nbsp; <a class="links" href="account.html">Rissal Hedna</a> </h6>
+            <h6 style="color: orangered">by &nbsp;<i class="fa-solid fa-crown" style="color:gold;"></i>&nbsp; <a class="links" href="signup.php">Rissal Hedna</a> </h6>
             <h3>Mashawi Family Set</h3>
             <div style="color: #999">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est cum culpa reprehenderit omnis nulla ad delectus eum, deleniti quos eligendi asperiores harum, vitae quae, suscipit at similique? Eos, aliquid nemo.</div>
           </div>
