@@ -28,59 +28,59 @@ session_start();
         <!-- Loaded the Header through JQuery -->
     </nav>
     <div class="container">
-            <div class="row">
-                <div class="col col-md-5 col-12">
-                    <div class="right-container">
-                        <div class="total">
-                            <div class="leftbx">Cart Total: X$
-                            </div>
-                            <div class="rightbx">
-                                <button class="bcart" onclick="window.location.href='cart.php';">Back To Cart</button>
-                            </div>
+        <div class="row">
+            <div class="col col-md-5 col-12">
+                <div class="right-container">
+                    <div class="total">
+                        <div class="leftbx">Cart Total: X$
                         </div>
-                        <div class="listitems">
-                            <br>
-                            <br>
-                            <input type="text" id="fname" name="fname" placeholder="Your first name here...">
-                            <br>
-                            <input type="text" id="lname" name="lname" placeholder="Your last name here...">
-
-                            <label for="kazaa">Kazaa</label>
-                            <select id="kazaa" name="kazaa">
-                                <option value="beirut">Beirut</option>
-                                <option value="chouf">Chouf</option>
-                                <option value="south">South</option>
-                            </select>
-                            <label for="city">City</label>
-                            <select id="city" name="city">
-                                <option value="akkar">Akkar</option>
-                                <option value="aley">Aley</option>
-                                <option value="baabda">Baabda</option>
-                                <option value="baalbek">Baalbek</option>
-                                <option value="batroun">Batroun</option>
-                                <option value="bcharreh">Bcharreh</option>
-                                <option value="bentjbeil">Bent Jbeil</option>
-                                <option value="beqaa">Beqaa</option>
-                                <option value="beirut">Beirut</option>
-                                <option value="chouf">Chouf</option>
-                                <option value="hasbaiya">Hasbaiya</option>
-                            </select>
-                            <br>
-                            <input type="text" id="addr" name="ad1" placeholder="Your address description here...">
-                            <br>
-                            <input type="text" id="numb" name="numb" placeholder="Your number here...">
-                            <button class="bcart" id="subb">Submit</button>
+                        <div class="rightbx">
+                            <button class="bcart" onclick="window.location.href='cart.php';">Back To Cart</button>
                         </div>
                     </div>
-                </div>
-                <div class="col col-md-7 col-12">
-                    <div class="row d-flex justify-content-center">
-                        <div class="col-12" id="rightColumn">
-                            <img width="400px" src="images/address.png" alt="hooman">
-                        </div>
+                    <div class="listitems">
+                        <br>
+                        <br>
+                        <input type="text" id="fname" name="fname" placeholder="Your first name here...">
+                        <br>
+                        <input type="text" id="lname" name="lname" placeholder="Your last name here...">
+
+                        <label for="kazaa">Kazaa</label>
+                        <select id="kazaa" name="kazaa">
+                            <option value="beirut">Beirut</option>
+                            <option value="chouf">Chouf</option>
+                            <option value="south">South</option>
+                        </select>
+                        <label for="city">City</label>
+                        <select id="city" name="city">
+                            <option value="akkar">Akkar</option>
+                            <option value="aley">Aley</option>
+                            <option value="baabda">Baabda</option>
+                            <option value="baalbek">Baalbek</option>
+                            <option value="batroun">Batroun</option>
+                            <option value="bcharreh">Bcharreh</option>
+                            <option value="bentjbeil">Bent Jbeil</option>
+                            <option value="beqaa">Beqaa</option>
+                            <option value="beirut">Beirut</option>
+                            <option value="chouf">Chouf</option>
+                            <option value="hasbaiya">Hasbaiya</option>
+                        </select>
+                        <br>
+                        <input type="text" id="addr" name="ad1" placeholder="Your address description here...">
+                        <br>
+                        <input type="text" id="numb" name="numb" placeholder="Your number here...">
+                        <button class="bcart" id="subb">Proceed to payment</button>
                     </div>
                 </div>
             </div>
+            <div class="col col-md-7 col-12">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-12" id="rightColumn">
+                        <img width="400px" src="images/address.png" alt="hooman">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <br>
 
@@ -125,10 +125,9 @@ session_start();
                     document.getElementById("rightColumn").innerHTML = this.responseText;
                 }
             };
-            xhttp.open("GET", "credit_card.php?fname="+fname+"&lname="+lname, true);
+            xhttp.open("GET", "credit_card.php?fname=" + fname + "&lname=" + lname, true);
             xhttp.send();
         });
-
     </script>
 
 </body>
