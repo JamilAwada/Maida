@@ -34,6 +34,8 @@
       </nav>
       <!-- NavBar End -->
 
+
+      
     <div class="container">
       <div class="background">
         <div class="row">
@@ -41,31 +43,76 @@
         </div>
         <div class="shadow">
           <div class="row">
-            <div class="bar-container">
-              <div class="progress-bar"></div>
+            <div class="progresscontainer w-100 mb-3">
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-label="Animated striped example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%"></div>
             </div>
-          </div>
+            </div>
           <div class="row images">
             <div class="image">
-              <img src="OrderTrackingLogos/ordered.png" alt="" />
+            <i class="fa-solid fa-question" style="color: orangered; font-size: 32px;"></i>
+            <button class="btn btn-outline-success" id="btn1">Order Placed</button>
             </div>
             <div class="image">
-              <img src="OrderTrackingLogos/confirmed.png" alt="" />
+            <i class="fa-solid fa-circle-check" style="color: orangered; font-size: 32px;"></i>
+            <button class="btn btn-outline-success" id="btn2">Order Confirmed</button>
             </div>
             <div class="image">
-              <img src="OrderTrackingLogos/delivered.png" alt="" />
+            <i class="fa-solid fa-motorcycle" style="color: orangered; font-size: 32px;"></i>
+            <button class="btn btn-outline-success" id="btn3">Order Picked</button>
             </div>
             <div class="image">
-              <img src="OrderTrackingLogos/successful.png" alt="" />
+            <i class="fa-solid fa-clipboard-check" style="color: orangered; font-size: 32px;"></i>
+            <button class="btn btn-outline-success me-3" id="btn4">Order Delivered</button>
             </div>
           </div>
         </div>
-        <div class="row h4">
-          <h4>Your order will be delivered soon</h4>
-          <p>Order placed on Oct 17th, 2022</p>
-        </div>
+        
       </div>
+      <div class="row h4">
+          <h4>Your order will be delivered soon</h4>
+          <p>Order placed on  <?php
+              // set timezone to lebanese time
+              date_default_timezone_set('Asia/Beirut');
+              // Return current date from the remote server
+              $date = date('d-m-y h:i:s');
+              echo $date;
+              ?></p>
+          
+        </div>
     </div>
+
+    <script>
+      // get buttons by id
+      var btn1 = document.getElementById("btn1");
+      var btn2 = document.getElementById("btn2");
+      var btn3 = document.getElementById("btn3");
+      var btn4 = document.getElementById("btn4");
+
+      // get progress bar by class
+      var progress = document.getElementsByClassName("progress-bar");
+
+      // clicking on btn1 changes progress bar width to 25%
+      btn1.onclick = function () {
+        progress[0].style.width = "25%";
+      };
+
+      // same thing for the others by 25% increments
+      btn2.onclick = function () {
+        progress[0].style.width = "50%";
+      };
+
+      btn3.onclick = function () {
+        progress[0].style.width = "75%";
+      };
+
+      btn4.onclick = function () {
+        progress[0].style.width = "100%";
+      };
+
+
+      </script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
            <script type="text/javascript">
             $(function(){

@@ -15,11 +15,11 @@ body{
 
 .background{
     width: 80%;
-    height: 70vh;
+    height: 90vh;
     background-color: orangered;
     border-radius: 10px;
     padding-top: 80px;
-
+    
 }
 
 .container{
@@ -28,15 +28,9 @@ body{
     align-items: center;
     margin-top: 4rem;
     padding: 0px;
+    height: 100vh;
 }
 
-.progress-bar{
-    width: 50%;
-    height: 100%;
-    background-color: black;
-    border-radius: 50px;
-    margin: 0;
-}
 
 .bar-container{
     display: block;
@@ -46,8 +40,7 @@ body{
     background-color: orangered;
     display: flex;
     justify-content: center;
-    padding: 0;
-    margin: 10px;
+   
 }
 
 img{
@@ -55,14 +48,9 @@ img{
     height: 100%;
 }
 
-
-.image{
-    width: 80px;
-}
-
 .images{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 h1{
