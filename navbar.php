@@ -9,7 +9,7 @@ if (isset($_SESSION['username'])) {
         <label for="check" class="checkbtn">
         <i class="fas fa-bars"></i>
         </label>
-        <label class="logo" onclick="window.location.href=\'home.php\'">Maida</label>
+        <label style="width:20px; margin:0px;margin-left:20px; padding:0px;" class="logo" onclick="window.location.href=\'home.php\'">Maida</label>
            <ul>
             <li>
               <a href="search.php">Browse <i class="fa-solid fa-magnifying-glass"></i></a>
@@ -20,10 +20,10 @@ if (isset($_SESSION['username'])) {
              <li>
               <a href="cart.php">Cart <i class="fa-solid fa-cart-shopping"></i></a>
              </li>
-             <li>
-              <a href="incoming_orders.php">Orders <i class="fa-solid fa-hat-chef"></i></a>
+             <li style="position:relative;">
+              <a href="incoming_orders.php">Orders</a>
              </li>
-             <li><a href="account.php">' . $_SESSION['username'] . '</a></li>
+             <li><a href="account.php">'.$_SESSION['username'].'</a></li>
              <li>
                <a href="logout.php">Log out <i class="fa-solid fa-right-from-bracket"></i></a>
              </li>
