@@ -1,9 +1,14 @@
 <?php
-session_start();
-// if (isset($_SESSION['username'])) {
-//   header("Location: home.php");
-//   exit();
-// }
+    session_start();
+    // if (isset($_SESSION['username'])) {
+    //   header("Location: home.php");
+    //   exit();
+    // }
+    // if cart is empty in session variable, redirect to search.php
+    if (empty($_SESSION['cart'])) {
+      header("Location: search.php");
+      exit();
+    }
 
 ?>
 <!DOCTYPE html>
@@ -28,15 +33,62 @@ session_start();
         <!-- Loaded the Header through JQuery -->
     </nav>
     <div class="container">
-        <div class="row">
-            <div class="col col-md-5 col-12">
-                <div class="right-container">
-                    <div class="total">
-                        <div class="leftbx">Cart Total: X$
+            <div class="row">
+                <div class="col col-md-5 col-12">
+                    <div class="right-container">
+                        <div class="total">
+                            <div class="leftbx">Cart Total: <span style ="color:orangered;"><?php
+                            
+                            // get the price and quantity from cart in session variables
+                            $total = 0;
+                            if (isset($_SESSION['cart'])) {
+                                $cart = $_SESSION['cart'];
+                                foreach ($cart as $key => $value) {
+                                    $total = $total + ((int)$value['price'] * (int)$value['quantity']);
+                                }
+                            }
+                            echo $total;
+                            ?>L.L.</span>
+                            </div>
+                            <div class="rightbx">
+                                <button class="bcart" onclick="window.location.href='cart.php';">Back To Cart</button>
+                            </div>
                         </div>
-                        <div class="rightbx">
-                            <button class="bcart" onclick="window.location.href='cart.php';">Back To Cart</button>
-                        </div>
+                        <form action="" class="listitems">
+                            <br>
+                            <br>
+                            <input type="text" id="fname" name="fname" placeholder="Your first name here..." required>
+                            <br>
+                            <input type="text" id="lname" name="lname" placeholder="Your last name here..." required>
+
+                            <label for="kazaa">District</label>
+                            <select id="district" name="district">
+                                <option value="beirut">Beirut</option>
+                                <option value="chouf">Chouf</option>
+                                <option value="south">South</option>
+                            </select>
+                            <label for="city">City</label>
+                            <select id="city" name="city">
+                                <option value="akkar">Akkar</option>
+                                <option value="aley">Aley</option>
+                                <option value="baabda">Baabda</option>
+                                <option value="baalbek">Baalbek</option>
+                                <option value="batroun">Batroun</option>
+                                <option value="bcharreh">Bcharreh</option>
+                                <option value="bentjbeil">Bent Jbeil</option>
+                                <option value="beqaa">Beqaa</option>
+                                <option value="beirut">Beirut</option>
+                                <option value="chouf">Chouf</option>
+                                <option value="hasbaiya">Hasbaiya</option>
+                            </select>
+                            <br>
+                            <input type="text" id="addr" name="ad1" placeholder="Address details..." required>
+                            <br>
+                            
+
+                            <input pattern="[0-9]{8}" type="text" id="numb" name="numb" placeholder="Your number here..." required>
+                            <button class="bcart" id="subb">Proceed to pay</button>
+                        </form>
                     </div>
                     <div class="listitems">
                         <br>
@@ -92,6 +144,9 @@ session_start();
         <!-- Loaded the Footer through JQuery -->
     </footer>
 
+    <!--sweet alert cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script type="text/javascript">
         $(function() {
@@ -105,15 +160,17 @@ session_start();
     </script>
 
     <script>
-        // when submit is clicked display credit_card.php under the image
-        // use ajax with XMLHttpRequest
-        // use php to get the data from the form
-        // use php to display the data in credit_card.php
-        var submit = document.getElementById("subb");
+        // check form validity
+        
+        document.getElementById("subb").addEventListener("click", function(event) {
+            var form = document.querySelector("form");
+            if (form.checkValidity()) {
+                event.preventDefault();
+                var submit = document.getElementById("subb");
         submit.addEventListener("click", function() {
             var fname = document.getElementById("fname").value;
             var lname = document.getElementById("lname").value;
-            var kazaa = document.getElementById("kazaa").value;
+            var district = document.getElementById("district").value;
             var city = document.getElementById("city").value;
             var addr = document.getElementById("addr").value;
             var numb = document.getElementById("numb").value;
@@ -125,8 +182,15 @@ session_start();
                     document.getElementById("rightColumn").innerHTML = this.responseText;
                 }
             };
-            xhttp.open("GET", "credit_card.php?fname=" + fname + "&lname=" + lname, true);
+
+            // send the above information to credit_card.php
+            xhttp.open("GET", "credit_card.php?fname=" + fname + "&lname=" + lname + "&district=" + district + "&city=" + city + "&addr=" + addr + "&numb=" + numb, true);
             xhttp.send();
+        });
+            } else {
+                // form is invalid
+                
+            }
         });
     </script>
 

@@ -32,7 +32,7 @@
         $folder = "ImageUploads/".$image;
         
         if(move_uploaded_file($image_tmp, $folder)){
-            echo "Uploaded";
+            echo "";
         }else{
             echo $_FILES["image"]["error"];
         }

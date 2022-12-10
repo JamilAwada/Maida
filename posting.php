@@ -120,7 +120,10 @@
                 </div>
                 
                 <br>
+                
                 <input type="file" name="image" class="photo-file" id="image_input"/>
+
+
                 <div class="container-fluid">
                   <div class="mt-5 text-center">
                     <button name='clear' class="clear-btn">Clear fields</button>

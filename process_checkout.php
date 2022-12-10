@@ -34,7 +34,7 @@
         $price = (int)$value['price'];
         $chefname = $value['chefname'];
         $dishname = $value['name'];
-        
+
         // echo $customerid."<br>";
         // echo $dishid."<br>";
         // echo $dishname."<br>";
@@ -44,18 +44,17 @@
         // echo $price."<br>";
         // echo $chefname."<br>";
         // echo $dishname."<br>";
-
-
+        
         // insert customerid, chefname, dishid, quantity, request, status, price, image, and dishname into orders table
         // use pdo
         // status default is Pending
+
         $sql = "INSERT INTO orders (customerid, chefname, dishid, quantity, request, status, price, image, dishname) VALUES (:customerid, :chefname, :dishid, :quantity, :request, :status, :price, :image, :dishname)";
         $stmt = $db->prepare($sql);
         
         $stmt->execute(['customerid' => $customerid, 'chefname' => $chefname, 'dishid' => $dishid, 'quantity' => $quantity, 'request' => $request, 'price' => $price, 'image' => $image, 'dishname' => $dishname, 'status' => "Pending"]);
         
     }
-
     $_SESSION['cart'] = array();
 
     echo "
@@ -70,7 +69,6 @@
         window.location = 'ordertracking.php';
     });
     </script>";
-    
 
 ?>
 
