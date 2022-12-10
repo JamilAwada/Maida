@@ -17,7 +17,9 @@ if (!isset($_SESSION['username'])) {
   <meta name="viewport" content="width=device-width" , initial-scale="1.0" />
   <title>Maida - My Profile</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+  <!-- get bootstrap cdn -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  
   <link href="Profile.css" rel="stylesheet" />
   <link rel="stylesheet" href="search.css" />
   <link rel="stylesheet" href="account.css" />
@@ -30,59 +32,50 @@ if (!isset($_SESSION['username'])) {
   <nav id="header">
   </nav>
   <!-- NavBar End -->
-  <!-- sticky icon start -->
-  <div class="iconstick"><a class="notbutn" href="notifications.php">Orders</a>
 
-    <div class=" text-center numorders">
-      <p class="num">1</p>
-    </div>
-  </div>
 
   <!--Profile Container-->
-  <div class="maincontainer">
+  <div class="maincontainer" style ="margin-top:100px; padding:20px;">
     <div class="maintext">
       <span class="profile">My Profile</span>
     </div>
 
-    <div class="mainfixed">
-      <div class="fixed">
-        <li>
-          <ul class="username">
-            <strong>Username:</strong>
-            <br />
-            <ul>
-              <div contenteditable="false" id="usernamefield" name="username"><?php echo $_SESSION['username'] ?></div>
-            </ul>
-          </ul>
-          <br />
+    <div class="mainfixed" style="padding:20px;">
 
-          <ul class="numberoforders">
-            <strong>My Standing:</strong>
-            <br />
-            <ul>
-              Gold
-            </ul>
-          </ul>
-          <br />
-          <ul class="email">
-            <strong>Email:</strong>
-            <br />
-            <ul>
-              <div contenteditable="false" id="emailfield" name="email"><?php echo $_SESSION['email'] ?></div>
-            </ul>
-          </ul>
-          <br />
-        </li>
-      </div>
-      <div class="fixed2">
-        <img class="imgprofile" src="images/profile.png" />
-      </div>
+
+            <h4 style="color:orangered;">Username</h4>
+            <div style="background-color:lightgrey; padding:5px; border-radius:3px; width:90%" contenteditable="false" id="usernamefield" name="username"><?php echo $_SESSION['username'] ?></div>
+            <br>
+            <h4 style="color:orangered;">My Address:</h4>
+            <div style="background-color:lightgrey; padding:5px; border-radius:3px; width:90%" contenteditable="false" id="addressfield" name="address"><?php 
+              // gett address from database
+              $sql = "SELECT * FROM users WHERE username = '".$_SESSION['username']."'";
+              $query = $db->prepare($sql);
+              $query->execute();
+              $result = $query->fetchAll(PDO::FETCH_OBJ);
+              if ($query->rowCount() > 0) {
+                foreach ($result as $row) {
+                  if($row->address == ""){
+                    echo "No address added";
+                  }else{
+                    echo $row->address;
+                  }
+                }
+              }
+    
+            ?></div>
+            <br>
+            <h4 style="color:orangered;">Email:</h4>
+            <div style="background-color:lightgrey; padding:5px; border-radius:3px; width:90%" contenteditable="false" id="emailfield" name="email"><?php echo $_SESSION['email'] ?></div>
+
+
+      
       <br />
     </div>
     <div class="buttons">
       <input type="submit" class="changes1" name="save" style="display: none;" value="Save">
       <button class="changes2" style="display: none;"><i class="fa-solid fa-x"></i></button>
-      <button class="bmydishes" id="editbtn">Edit My Profile</button>
+      <button class="btn btn-success" style="margin-bottom:10px; margin-top:10px;" id="editbtn"><span>Edit My Profile</span></button>
     </div>
   </div>
   <!--Profile Container End-->
@@ -121,6 +114,10 @@ if (!isset($_SESSION['username'])) {
               </div>
               </a>";
               }
+            }else{
+              echo "<center><h2>You have no dishes available</h2>
+              <br/>
+              <a href='posting.php'><button class='btn btn-success'>Add Dish</button></a></center>";
             }
 
             ?>
@@ -132,6 +129,9 @@ if (!isset($_SESSION['username'])) {
     <br>
     <br>
   </center>
+  <footer id="footer">
+
+  </footer>
 
 
   <script>
@@ -152,6 +152,7 @@ if (!isset($_SESSION['username'])) {
         cancelBtn.style.display = "block";
         usernameField.contentEditable = true;
         emailField.contentEditable = true;
+        addressfield.contentEditable = true;
         toggle = 1;
       } else {
 
@@ -165,6 +166,7 @@ if (!isset($_SESSION['username'])) {
       cancelBtn.style.display = "none";
       usernameField.contentEditable = false;
       emailField.contentEditable = false;
+      addressfield.contentEditable = false;
       usernameField.innerHTML = username;
       emailField.innerHTML = email;
     });
@@ -191,12 +193,14 @@ if (!isset($_SESSION['username'])) {
       $(".changes1").click(function() {
         var username = $("#usernamefield").text();
         var email = $("#emailfield").text();
+        var address = $("#addressfield").text();
         $.ajax({
           url: "process_profileupdate.php",
           method: "POST",
           data: {
             username: username,
             email: email,
+            address: address,
             id: <?php echo $_SESSION['id'] ?>
           },
           success: function(data) {
