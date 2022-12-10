@@ -28,9 +28,8 @@ session_start();
         <!-- Loaded the Header through JQuery -->
     </nav>
     <div class="container">
-        <div class="container-fluid">
             <div class="row">
-                <div class="col col-md-6 col-12">
+                <div class="col col-md-5 col-12">
                     <div class="right-container">
                         <div class="total">
                             <div class="leftbx">Cart Total: X$
@@ -70,45 +69,21 @@ session_start();
                             <input type="text" id="addr" name="ad1" placeholder="Your address description here...">
                             <br>
                             <input type="text" id="numb" name="numb" placeholder="Your number here...">
-                            <button class="bcart" id="subb" onclick="window.location.href='shipping.php';">Submit</button>
+                            <button class="bcart" id="subb">Submit</button>
                         </div>
                     </div>
                 </div>
-                <div class="col col-md-6 col-12">
-                    <img width="400px" src="images/address.png" alt="hooman">
+                <div class="col col-md-7 col-12">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-12" id="rightColumn">
+                            <img width="400px" src="images/address.png" alt="hooman">
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
     </div>
     <br>
-    <div class="pay">
-        <input type="radio" id="cod" name="cod">
-        <label for="cod">Cash On Delivery</label>
-        <input type="radio" id="card" name="card">
-        <label for="cod">Credit Card</label>
-        <div class="rect">
-            <div style="width: 100%;height:30px;">
-                <div style="position:relative; float:left;left:30px;top:15px;font-size:20px; font-family:DD-TTNorms, -apple-system, BlinkMacSystemFont, " Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji" , "Segoe UI Emoji" , "Segoe UI Symbol" ;">
-                    Card Details
-                </div>
-                <div style="position:relative;float:right;top: 5px;right:30px;">
-                    <img src="images/visa.png" alt="visaicon" style="width:50px;height:50px;">
-                    <img src="images/mastercard.png" alt="mastercardicon" style="margin-left:15px;width:50px;height:50px;">
 
-                </div>
-            </div>
-            <br>
-            <div style="margin-left: 30px; margin-top:5px">
-                <label for="ccnum">Credit card number</label><br>
-                <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444" style="width:300px;padding:5px;border-radius:10px;text-align:center;border:2px solid white;"><br>
-                <label for="expyear">Exp Date</label><br>
-                <input type="month" id="expyear" name="expyear" style="width:150px;padding:5px;border-radius:10px;border:2px solid white;"><br>
-                <label for="cvv">CVV</label><br>
-                <input type="text" id="cvv" name="cvv" placeholder="352" style="width:60px;padding:5px;border-radius:10px;text-align:center;border:2px solid white;">
-                <br><br>
-            </div>
-        </div>
-    </div>
 
     </div>
 
@@ -128,4 +103,32 @@ session_start();
             $("#footer").load("footer.php");
         });
     </script>
+
+    <script>
+        // when submit is clicked display credit_card.php under the image
+        // use ajax with XMLHttpRequest
+        // use php to get the data from the form
+        // use php to display the data in credit_card.php
+        var submit = document.getElementById("subb");
+        submit.addEventListener("click", function() {
+            var fname = document.getElementById("fname").value;
+            var lname = document.getElementById("lname").value;
+            var kazaa = document.getElementById("kazaa").value;
+            var city = document.getElementById("city").value;
+            var addr = document.getElementById("addr").value;
+            var numb = document.getElementById("numb").value;
+
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    // we load credit_card.php page instead of the image
+                    document.getElementById("rightColumn").innerHTML = this.responseText;
+                }
+            };
+            xhttp.open("GET", "credit_card.php?fname=".fname."&lname=".lname, true);
+            xhttp.send();
+        });
+
+    </script>
+
 </body>

@@ -77,10 +77,6 @@ input[type="text"]:focus {
   justify-content: center;
 }
 
-.pay {
-  width: 40%;
-  margin: auto;
-}
 .rect {
   background-color: rgb(227, 242, 235);
   border: 3px solid rgb(217, 217, 217);
@@ -88,6 +84,7 @@ input[type="text"]:focus {
   color: rgb(85, 86, 133);
   border-radius: 20px;
   height: 300px;
-  width: 500px;
+  width:400px;
   padding: 15px;
 }
+
