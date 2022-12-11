@@ -169,15 +169,18 @@
                 </div>
                 </br>
               <div class="container-fluid">
-                <div class="mt-5 text-center">
-                  <button class="clear-btn">
-                    <a href="account.php" style="text-decoration: none; color: inherit;">
+                
+                  <div class="clear-btn">
+                  <a href="account.php" style="text-decoration: none; color: inherit;">
                     Cancel
                     </a>
-                  </button>
-              
+                  </div>
                   <button name='submit' class="save-btn" type="submit" >Save Changes</button>
-                  <button name='delete' class="delete-btn" type="delete" >Delete</button>
+                  <div name='delete' class="delete-btn" type="delete" >
+                    <a href="process_delete.php?dishid=<?php echo $id ?>" style="text-decoration: none; color: inherit;">
+                    Delete
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

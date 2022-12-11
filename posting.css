@@ -150,6 +150,7 @@ label {
   padding: 0.5em;
 }
 .clear-btn {
+  width: 30%;
   color: orangered;
   background-color: white;
   border: 1px solid orangered;
@@ -190,6 +191,7 @@ label {
 }
 
 .delete-btn {
+  width: 30%;
   color: white;
   background-color: red;
   border: 1px solid red;
