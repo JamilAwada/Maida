@@ -81,6 +81,9 @@
                             ?></p>
 
       </div>
+      <div class="row">
+        <a href="review.php" class="btn btn-success w-25">Leave a review</a>
+      </div>
     </div>
 
     <script>
