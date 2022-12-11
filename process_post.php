@@ -75,19 +75,9 @@
             if($stmt){
 
                 echo "
-                <!-- CDN for SweetAlert: Shows an alert when the user registers successfully -->
-                <script src='//cdn.jsdelivr.net/npm/sweetalert2@11'></script>
-                <!-- CDN for JQuery -->
-                <script src='https://ajax.googleapis.com/ajax/libs/cesiumjs/1.78/Build/Cesium/Cesium.js'></script>
                 <script>
-                Swal.fire({
-                    title: 'Success!',
-                    text: 'Your meal has been posted!',
-                    icon: 'success',
-                    confirmButtonText: 'Keep posting'
-                }).then(function() {
-                    window.location = 'posting.php';
-                });
+                    alert('Your meal has been posted!');
+                    window.location.href='account.php';
                 </script>
                 ";
                 exit();
