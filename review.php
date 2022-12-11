@@ -10,6 +10,10 @@
   <link rel="stylesheet" href="cart.css" />
   <link rel="stylesheet" href="navbar.css" />
   <link rel="stylesheet" href="footer.css" />
+  <!-- CDN for SweetAlert: Shows an alert when the user registers successfully -->
+  <script src='//cdn.jsdelivr.net/npm/sweetalert2@11'></script>
+  <!-- CDN for JQuery -->
+  <script src='https://ajax.googleapis.com/ajax/libs/cesiumjs/1.78/Build/Cesium/Cesium.js'></script>
   <title>Maida - Leave a review</title>
 
 
@@ -36,8 +40,9 @@
             ">
           How was it?
         </h1>
-        <h4 align="center">Your feedback is very important to the chef. Leave a review to let them know about your experience.</h4>
-        <form action="leave_review.php" method="POST">
+        <h4 align="center">Your feedback is very important to us. Leave a review so we can know about your experience.</h4>
+        <h5 align="center">We will forward your feedback to the chefs.</h5>
+      
           <div class="form-group">
             <label for="exampleFormControlTextarea1">Review</label>
             <textarea class="form-control mt-1" id="exampleFormControlTextarea1" rows="3" name="review"></textarea>
@@ -52,8 +57,9 @@
               <option value = "5">5 Stars</option>
             </select>
           </div>
-          <button type="submit" class="btn btn-primary mt-3" style="background-color: orangered; border: none;">Submit</button>
-        </form>
+
+          <button id = "finish" type="submit" name = "submit" class="btn btn-primary mt-3" style="background-color: orangered; border: none;">Submit</button>
+      
 
         </div>
       </div>
@@ -82,26 +88,24 @@
     });
   </script>
 
-  <script>
-    $(document).ready(function() {
-      $(".ItemContainer").on("click", "#delete", function() {
-        var id = $(this).parent().parent().attr("id");
-        $.ajax({
-          url: "delete_cart_item.php",
-          type: "POST",
-          data: {
-            id: id
-          },
-          success: function(data) {
-            if (data == "deleted") {
-              $("#" + id).remove();
-            }
-          }
-        });
 
+  <script>
+    // generate jquery to fire Swal when clicking on submit button
+    $(document).ready(function() {
+      $("#finish").click(function() {
+        Swal.fire({
+          title: 'Thank you for your feedback!',
+          text: 'Your voice is heard. How about some more deliciousness?',
+          icon: 'success',
+          confirmButtonText: 'More food!'
+        }).then((result) => {
+          if (result.isConfirmed) {
+            window.location.href = "search.php";
+          }
+        })
       });
     });
-  </script>
+   </script>
 </body>
 
 </html>
