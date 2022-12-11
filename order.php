@@ -64,14 +64,13 @@ include_once('config.php');
 
           </div>
 
-          <div align="center" style="color: orangered; text-indent: 10px;" class="d-flex align-items-center justify-content-center my-3"><i class="fa-regular fa-face-smile mt-5" style="font-size: 50px; color: orangered;"></i><a class="chef mt-5" href="account.html"><?php echo $dishchefid ?></a></div>
+          <div align="center" style="color: orangered; text-indent: 10px;" class="d-flex align-items-center justify-content-center my-3"><i class="fa-solid fa-utensils" style="font-size: 50px; color: orangered;"></i><a class="chef" href="account.html"><?php echo $dishchefid ?></a></div>
 
         </div>
         <div class="col-lg-6">
           <div class="rogw">
             <div class="d-flex justify-content-between align-items-center">
               <h2 class="mt-5 title text-dark"><?php echo $dishname ?></h2>
-              <span style="color: orangered; font-size: larger;"><i class="fa-solid fa-star mt-" style="color: gold;"></i> <?php echo $dishrating ?></span>
               <h3 class="mt-5 title"><?php echo $dishprice ?>L.L.</h3>
             </div>
             <div class="divider ms-2 my-2" style="width: 100%"></div>
@@ -100,49 +99,6 @@ include_once('config.php');
     </div>
   </div>
 
-
-
-
-  <!-- Testimonials -->
-
-  <div class="container2 mt-5 mb-5">
-    <h1 align="center" class="">Reviews</h1><br>
-    <div class="row mb-3">
-
-      <div class="col-lg-6 col-md-12 p-0">
-
-        <div class="card text-center">
-          <i class="fa-solid fa-user-pen my-4" style="font-size: 100px;"></i><br>
-          <strong class="py-2">Karen Smith</strong>
-          <p class="px-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis minima, temporibus velit odit animi assumenda officiis obcaecati delectus vel quasi hic voluptatum sunt accusantium in molestiae beatae, veritatis quia aperiam?</p>
-        </div>
-      </div>
-      <div class="col-lg-6 col-md-12">
-        <div class="card text-center">
-          <i class="fa-solid fa-user-pen my-4" style="font-size: 100px;"></i><br>
-          <strong class="py-2">Karen Smith</strong>
-          <p class="px-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis minima, temporibus velit odit animi assumenda officiis obcaecati delectus vel quasi hic voluptatum sunt accusantium in molestiae beatae, veritatis quia aperiam?</p>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-
-      <div class="col-lg-6 col-md-12 p-0">
-
-        <div class="card text-center">
-          <i class="fa-solid fa-user-pen my-4" style="font-size: 100px;"></i><br>
-          <strong class="py-2">Karen Smith</strong>
-          <p class="px-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis minima, temporibus velit odit animi assumenda officiis obcaecati delectus vel quasi hic voluptatum sunt accusantium in molestiae beatae, veritatis quia aperiam?</p>
-        </div>
-      </div>
-      <div class="col-lg-6 col-md-12">
-        <div class="card text-center">
-          <i class="fa-solid fa-user-pen my-4" style="font-size: 100px;"></i><br>
-          <strong class="py-2">Karen Smith</strong>
-          <p class="px-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis minima, temporibus velit odit animi assumenda officiis obcaecati delectus vel quasi hic voluptatum sunt accusantium in molestiae beatae, veritatis quia aperiam?</p>
-        </div>
-      </div>
-    </div>
 
 
 
