@@ -19,7 +19,7 @@ if (!isset($_SESSION['username'])) {
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- get bootstrap cdn -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-  
+
   <link href="Profile.css" rel="stylesheet" />
   <link rel="stylesheet" href="search.css" />
   <link rel="stylesheet" href="account.css" />
@@ -35,7 +35,7 @@ if (!isset($_SESSION['username'])) {
 
 
   <!--Profile Container-->
-  <div class="maincontainer" style ="margin-top:100px; padding:20px;">
+  <div class="maincontainer" style="margin-top:100px; padding:20px;">
     <div class="maintext">
       <span class="profile">My Profile</span>
     </div>
@@ -43,33 +43,33 @@ if (!isset($_SESSION['username'])) {
     <div class="mainfixed" style="padding:20px;">
 
 
-            <h4 style="color:orangered;">Username</h4>
-            <div style="background-color:lightgrey; padding:5px; border-radius:3px; width:90%" contenteditable="false" id="usernamefield" name="username"><?php echo $_SESSION['username'] ?></div>
-            <br>
-            <h4 style="color:orangered;">My Address:</h4>
-            <div style="background-color:lightgrey; padding:5px; border-radius:3px; width:90%" contenteditable="false" id="addressfield" name="address"><?php 
-              // gett address from database
-              $sql = "SELECT * FROM users WHERE username = '".$_SESSION['username']."'";
-              $query = $db->prepare($sql);
-              $query->execute();
-              $result = $query->fetchAll(PDO::FETCH_OBJ);
-              if ($query->rowCount() > 0) {
-                foreach ($result as $row) {
-                  if($row->address == ""){
-                    echo "No address added";
-                  }else{
-                    echo $row->address;
-                  }
-                }
-              }
-    
-            ?></div>
-            <br>
-            <h4 style="color:orangered;">Email:</h4>
-            <div style="background-color:lightgrey; padding:5px; border-radius:3px; width:90%" contenteditable="false" id="emailfield" name="email"><?php echo $_SESSION['email'] ?></div>
+      <h4 style="color:orangered;">Username</h4>
+      <div style="background-color:lightgrey; padding:5px; border-radius:3px; width:90%" contenteditable="false" id="usernamefield" name="username"><?php echo $_SESSION['username'] ?></div>
+      <br>
+      <h4 style="color:orangered;">My Address:</h4>
+      <div style="background-color:lightgrey; padding:5px; border-radius:3px; width:90%" contenteditable="false" id="addressfield" name="address"><?php
+                                                                                                                                                  // gett address from database
+                                                                                                                                                  $sql = "SELECT * FROM users WHERE username = '" . $_SESSION['username'] . "'";
+                                                                                                                                                  $query = $db->prepare($sql);
+                                                                                                                                                  $query->execute();
+                                                                                                                                                  $result = $query->fetchAll(PDO::FETCH_OBJ);
+                                                                                                                                                  if ($query->rowCount() > 0) {
+                                                                                                                                                    foreach ($result as $row) {
+                                                                                                                                                      if ($row->address == "") {
+                                                                                                                                                        echo "No address added";
+                                                                                                                                                      } else {
+                                                                                                                                                        echo $row->address;
+                                                                                                                                                      }
+                                                                                                                                                    }
+                                                                                                                                                  }
+
+                                                                                                                                                  ?></div>
+      <br>
+      <h4 style="color:orangered;">Email:</h4>
+      <div style="background-color:lightgrey; padding:5px; border-radius:3px; width:90%" contenteditable="false" id="emailfield" name="email"><?php echo $_SESSION['email'] ?></div>
 
 
-      
+
       <br />
     </div>
     <div class="buttons">
@@ -89,7 +89,7 @@ if (!isset($_SESSION['username'])) {
       </div>
       <div class="slider">
         <center>
-          <div class="cardsList" >
+          <div class="cardsList">
             <?php
             // select all dishes from the database with chefid = $_SESSION['username']
             // for each dish, create a card with the dish name and price
@@ -115,7 +115,7 @@ if (!isset($_SESSION['username'])) {
               </div>
               </a>";
               }
-            }else{
+            } else {
               // center the div
 
               echo "<center id='noexist'><h2 style='color: black;'>You have not posted a dish yet.</h2>
@@ -197,11 +197,7 @@ if (!isset($_SESSION['username'])) {
     if (cardsList.contains(noexist)) {
       cardsList.classList.add("d-flex", "align-items-center", "justify-content-center");
     }
-
-
-
-
-    </script>
+  </script>
 
   <script>
     // save the changes to the user email and username when save button clicked
