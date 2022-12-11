@@ -118,14 +118,15 @@ if (!isset($_SESSION['username'])) {
                     <option value="vegetarian" <?php echo ($dishdiet == "vegetarian") ? "selected" : ""; ?>>Vegetarian</option>
                     <option value="vegan" <?php echo ($dishdiet == "vegan") ? "selected" : ""; ?>>Vegan</option>
                     <option value="glutenfree" <?php echo ($dishdiet == "glutenfree") ? "selected" : ""; ?>>Gluten Free</option>
-                    <option value="keto" <?php echo ($dishcuisine == "keto") ? "selected" : ""; ?>>Keto</option>
-                    <option value="lactosefree" <?php echo ($dishcuisine == "lactosefree") ? "selected" : ""; ?>>Lactose Free</option>
-                    <option value="paleo" <?php echo ($dishcuisine == "paleo") ? "selected" : ""; ?>>Paleo</option>
-                    <option value="pescatarian" <?php echo ($dishcuisine == "pescatarian") ? "selected" : ""; ?>>Pescatarian</option>
-                    <option value="whole30" <?php echo ($dishcuisine == "whole30") ? "selected" : ""; ?>>Whole30</option>
+                    <option value="keto" <?php echo ($dishdiet == "keto") ? "selected" : ""; ?>>Keto</option>
+                    <option value="lactosefree" <?php echo ($dishdiet == "lactosefree") ? "selected" : ""; ?>>Lactose Free</option>
+                    <option value="paleo" <?php echo ($dishdiet == "paleo") ? "selected" : ""; ?>>Paleo</option>
+                    <option value="pescatarian" <?php echo ($dishdiet == "pescatarian") ? "selected" : ""; ?>>Pescatarian</option>
+                    <option value="whole30" <?php echo ($dishdiet == "whole30") ? "selected" : ""; ?>>Whole30</option>
 
                   </select>
                   <br />
+            
                 </div>
 
                 <div class="input-container ps-5 my-3">
