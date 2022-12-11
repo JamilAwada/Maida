@@ -21,9 +21,12 @@ if (isset($_SESSION['username'])) {
               <a href="cart.php">Cart <i class="fa-solid fa-cart-shopping"></i></a>
              </li>
              <li style="position:relative;">
-              <a href="incoming_orders.php">Orders</a>
+              <a href="incoming_orders.php" style="padding-right:0;">Orders
+              <div style="border-radius:25px; background-color:red;float:right;position:relative;width:20px;height:20px;
+              margin-top:20px;"><p style="height:20px;width:20px;text-align:center;font-size:10px;margin-top:0;margin-bottom:0;font-weight:bold;">2</p></div>
+              </a>
              </li>
-             <li><a href="account.php">'.$_SESSION['username'].'</a></li>
+             <li><a href="account.php">' . $_SESSION['username'] . '</a></li>
              <li>
                <a href="logout.php">Log out <i class="fa-solid fa-right-from-bracket"></i></a>
              </li>
