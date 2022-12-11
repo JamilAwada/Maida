@@ -170,12 +170,14 @@
                 </br>
               <div class="container-fluid">
                 <div class="mt-5 text-center">
-                  <a href="account.php" style="text-decoration: none;">
                   <button class="clear-btn">
+                    <a href="account.php" style="text-decoration: none; color: inherit;">
                     Cancel
+                    </a>
                   </button>
-              </a>
-                  <button name='submit' class="post-btn" type="submit">Save Changes</button>
+              
+                  <button name='submit' class="save-btn" type="submit" >Save Changes</button>
+                  <button name='delete' class="delete-btn" type="delete" >Delete</button>
                 </div>
               </div>
             </div>

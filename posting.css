@@ -150,8 +150,8 @@ label {
   padding: 0.5em;
 }
 .clear-btn {
-  color: white;
-  background-color: #f73d18;
+  color: orangered;
+  background-color: white;
   border: 1px solid orangered;
   padding: 0.5em;
   border-radius: 7px;
@@ -160,8 +160,8 @@ label {
 .clear-btn:hover {
   border: 1px solid orangered;
   border-radius: 7px;
-  background-color: white;
-  color: #f73d18;
+  background-color: orangered;
+  color: white;
   padding: 0.5em;
 }
 
@@ -170,4 +170,37 @@ label {
   height: 100%;
   border: none;
   margin-top: 5px;
+}
+
+.save-btn {
+  color: white;
+  background-color: green;
+  border: 1px solid green;
+  padding: 0.5em;
+  border-radius: 7px;
+
+}
+
+.save-btn:hover {
+  border: 1px solid green;
+  border-radius: 7px;
+  background-color: white;
+  color: green;
+  padding: 0.5em;
+}
+
+.delete-btn {
+  color: white;
+  background-color: red;
+  border: 1px solid red;
+  padding: 0.5em;
+  border-radius: 7px;
+}
+
+.delete-btn:hover {
+  border: 1px solid red;
+  border-radius: 7px;
+  background-color: white;
+  color: red;
+  padding: 0.5em;
 }
