@@ -52,7 +52,7 @@
                   echo '
                                 <div id=' . $value['id'] . ' class="ItemContainer row" style="width:95%; border:1px solid orangered; padding:10px; border-radius:5px; margin-bottom:5px;">
                                   <div class="col-2 d-flex align-items-center"><div class="imgcontainer" style="width:100px; height:50px; border-radius:5px; overflow:hidden;"><img width="100px" src="ImageUploads/' . $value['image'] . '"></div></div>
-                                  <div class="col-3 d-flex align-items-center">' . $value['name'] . '<span style ="color:orangered;">x' . $value['quantity'] . '</span></div>
+                                  <div class="col-3 d-flex align-items-center">' . $value['name'] . ' <span style ="color:orangered;">x' . $value['quantity'] . '</span></div>
                                   <div class="col-4 d-flex align-items-center text-muted">' . $value['request'] . '</div>
                                   <div class="col-2 d-flex align-items-center" style="color:orangered;">' . $total . 'L.L.</div>
                                   <div class="col-1 d-flex align-items-center justify-content-end">

@@ -2,10 +2,10 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Dec 08, 2022 at 03:43 PM
--- Server version: 10.4.25-MariaDB
--- PHP Version: 8.1.10
+-- Host: localhost
+-- Generation Time: Dec 11, 2022 at 09:45 AM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.1.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,17 +24,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cart`
---
-
-CREATE TABLE `cart` (
-  `id` int(11) NOT NULL,
-  `userid` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `dishes`
 --
 
@@ -49,22 +38,23 @@ CREATE TABLE `dishes` (
   `fat` int(11) NOT NULL,
   `id` int(11) NOT NULL,
   `image` varchar(100) NOT NULL,
-  `chefid` varchar(100) NOT NULL,
-  `rating` float NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `chefid` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `dishes`
 --
 
-INSERT INTO `dishes` (`name`, `description`, `cuisine`, `diet`, `price`, `carbohydrates`, `protein`, `fat`, `id`, `image`, `chefid`, `rating`) VALUES
-('Kebbe', 'Kebbe', 'turkish', 'vegetarian', 120000, 12, 10, 50, 33, 'kebbe-libanaise-3-780x470.jpg.webp', 'rissal', 0),
-('Noodles', 'Noodles', 'chinese', 'vegetarian', 120000, 14, 23, 21, 36, 'ramen-noodles-featured.jpg', 'rissal', 0),
-('Spaghetti', 'Spaghetti', 'italian', 'vegan', 150000, 12, 32, 2, 37, 'Spaghetti-with-Meat-Sauce-Recipe-1-1200.jpg', 'rissal', 0),
-('Pizza', 'Pizza', 'italian', 'keto', 50000, 50, 10, 10, 38, 'Eq_it-na_pizza-margherita_sep2005_sml.jpg', 'rissal', 0),
-('Knefe', 'Knefe', 'turkish', 'vegetarian', 80000, 60, 13, 20, 39, 'knefe_cheese_plate_2.jpg', 'kamil', 0),
-('Farrouj', 'Farrouj', 'none', 'none', 300000, 12, 20, 10, 40, '241929befd768760c624685185ff10f8_featured_v2.avif', 'kamil', 0),
-('Chicken Tenders', '6-piece Chicken Tenders', 'none', 'keto', 200000, 5, 20, 10, 41, '3973d54d-0004-4c06-a9d1-0843f3bf3efa.jpg', 'rissal', 0);
+INSERT INTO `dishes` (`name`, `description`, `cuisine`, `diet`, `price`, `carbohydrates`, `protein`, `fat`, `id`, `image`, `chefid`) VALUES
+('Kebbe', 'Kebbe', 'turkish', 'vegetarian', 120000, 12, 10, 50, 33, '', 'rissal'),
+('Noodles', 'Noodles', 'chinese', 'vegetarian', 120000, 14, 23, 21, 36, 'ramen-noodles-featured.jpg', 'rissal'),
+('Spaghetti', 'Spaghetti', 'italian', 'vegan', 150000, 12, 32, 2, 37, 'Spaghetti-with-Meat-Sauce-Recipe-1-1200.jpg', 'rissal'),
+('Pizza', 'Pizza', 'italian', 'keto', 50000, 50, 10, 10, 38, 'Eq_it-na_pizza-margherita_sep2005_sml.jpg', 'rissal'),
+('Knefe', 'Knefe', 'turkish', 'vegetarian', 80000, 60, 13, 20, 39, 'knefe_cheese_plate_2.jpg', 'kamil'),
+('Farrouj', 'Farrouj', 'none', 'none', 300000, 12, 20, 10, 40, '241929befd768760c624685185ff10f8_featured_v2.avif', 'kamil'),
+('Chicken Tenders', '6-piece Chicken Tenders', 'none', 'keto', 200000, 5, 20, 10, 41, '3973d54d-0004-4c06-a9d1-0843f3bf3efa.jpg', 'rissal'),
+('Spaghetti Monster', 'An Amazing Dish Tbh', 'italian', 'vegetarian', 120000, 12, 3, 21, 46, 'spaghettimonster.png', 'chef'),
+('Re', 'Weqew', 'none', 'none', 333, 3, 3, 3, 47, '', 'chef');
 
 -- --------------------------------------------------------
 
@@ -75,12 +65,28 @@ INSERT INTO `dishes` (`name`, `description`, `cuisine`, `diet`, `price`, `carboh
 CREATE TABLE `orders` (
   `id` int(11) NOT NULL,
   `customerid` int(11) NOT NULL,
-  `chefid` int(11) NOT NULL,
+  `chefname` varchar(100) NOT NULL,
   `dishid` int(11) NOT NULL,
   `quantity` int(11) NOT NULL,
-  `request` int(11) NOT NULL,
-  `status` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `request` varchar(100) NOT NULL,
+  `status` varchar(100) NOT NULL DEFAULT 'Pending',
+  `price` int(11) NOT NULL,
+  `image` varchar(100) NOT NULL,
+  `dishname` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `orders`
+--
+
+INSERT INTO `orders` (`id`, `customerid`, `chefname`, `dishid`, `quantity`, `request`, `status`, `price`, `image`, `dishname`) VALUES
+(24, 143, 'chef', 46, 4, 'No specific request', 'Fulfilled', 120000, 'spaghettimonster.png', 'Spaghetti Monster'),
+(25, 143, 'chef', 46, 1, 'No specific request', 'Fulfilled', 120000, 'spaghettimonster.png', 'Spaghetti Monster'),
+(26, 143, 'chef', 46, 1, 'No specific request', 'Fulfilled', 120000, 'spaghettimonster.png', 'Spaghetti Monster'),
+(27, 143, 'rissal', 37, 1, 'No specific request', 'Fulfilled', 150000, 'Spaghetti-with-Meat-Sauce-Recipe-1-1200.jpg', 'Spaghetti'),
+(28, 143, 'rissal', 38, 1, 'No specific request', 'Fulfilled', 50000, 'Eq_it-na_pizza-margherita_sep2005_sml.jpg', 'Pizza'),
+(29, 143, 'rissal', 38, 1, 'No specific request', 'Fulfilled', 50000, 'Eq_it-na_pizza-margherita_sep2005_sml.jpg', 'Pizza'),
+(30, 143, 'chef', 46, 1, 'No specific request', 'Fulfilled', 120000, 'spaghettimonster.png', 'Spaghetti Monster');
 
 -- --------------------------------------------------------
 
@@ -91,7 +97,7 @@ CREATE TABLE `orders` (
 CREATE TABLE `search` (
   `id` int(11) NOT NULL,
   `name` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `search`
@@ -125,7 +131,12 @@ INSERT INTO `search` (`id`, `name`) VALUES
 (26, 'Knefe'),
 (27, 'Farrouj'),
 (28, 'Chicken Tenders'),
-(29, 'Ddd');
+(29, 'Ddd'),
+(30, 'Sample Dish'),
+(31, 'Spaghetti Monster'),
+(32, 'Spaghetti Monster'),
+(33, 'Spaghetti Monster'),
+(34, 'Re');
 
 -- --------------------------------------------------------
 
@@ -137,25 +148,30 @@ CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `username` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `address` text NOT NULL,
-  `password` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `password` varchar(100) NOT NULL,
+  `address` varchar(100) NOT NULL,
+  `district` varchar(100) NOT NULL,
+  `city` varchar(100) NOT NULL,
+  `phone` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `email`, `address`, `password`) VALUES
-(132, 'rissal', 'rissalhedna@hotmail.com', 'somewhere in the world', '7d1e01499f9a3371c05dc6f28838488ccaa8a441'),
-(133, 'jamil', 'jamil@gmail.com', 'somewhere in the world', '5c2dd944dde9e08881bef0894fe7b22a5c9c4b06'),
-(134, 'mehdi', 'mehdi@gmail.com', 'somewhere in the world', 'd8932fd49bb05ff0670c3545d15547cb7baaf208'),
-(135, 'younes', 'younes@gmail.com', 'somewhere in the world', 'c7329b36a0495cf910391ad2e5f975504b63b59e'),
-(136, 'rissalhedna', 'riss@riss.com', 'somewhere in the world', '5cb138284d431abd6a053a56625ec088bfb88912'),
-(137, 'Hanine', 'hanne@gmail.om', 'somewhere in the world', '5a95d36bea3ca992bc8f3449d3d530ab83cc60de'),
-(138, 'khalil', 'khalil@gmail.com', 'somewhere in the world', '8c6617dbddaf5ee6d4dd0a91108429ecf6018408'),
-(139, 'kamil', 'kamil@gmail.com', 'somewhere in the world', 'ab239c5a26a103f02214f1ae199f6dad0108e000'),
-(140, 'hgj', 'fjg@ghvb.h', 'somewhere in the world', '1041179cbdda366fd7b0347f09255f775170e103'),
-(141, 'passis123', 'passis123@gmail.com', 'somewhere in the world', '40bd001563085fc35165329ea1ff5c5ecbdbbeef');
+INSERT INTO `users` (`id`, `username`, `email`, `password`, `address`, `district`, `city`, `phone`) VALUES
+(133, 'jamil', 'jamil@gmail.com', '5c2dd944dde9e08881bef0894fe7b22a5c9c4b06', '', '', '', '0'),
+(134, 'mehdi', 'mehdi@gmail.com', 'd8932fd49bb05ff0670c3545d15547cb7baaf208', '', '', '', '0'),
+(135, 'younes', 'younes@gmail.com', 'c7329b36a0495cf910391ad2e5f975504b63b59e', '', '', '', '0'),
+(136, 'rissalhedna', 'riss@riss.com', '5cb138284d431abd6a053a56625ec088bfb88912', '', '', '', '0'),
+(137, 'Hanine', 'hanne@gmail.om', '5a95d36bea3ca992bc8f3449d3d530ab83cc60de', '', '', '', '0'),
+(138, 'khalil', 'khalil@gmail.com', '8c6617dbddaf5ee6d4dd0a91108429ecf6018408', '', '', '', '0'),
+(139, 'kamil', 'kamil@gmail.com', 'ab239c5a26a103f02214f1ae199f6dad0108e000', '', '', '', '0'),
+(140, 'hgj', 'fjg@ghvb.h', '1041179cbdda366fd7b0347f09255f775170e103', '', '', '', '0'),
+(141, 'ak', 'chayef@hotmail.com', 'f887114c19eb09b0e6f0f43c850313bde711bd73', '', '', '', '0'),
+(142, 'chef', 'chef@gmail.com', 'd5f2e5c77054c44c2c72a1b017deca06fc637c99', '', '', '', '0'),
+(143, 'Rissal', 'rissalhedna@gmail.com', '12dea96fec20593566ab75692c9949596833adc9', 'Santona Residance', 'beirut', 'beirut', '88888888'),
+(144, 'jmm', 'jmm@gmail.com', '03809e0aec2c8e8a3f7fdb60ec4269937485984c', '', '', '', '');
 
 --
 -- Indexes for dumped tables
@@ -193,25 +209,25 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `dishes`
 --
 ALTER TABLE `dishes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `search`
 --
 ALTER TABLE `search`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=142;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=145;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

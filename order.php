@@ -38,8 +38,12 @@ include_once('config.php');
   $result = $query->fetchAll(PDO::FETCH_OBJ);
 
   $dishname = $result[0]->name;
+  $dishdescription = $result[0]->description;
   $dishprice = $result[0]->price;
   $dishimage = $result[0]->image;
+  $dishchefid = $result[0]->chefid;
+  $dishcarbohydrates = $result[0]->carbohydrates;
+  $dishprotein = $result[0]->protein;
   $dishfat = $result[0]->fat;
   
   $dishchefname = $result[0]->chefid;
