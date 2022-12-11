@@ -113,9 +113,7 @@
                 }
               }
               ?>
-              <div class="forgot-pass mt-1">
-                <a href="#">Forgot password?</a>
-              </div>
+    
               
 
               <button type="submit" name ="submit" class="login-btn primary-bg mt-5">Log In</button>

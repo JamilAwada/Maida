@@ -135,7 +135,7 @@ session_start();
 
             <h6 style="color: orangered">by &nbsp;<i class="fa-solid fa-crown" style="color:gold;"></i>&nbsp; <a class="links" href="signup.php">Rissal Hedna</a> </h6>
             <h3>Mashawi Family Set</h3>
-            <div style="color: #999">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est cum culpa reprehenderit omnis nulla ad delectus eum, deleniti quos eligendi asperiores harum, vitae quae, suscipit at similique? Eos, aliquid nemo.</div>
+            <div style="color: #999">A full course set consisting of Skewered Kebab, Skewered Tawouk, and Kafta. Sides of Hommos, Tabbouleh, Kebbe and Batata Harra</div>
           </div>
           <div class="col d-flex justify-content-center">
             <img src="images/mashawi.jpeg" alt="" class="w-50 h-auto popdish" style="border-radius: 7px">
