@@ -37,21 +37,34 @@
             </div>
           </div>
           <div class="images">
-            <div class="image>
+            <div class="image">
+              <div class="paircontainer d-flex flex-column align-items-center">
               <i class=" fa-solid fa-question" style="color: orangered; font-size: 32px;"></i>
+              <br>
               <button class="btn btn-outline-success" id="btn1">Order Placed</button>
+              </div>
+              
             </div>
             <div class="image">
+            <div class="paircontainer d-flex flex-column align-items-center">
               <i class="fa-solid fa-circle-check" style="color: orangered; font-size: 32px;"></i>
+              <br>
               <button class="btn btn-outline-success" id="btn2">Order Confirmed</button>
+              </div>
             </div>
             <div class="image">
+            <div class="paircontainer d-flex flex-column align-items-center">
               <i class="fa-solid fa-motorcycle" style="color: orangered; font-size: 32px;"></i>
+              <br>
               <button class="btn btn-outline-success" id="btn3">Order Picked</button>
+              </div>
             </div>
             <div class="image">
+            <div class="paircontainer d-flex flex-column align-items-center">
               <i class="fa-solid fa-clipboard-check" style="color: orangered; font-size: 32px;"></i>
+              <br>
               <button class="btn btn-outline-success me-3" id="btn4">Order Delivered</button>
+              </div>
             </div>
           </div>
         </div>

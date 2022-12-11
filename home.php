@@ -55,7 +55,12 @@ session_start();
         <div class="paraout">
           <span class="parain">Find your favorite freshly made dish and order after signing up!</span>
           <div class="Alinks">
-            <button class="bmydishes" onclick="location.href='signup.php'" type="button">Sign Up</button>
+            <?php if (isset($_SESSION['username'])) {
+              echo '<button class="bmydishes" onclick="location.href=\'search.php\'" type="button">Browse</button>';
+            } else {
+              echo '<button class="bmydishes" onclick="location.href=\'preauth.php\'" type="button">Sign Up</button>';
+            }
+            ?>
 
           </div>
         </div>
