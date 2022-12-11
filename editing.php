@@ -170,7 +170,7 @@
                 </br>
               <div class="container-fluid">
                 <div class="mt-5 text-center">
-                  <a href="account.php">
+                  <a href="account.php" style="text-decoration: none;">
                   <button class="clear-btn">
                     Cancel
                   </button>
