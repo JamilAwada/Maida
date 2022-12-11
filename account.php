@@ -139,12 +139,10 @@ if (!isset($_SESSION['username'])) {
 
   <script>
     const editBtn = document.getElementById('editbtn');
-    const usernameField = document.getElementById('usernamefield');
     const emailField = document.getElementById('emailfield');
     const saveBtn = document.querySelector(".changes1");
     const cancelBtn = document.querySelector(".changes2");
 
-    var username = usernameField.innerHTML;
     var email = emailField.innerHTML;
 
     var toggle = 0;
@@ -153,7 +151,6 @@ if (!isset($_SESSION['username'])) {
       if (toggle == 0) {
         saveBtn.style.display = "block";
         cancelBtn.style.display = "block";
-        usernameField.contentEditable = true;
         emailField.contentEditable = true;
         addressfield.contentEditable = true;
         toggle = 1;
@@ -167,7 +164,6 @@ if (!isset($_SESSION['username'])) {
     cancelBtn.addEventListener('click', () => {
       saveBtn.style.display = "none";
       cancelBtn.style.display = "none";
-      usernameField.contentEditable = false;
       emailField.contentEditable = false;
       addressfield.contentEditable = false;
       usernameField.innerHTML = username;

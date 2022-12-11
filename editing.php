@@ -24,6 +24,10 @@ if (!isset($_SESSION['username'])) {
   <link rel="stylesheet" href="posting.css" />
   <link rel="stylesheet" href="navbar.css" />
   <link rel="stylesheet" href="footer.css" />
+  <!-- CDN for SweetAlert: Shows an alert when the user registers successfully -->
+  <script src='//cdn.jsdelivr.net/npm/sweetalert2@11'></script>
+  <!-- CDN for JQuery -->
+  <script src='https://ajax.googleapis.com/ajax/libs/cesiumjs/1.78/Build/Cesium/Cesium.js'></script>
   <title>Maida - Edit your dish</title>
 </head>
 
