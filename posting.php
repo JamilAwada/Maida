@@ -128,13 +128,11 @@
                 <input type="file" name="image" class="photo-file" id="image_input"/>
 
 
-                <div class="container-fluid">
-                  <div class="mt-5 text-center">
+                <div class="container-fluid mt-5 d-flex justify-content-center">
                     <button name='clear' class="clear-btn">Clear fields</button>
                     <button class="post-btn" type="submit" name="submit">
                       Post meal
                     </button>
-                  </div>
                 </div>
               </div>
             </div>
@@ -241,7 +239,7 @@
         imageContainer.innerHTML = "";
         newImage.src = image;
         imageContainer.appendChild(newImage);
-        
+
     });
   </script>
 
