@@ -229,7 +229,6 @@
 
     const image_input = document.getElementById('image_input');
 
-
     image_input.addEventListener('change', function(e) {
         var image = URL.createObjectURL(e.target.files[0]);
         var imageContainer = document.getElementById('imagecontainer');
@@ -242,6 +241,7 @@
         imageContainer.innerHTML = "";
         newImage.src = image;
         imageContainer.appendChild(newImage);
+        
     });
   </script>
 

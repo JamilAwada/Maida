@@ -175,7 +175,7 @@ include_once('config.php');
     });
   </script>
 
-  <!-- add cdn for sweet alert 3 -->
+  <!-- add cdn for sweet alert 2 -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   <script>
     //create an array of cart items

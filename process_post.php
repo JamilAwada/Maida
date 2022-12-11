@@ -31,9 +31,7 @@
 
         $folder = "ImageUploads/".$image;
         
-        if(move_uploaded_file($image_tmp, $folder)){
-            echo "";
-        }else{
+        if(!move_uploaded_file($image_tmp, $folder)){
             echo $_FILES["image"]["error"];
         }
 
@@ -44,7 +42,7 @@
 
 
         $error = false;
-        if(empty($name) | empty($price) | empty($carbs) | empty($protein) | empty($fat)){
+        if(empty($name) | empty($price) | empty($carbs) | empty($protein) | empty($fat) | empty($image)){
             $error = true;
             header("Location: posting.php?error=empty");
             exit();
@@ -73,13 +71,13 @@
 
             // if successfully inserted into database
             if($stmt){
-
                 echo "
                 <script>
-                    alert('Your meal has been posted!');
-                    window.location.href='account.php';
+                        alert('Your meal has been posted!');
+                        window.location.href='account.php';
                 </script>
                 ";
+
                 exit();
             }
             else{
@@ -94,5 +92,6 @@
         header("Location: posting.php");
         exit();
     }
+
 
 ?>

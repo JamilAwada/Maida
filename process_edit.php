@@ -26,19 +26,9 @@
 
     if($query){
         echo "
-        <!-- CDN for SweetAlert: Shows an alert when the user registers successfully -->
-        <script src='//cdn.jsdelivr.net/npm/sweetalert2@11'></script>
-        <!-- CDN for JQuery -->
-        <script src='https://ajax.googleapis.com/ajax/libs/cesiumjs/1.78/Build/Cesium/Cesium.js'></script>
         <script>
-            Swal.fire({
-                title: 'Success!',
-                text: 'Your meal has been updated!',
-                icon: 'success',
-                confirmButtonText: 'My account'
-            }).then(function() {
-                window.location = 'account.php';
-            });
+            alert('Dish updated successfully');
+            window.location.href='account.php';
         </script>
 ";
 

@@ -159,10 +159,10 @@ if (!isset($_SESSION['username'])) {
                       <img src="ImageUploads/<?php echo $dishimage ?>" alt="image" id="image" class="image" style="object-fit:contain; max-width: 100%; max-height:100%; border-radius: 10px; width:300px;" />
                     </div>
                     </br>
-                    <div class="container-fluid">
-                      <div class="mt-2 text-center">
+                    <div class="container-fluid d-flex justify-content-end">
+                      <div class="mt-2 text-center d-flex">
                         <div class="clear-btn">
-                          <a href="account.php" style="text-decoration: none; color: inherit;">
+                          <a href="account.php" style="text-decoration: none; color: inherit; vertical-align: middle;">
                             Cancel
                           </a>
                         </div>

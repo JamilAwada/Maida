@@ -22,14 +22,9 @@
         <!-- CDN for JQuery -->
         <script src='https://ajax.googleapis.com/ajax/libs/cesiumjs/1.78/Build/Cesium/Cesium.js'></script>
         <script>
-            Swal.fire({
-                title: 'Success!',
-                text: 'Your meal has been deleted!',
-                icon: 'success',
-                confirmButtonText: 'My account'
-            }).then(function() {
-                window.location = 'account.php';
-            });
+            alert('Dish deleted successfully');
+            window.location.href='account.php';
+
         </script>
     ";}
 ?>

@@ -57,11 +57,7 @@ if (!isset($_SESSION['username'])) {
       </div>
 
 
-      <span class=""><button class="sortnfilter">
-          Sort <i class="fa-solid fa-sort"></i>
-        </button>
-        <button class="sortnfilter">
-          Filter <i class="fa-solid fa-filter"></i></button></span>
+      
     </div>
     <div class="categoriesSection">
       <div class="section">
