@@ -89,7 +89,7 @@ if (!isset($_SESSION['username'])) {
       </div>
       <div class="slider">
         <center>
-          <div class="cardsList">
+          <div class="cardsList" >
             <?php
             // select all dishes from the database with chefid = $_SESSION['username']
             // for each dish, create a card with the dish name and price
@@ -102,22 +102,25 @@ if (!isset($_SESSION['username'])) {
             if ($query->rowCount() > 0) {
               foreach ($result as $row) {
                 // wrap the container with a link that takes me to process_edit.php?dishid=$row->dishid
-                echo "<a href=" . "editing.php?dishid=$row->id" . ">
+                echo "<a id='exists' href=" . "editing.php?dishid=$row->id" . ">
                 <div class='cardContainer'>
                 <div class='card'>
                   <img src='imageUploads/$row->image' alt='' />
                 </div>
                 <div class='cardDescription'>
-                  <div class='name'>$row->name</div>
+                  <div class='name' style='color:black;'>$row->name</div>
+                  
                   <div class='price'>$row->price</div>
                 </div>
               </div>
               </a>";
               }
             }else{
-              echo "<center><h2>You have no dishes available</h2>
-              <br/>
-              <a href='posting.php'><button class='btn btn-success'>Add Dish</button></a></center>";
+              // center the div
+
+              echo "<center id='noexist'><h2 style='color: black;'>You have not posted a dish yet.</h2>
+              <br>
+              <a id='postingbtn' class='mt-3' href='posting.php'><button class='btn btn-success'>Add Dish</button></a></center>";
             }
 
             ?>
@@ -184,6 +187,21 @@ if (!isset($_SESSION['username'])) {
       $("#footer").load("footer.php");
     });
   </script>
+
+  <script>
+    // check if cards list has a direct child with id = 'noexist', if it does, add d-flex, justify-content-center and align-items-center to its class list
+
+    var cardsList = document.querySelector(".cardsList");
+    var noexist = document.getElementById("noexist");
+
+    if (cardsList.contains(noexist)) {
+      cardsList.classList.add("d-flex", "align-items-center", "justify-content-center");
+    }
+
+
+
+
+    </script>
 
   <script>
     // save the changes to the user email and username when save button clicked

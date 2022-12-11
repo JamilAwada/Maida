@@ -63,19 +63,16 @@
             
             $sql = "INSERT INTO dishes (name, description, cuisine, diet, price, carbohydrates, protein, fat, image, chefid) VALUES (:name, :description, :cuisine, :diet, :price, :carbohydrates, :protein, :fat, :image, :chefid)";
 
-            // insert name into search table
-            $sql2 = "INSERT INTO search (name) VALUES (:name)";
 
 
             $stmt = $db->prepare($sql);
-            $stmt2 = $db->prepare($sql2);
-            
+
             //execute the query
             $stmt->execute(['name' => $name, 'description' => $description, 'cuisine' => $cuisine, 'diet' => $diet, 'price' => $price, 'carbohydrates' => $carbs, 'protein' => $protein, 'fat' => $fat, 'image' => $image, 'chefid' => $chefid]);
-            $stmt2->execute(['name' => $name]);
+
 
             // if successfully inserted into database
-            if($stmt2){
+            if($stmt){
 
                 echo "
                 <!-- CDN for SweetAlert: Shows an alert when the user registers successfully -->
@@ -83,14 +80,14 @@
                 <!-- CDN for JQuery -->
                 <script src='https://ajax.googleapis.com/ajax/libs/cesiumjs/1.78/Build/Cesium/Cesium.js'></script>
                 <script>
-                    Swal.fire({
-                        title: 'Success!',
-                        text: 'Your meal has been posted!',
-                        icon: 'success',
-                        confirmButtonText: 'Keep posting'
-                    }).then(function() {
-                        window.location = 'posting.php';
-                    });
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'Your meal has been posted!',
+                    icon: 'success',
+                    confirmButtonText: 'Keep posting'
+                }).then(function() {
+                    window.location = 'posting.php';
+                });
                 </script>
                 ";
                 exit();
