@@ -80,7 +80,7 @@
             Edit dish
           </h1>
           <div class="col-lg col-sm-12">
-            <form action = "process_edit.php" method="POST" enctype="multipart/form-data">
+            <form action = "process_edit.php?dishid=<?php echo $id ?>" method="POST" enctype="multipart/form-data">
 
             <div class="row">
             <div class="col-xl-6 col-xs-12">
@@ -168,7 +168,6 @@
                   <img src="ImageUploads/<?php echo $dishimage ?>" alt="image" id="image" class="image" style="object-fit:contain; max-width: 100%; max-height:100%; border-radius: 10px; width:300px;"/>
                 </div>
                 </br>
-                <input type="file" name="image" class="photo-file" id="image_input"/>
               <div class="container-fluid">
                 <div class="mt-5 text-center">
                   <a href="account.php">
