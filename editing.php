@@ -156,7 +156,7 @@ if (!isset($_SESSION['username'])) {
                     </div>
                     </br>
                     <div class="container-fluid">
-                      <div class="mt-5 text-center">
+                      <div class="mt-2 text-center">
                         <div class="clear-btn">
                           <a href="account.php" style="text-decoration: none; color: inherit;">
                             Cancel

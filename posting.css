@@ -156,6 +156,9 @@ label {
   border: 1px solid orangered;
   padding: 0.5em;
   border-radius: 7px;
+  float: left;
+  position: relative;
+  margin: 2px;
 }
 
 .clear-btn:hover {
@@ -179,7 +182,9 @@ label {
   border: 1px solid green;
   padding: 0.5em;
   border-radius: 7px;
-
+  float: left;
+  position: relative;
+  margin: 2px;
 }
 
 .save-btn:hover {
@@ -197,6 +202,9 @@ label {
   border: 1px solid red;
   padding: 0.5em;
   border-radius: 7px;
+  float: left;
+  position: relative;
+  margin: 2px;
 }
 
 .delete-btn:hover {
