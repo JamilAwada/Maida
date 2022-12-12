@@ -30,26 +30,18 @@
             ">
           My Orders
         </h1>
+        <center><button class="btn btn-danger" onclick="location.href='incoming_orders.php?type=past'">Past Orders</button><button onclick="location.href='incoming_orders.php?type=new'" class="btn btn-danger" style="margin-left:10px;">Incoming Orders</button></center>
         <div class="card" style="margin: 20px">
+        
           <div class="container" style="height:23rem; overflow-y: scroll;">
+          
             <div class="row d-flex justify-content-center" style="padding: 20px">
-
+            
               <?php
                 session_start();
                 include_once("config.php");
                 $chefname = $_SESSION['username'];
 
-                // <div id=' . $value['id'] . ' class="ItemContainer row" style="width:95%; border:1px solid orangered; padding:10px; border-radius:5px; margin-bottom:5px;">
-                //                   <div class="col-2 d-flex align-items-center"><div class="imgcontainer" style="width:100px; height:50px; border-radius:5px; overflow:hidden;"><img width="100px" src="ImageUploads/' . $value['image'] . '"></div></div>
-                //                   <div class="col-3 d-flex align-items-center">' . $value['name'] . '<span style ="color:orangered;">x' . $value['quantity'] . '</span></div>
-                //                   <div class="col-4 d-flex align-items-center text-muted">' . $value['request'] . '</div>
-                //                   <div class="col-2 d-flex align-items-center" style="color:orangered;">' . $total . 'L.L.</div>
-                //                   <div class="col-1 d-flex align-items-center justify-content-end">
-                //                   <i id="delete" class="fa fa-window-close" style="color:red;" aria-hidden="true"></i>
-                //                   </div>
-                //                 </div>
-
-                // get all orders from orders table where chefname equals chefname
                 $sql = "SELECT * FROM orders WHERE chefname = '$chefname'";
                 // use pdo
                 $stmt = $db->prepare($sql);
@@ -66,19 +58,38 @@
                   $name = $value['dishname'];
                   $image = $value['image'];
                   
-                  if($status == "Pending"){
-                    $total = (int)$price * (int)$quantity;
-                  echo '<div id=' . $orderid . ' class="ItemContainer row" style="width:95%; border:1px solid orangered; padding:10px; border-radius:5px; margin-bottom:5px;">
-                  <div class="col-2 d-flex align-items-center"><div class="imgcontainer" style="width:100px; height:50px; border-radius:5px; overflow:hidden;"><img width="100px" src="ImageUploads/' . $image . '"></div></div>
-                  <div class="col-3 d-flex align-items-center">' . $name . '<span style ="color:orangered;">x' . $quantity . '</span></div>
-                  <div class="col-3 d-flex align-items-center text-muted">' . $request . '</div>
-                  <div class="col-2 d-flex align-items-center" style="color:orangered;">' . $total . 'L.L.</div>
-                  <div class="col-2 d-flex align-items-center justify-content-end">
-                  <button onclick="location.href=\'order_details.php?id='.$orderid.'\'" class="btn btn-danger">View</button>
-                  </div>
-                </div>';
-                }
+                  $type = $_GET['type'];
+
+                  if($type == 'new'){
+                    if($status == "Pending"){
+                      $total = (int)$price * (int)$quantity;
+                      echo '
+                      <div id=' . $orderid . ' class="ItemContainer row" style="width:95%; border:1px solid orangered; padding:10px; border-radius:5px; margin-bottom:5px;">
+                        <div class="col-2 d-flex align-items-center"><div class="imgcontainer" style="width:100px; height:50px; border-radius:5px; overflow:hidden;"><img width="100px" src="ImageUploads/' . $image . '"></div></div>
+                        <div class="col-3 d-flex align-items-center">' . $name . '<span style ="color:orangered;">x' . $quantity . '</span></div>
+                        <div class="col-3 d-flex align-items-center text-muted">' . $request . '</div>
+                        <div class="col-2 d-flex align-items-center" style="color:orangered;">' . $total . 'L.L.</div>
+                        <div class="col-2 d-flex align-items-center justify-content-end">
+                        <button onclick="location.href=\'order_details.php?id='.$orderid.'\'" class="btn btn-danger">View</button>
+                        </div>
+                      </div>';
+                    }
                   }
+
+                  if($type == 'past'){
+                    if($status == "Fulfilled"){
+                      $total = (int)$price * (int)$quantity;
+                      echo '
+                      <div id=' . $orderid . ' class="ItemContainer row" style="width:95%; border:1px solid orangered; padding:10px; border-radius:5px; margin-bottom:5px;">
+                        <div class="col-2 d-flex align-items-center"><div class="imgcontainer" style="width:100px; height:50px; border-radius:5px; overflow:hidden;"><img width="100px" src="ImageUploads/' . $image . '"></div></div>
+                        <div class="col-3 d-flex align-items-center">' . $name . '<span style ="color:orangered;">x' . $quantity . '</span></div>
+                        <div class="col-4 d-flex align-items-center text-muted">' . $request . '</div>
+                        <div class="col-3 d-flex align-items-center" style="color:orangered;">' . $total . 'L.L.</div>
+                      </div>';
+                    }
+                  }
+
+                }
 
               ?>
             </div>

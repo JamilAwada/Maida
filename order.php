@@ -52,9 +52,9 @@ include_once('config.php');
 
   ?>
 
-  <div class="container1 mt-3">
-    <div class="subcontainer d-flex p-3">
-      <div class="row w-100">
+  <div class="container1">
+    <div class="subcontainer d-flex p-3" style="margin-top:100px;">
+      <div class="row w-100" >
         <div class="col-lg-6">
           <div class="d-flex justify-content-center">
             <div class="imagecontainer mt-5">
@@ -64,7 +64,7 @@ include_once('config.php');
 
           </div>
 
-          <div align="center" style="color: orangered; text-indent: 10px;" class="d-flex align-items-center justify-content-center my-3"><i class="fa-solid fa-utensils" style="font-size: 50px; color: orangered;"></i><a class="chef" href="account.html"><?php echo $dishchefid ?></a></div>
+          <div align="center" style="color: orangered; text-indent: 10px;" class="d-flex align-items-center justify-content-center my-3"><i class="fa-solid fa-utensils" style="font-size: 50px; color: orangered;"></i><a class="chef"><?php echo $dishchefid ?></a></div>
 
         </div>
         <div class="col-lg-6">

@@ -21,8 +21,9 @@ if (isset($_SESSION['username'])) {
               <a href="cart.php">Cart <i class="fa-solid fa-cart-shopping"></i></a>
              </li>
              <li style="position:relative;">
-              <a href="incoming_orders.php">Orders <i class="fa-solid fa-clipboard-list"></i></a>
+              <a href="incoming_orders.php?type=new">Orders <i class="fa-solid fa-clipboard-list"></i></a>
              </li>
+             
              <li><a href="account.php">' . $_SESSION['username'] . '</a></li>
              <li>
                <a href="logout.php">Log out <i class="fa-solid fa-right-from-bracket"></i></a>
