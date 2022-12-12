@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Dec 12, 2022 at 11:34 AM
+-- Generation Time: Dec 12, 2022 at 10:23 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -52,8 +52,11 @@ INSERT INTO `dishes` (`name`, `description`, `cuisine`, `diet`, `price`, `carboh
 ('Knefe', 'Knefe', 'turkish', 'vegetarian', 80000, 60, 13, 20, 39, 'knefe_cheese_plate_2.jpg', 'kamil'),
 ('Farrouj', 'Farrouj', 'none', 'none', 300000, 12, 20, 10, 40, '241929befd768760c624685185ff10f8_featured_v2.avif', 'kamil'),
 ('Chicken Tenders', '6-piece Chicken Tenders', 'none', 'keto', 200000, 5, 20, 10, 41, '3973d54d-0004-4c06-a9d1-0843f3bf3efa.jpg', 'rissal'),
-('Spaghetti Monster', 'An Amazing Dish Tbh', 'italian', 'vegetarian', 120000, 12, 3, 21, 46, 'spaghettimonster.png', 'chef'),
-('Hommos', 'Hommos, Lemon, Thine, Zet.', 'middleeastern', 'vegetarian', 150000, 30, 10, 1, 48, 'Lebanese_style_hummus.jpg', 'jana');
+('Hommos', 'Hommos, Lemon, Thine, Zet.', 'middleeastern', 'vegetarian', 150000, 30, 10, 1, 48, 'Lebanese_style_hummus.jpg', 'jana'),
+('Bruschetta', 'An Italian Delicacy With Tomatoes, Cheese, And Bread ', 'italian', 'vegetarian', 300000, 12, 14, 1, 55, 'warm-bruschetta-1.jpg', 'rissou'),
+('Kabab', 'A Turkish Delicious Meaty Meal', 'turkish', 'none', 100000, 30, 12, 15, 56, 'a39okhfk_620_625x300_21_January_20.webp', 'rissou'),
+('Calzone', '', 'italian', 'none', 140000, 12, 23, 2, 57, '190130-calzone-horizontal-2-1549482540.png', 'rissou'),
+('Mansaf', 'Mansaf', 'turkish', 'none', 200000, 12, 23, 21, 58, 'mansaf-I.jpg', 'rissou');
 
 -- --------------------------------------------------------
 
@@ -87,7 +90,10 @@ INSERT INTO `orders` (`id`, `customerid`, `chefname`, `dishid`, `quantity`, `req
 (29, 143, 'rissal', 38, 1, 'No specific request', 'Fulfilled', 50000, 'Eq_it-na_pizza-margherita_sep2005_sml.jpg', 'Pizza'),
 (30, 143, 'chef', 46, 1, 'No specific request', 'Fulfilled', 120000, 'spaghettimonster.png', 'Spaghetti Monster'),
 (31, 146, 'jana', 51, 1, 'No specific request', 'Fulfilled', 30000, 'Lebanese_style_hummus.jpg', 'Hommos'),
-(32, 146, 'jana', 51, 2, 'bala zeit', 'Fulfilled', 30000, 'Lebanese_style_hummus.jpg', 'Hommos');
+(32, 146, 'jana', 51, 2, 'bala zeit', 'Fulfilled', 30000, 'Lebanese_style_hummus.jpg', 'Hommos'),
+(33, 146, 'rissou', 57, 1, 'No specific request', 'Fulfilled', 140000, '190130-calzone-horizontal-2-1549482540.png', 'Calzone'),
+(34, 146, 'rissou', 55, 3, 'No specific request', 'Pending', 300000, 'warm-bruschetta-1.jpg', 'Bruschetta'),
+(35, 146, 'rissou', 56, 1, 'No specific request', 'Pending', 100000, 'a39okhfk_620_625x300_21_January_20.webp', 'Kabab');
 
 -- --------------------------------------------------------
 
@@ -123,8 +129,11 @@ INSERT INTO `users` (`id`, `username`, `email`, `password`, `address`, `district
 (142, 'chef', 'chef@gmail.com', 'd5f2e5c77054c44c2c72a1b017deca06fc637c99', '', '', '', '0'),
 (143, 'Rissal', 'rissalhedna@gmail.com', '12dea96fec20593566ab75692c9949596833adc9', 'Santona Residance', 'beirut', 'beirut', '88888888'),
 (144, 'jmm', 'jmm@gmail.com', '03809e0aec2c8e8a3f7fdb60ec4269937485984c', '', '', '', ''),
-(145, 'jana', 'jana@dsds.com', 'a2468f28b1edfae3e0a0ca3842941d5601441434', '', '', '', ''),
-(146, 'user', 'user@gmail.com', '12dea96fec20593566ab75692c9949596833adc9', 'Hamra', 'beirut', 'beirut', '11111111');
+(145, 'jana', 'jana@dsds.com', 'a2468f28b1edfae3e0a0ca3842941d5601441434', 'dsf', 'beirut', 'akkar', '11111111'),
+(146, 'user', 'user@gmail.com', '12dea96fec20593566ab75692c9949596833adc9', 'Santona Residence', 'beirut', 'beirut', '11111111'),
+(147, 'rissou', 'rissal@gmail.com', '7d1e01499f9a3371c05dc6f28838488ccaa8a441', 'afdsb', 'beirut', 'akkar', '12345678'),
+(148, 's', 'dd@f.f', '3c363836cf4e16666669a25da280a1865c2d2874', '', '', '', ''),
+(149, 'username', 'adfsfg@afds.afdsf', '5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8', '', '', '', '');
 
 --
 -- Indexes for dumped tables
@@ -156,19 +165,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `dishes`
 --
 ALTER TABLE `dishes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
 
 --
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=147;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=150;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
