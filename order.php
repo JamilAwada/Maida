@@ -131,13 +131,9 @@ include_once('config.php');
     });
   </script>
 
-  <!-- add cdn for sweet alert 2 -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   <script>
-    //create an array of cart items
-    // add the dish id to the array when the add to cart button is clicked
-    // add the array to the session variable
-    // use ajax and jquery
+
 
     $(document).ready(function() {
       $("#cart").click(function() {

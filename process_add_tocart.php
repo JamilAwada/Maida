@@ -7,7 +7,6 @@
 <?php
     
     if(isset($_POST)){
-        // get dish image, name, price, request, quantity from post method
         $id = $_POST['id'];
         $name = $_POST['name'];
         $quantity = $_POST['quantity'];
@@ -24,7 +23,6 @@
             $request = "No specific request";
         }
 
-        // add the dish with the details above to the cart array in the session variable
         if(isset($_SESSION['cart'])){
             $cart = $_SESSION['cart'];
             $item_array_id = array_column($cart, 'id');

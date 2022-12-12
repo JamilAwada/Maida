@@ -240,7 +240,7 @@ if (!isset($_SESSION['username'])) {
         <center>
           <div class="cardsList">
             <?php
-            // select all dishes with italian type
+            // select all dishes with none type
             $sql = "SELECT * FROM dishes WHERE cuisine = 'None'";
             $query = $db->prepare($sql);
             $query->execute();

@@ -37,14 +37,11 @@
                 include_once("config.php");
                 $chefname = $_SESSION['username'];
 
-                // get all orders from orders table where chefname equals chefname
                 $sql = "SELECT * FROM orders WHERE chefname = '$chefname'";
-                // use pdo
                 $stmt = $db->prepare($sql);
                 $stmt->execute();
                 $orders = $stmt->fetchAll();
 
-                //loop through al values
                 foreach ($orders as $key => $value) {
                   $orderid = $value['id'];
                   $status = $value['status'];
@@ -77,10 +74,8 @@
     </footer>
 
 
-    <!-- load jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
-        // get header and footer
         $("#header").load("navbar.php");
         $("#footer").load("footer.php");
     </script>

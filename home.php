@@ -1,9 +1,6 @@
 <?php
 session_start();
-// if (isset($_SESSION['username'])) {
-//   header("Location: home.php");
-//   exit();
-// }
+
 
 ?>
 <!DOCTYPE html>
@@ -27,7 +24,6 @@ session_start();
   <!-- NavBar Start -->
   <nav id="header">
 
-    <!-- Loaded the Header through JQuery -->
 
   </nav>
   <!-- NavBar End -->
@@ -40,7 +36,6 @@ session_start();
   <br>
 
 
-  <!-- Goals Container-->
   <div class="maincol" id="1">
     <div class="leftdiv">
       <span class="servegoal">What We Serve</span>
@@ -72,7 +67,6 @@ session_start();
 
     </div>
 
-    <!-- Goals Container2-->
     <div class="rowcontainer" id="2">
       <div class="imgcontainer">
         <img class="dish2" src="images/pasta.jpg">
@@ -86,8 +80,7 @@ session_start();
           <div class="Alinks">
             <?php
 
-            // if the user is logged in, direct to posting.php
-            // if the user is not logged in, direct to preauth.php
+
             if (isset($_SESSION['username'])) {
               echo '<button class="bmydishes" onclick="location.href=\'posting.php\'" type="button">Post Now</button>';
             } else {
@@ -99,7 +92,6 @@ session_start();
       </div>
     </div>
 
-    <!-- Goals Container3-->
     <div class="maincol" id="3">
       <div class="rowcontainer">
 

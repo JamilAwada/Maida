@@ -42,7 +42,6 @@
 
               <?php
               session_start();
-              // get the image, dishname, request, and price from cart in session variables
               if (isset($_SESSION['cart'])) {
                 $cart = $_SESSION['cart'];
                 $fulltotal = 0;

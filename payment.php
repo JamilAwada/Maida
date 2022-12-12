@@ -1,10 +1,6 @@
 <?php
     session_start();
-    // if (isset($_SESSION['username'])) {
-    //   header("Location: home.php");
-    //   exit();
-    // }
-    // if cart is empty in session variable, redirect to search.php
+
     if (empty($_SESSION['cart'])) {
       header("Location: search.php");
       exit();
@@ -39,7 +35,6 @@
                         <div class="total">
                             <div class="leftbx">Cart Total: <span style ="color:orangered;"><?php
                             
-                            // get the price and quantity from cart in session variables
                             $total = 0;
                             if (isset($_SESSION['cart'])) {
                                 $cart = $_SESSION['cart'];
@@ -126,7 +121,6 @@
     </script>
 
     <script>
-        // check form validity
         
         document.getElementById("subb").addEventListener("click", function(event) {
             var form = document.querySelector("form");
@@ -144,12 +138,10 @@
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
-                    // we load credit_card.php page instead of the image
                     document.getElementById("rightColumn").innerHTML = this.responseText;
                 }
             };
 
-            // send the above information to credit_card.php
             xhttp.open("GET", "credit_card.php?fname=" + fname + "&lname=" + lname + "&district=" + district + "&city=" + city + "&addr=" + addr + "&numb=" + numb, true);
             xhttp.send();
         });

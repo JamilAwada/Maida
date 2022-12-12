@@ -6,15 +6,12 @@
 
 <?php 
 
-    // get dish id from the url
     $id = $_GET['dishid'];
 
-    // delete dish from database
     $sql = "DELETE FROM dishes WHERE id = '$id'";
     $query = $db->prepare($sql);
     $query->execute();
 
-    // echo dish deleted successfully
     if($query){
         echo "
         <!-- CDN for SweetAlert: Shows an alert when the user registers successfully -->

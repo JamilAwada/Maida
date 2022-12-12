@@ -73,9 +73,9 @@
       <div class="row h4">
         <h4>Your order will be delivered soon</h4>
         <p>Order placed on <?php
-                            // set timezone to lebanese time
+                            // Setting timezone to lebanese time
                             date_default_timezone_set('Asia/Beirut');
-                            // Return current date from the remote server
+                            // Returning current date from the remote server
                             $date = date('d-m-y h:i:s');
                             echo $date;
                             ?></p>
@@ -87,21 +87,17 @@
     </div>
 
     <script>
-      // get buttons by id
       var btn1 = document.getElementById("btn1");
       var btn2 = document.getElementById("btn2");
       var btn3 = document.getElementById("btn3");
       var btn4 = document.getElementById("btn4");
 
-      // get progress bar by class
       var progress = document.getElementsByClassName("progress-bar");
 
-      // clicking on btn1 changes progress bar width to 25%
       btn1.onclick = function() {
         progress[0].style.width = "25%";
       };
 
-      // same thing for the others by 25% increments
       btn2.onclick = function() {
         progress[0].style.width = "50%";
       };

@@ -11,12 +11,10 @@
 
         $sql = "SELECT * FROM dishes WHERE name LIKE '%$name%'";
         
-        //fetch query using pdo
         $query = $db->prepare($sql);
         $query->execute();
         $result = $query->fetchAll(PDO::FETCH_OBJ);
         
-        //if result is not empty
         if($query->rowCount() > 0){
             foreach($result as $row){
                 

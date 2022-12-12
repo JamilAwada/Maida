@@ -34,31 +34,26 @@
 
       <?php
         
-        // session_start();
         
         $order_id = $_GET['id'];
-        // select the order with order_id from the database
-        // use pdo
+
         $sql = "SELECT * FROM orders WHERE id = :order_id";
         $stmt = $db->prepare($sql);
         $stmt->execute(['order_id' => $order_id]);
         $order = $stmt->fetch();
 
-        // get the customerid from the order
         $customer_id = $order['customerid'];
         $sql = "SELECT * FROM users WHERE id = :customer_id";
         $stmt = $db->prepare($sql);
         $stmt->execute(['customer_id' => $customer_id]);
         $customer = $stmt->fetch();
 
-        // get address, city, district, and phone from customer
         $address = $customer['address'];
         $city = $customer['city'];
         $district = $customer['district'];
         $phone = $customer['phone'];
         $username = $customer['username'];
 
-        // get the order price, quantity, dishname, request from order
         $price = $order['price'];
         $quantity = $order['quantity'];
         $dishname = $order['dishname'];
@@ -146,7 +141,7 @@
 
              <!-- Footer Start -->
     
-             <footer id="footer">
+        <footer id="footer">
         
         </footer>
     

@@ -90,7 +90,6 @@
 
 
   <script>
-    // generate jquery to fire Swal when clicking on submit button
     $(document).ready(function() {
       $("#finish").click(function() {
         Swal.fire({

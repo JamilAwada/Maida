@@ -7,7 +7,6 @@
 
 <?php 
 
-   // get dish details from the form
     $name = $_POST['name'];
     $desc = $_POST['desc'];
     $cuisine = $_POST['cuisine'];
@@ -18,7 +17,6 @@
     $fat = $_POST['fat'];
     $id = $_GET['dishid'];
 
-    // update the dish in the database table dishes
 
     $sql = "UPDATE dishes SET name = '$name', description = '$desc', cuisine = '$cuisine', diet = '$diet', price = '$price', carbohydrates = '$carbs', protein = '$protein', fat = '$fat' WHERE id = '$id'";
     $query = $db->prepare($sql);

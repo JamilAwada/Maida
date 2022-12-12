@@ -32,9 +32,6 @@
             exit();
         }
 
-        // Check if the email is valid
-        // Email must start with a letter, contain only letters, numbers, and underscores, and end with a letter or number
-        // Email must contain an @ symbol and a .
         if(!preg_match("/^[a-zA-Z][a-zA-Z0-9_]*[a-zA-Z0-9]@[a-zA-Z0-9]+\.[a-zA-Z0-9]+$/", $email)){
             $error = true;
             header("Location: signup.php?error=invalidemail&username=$username");
@@ -42,14 +39,12 @@
         }
 
 
-        // check for password length (min 6 characters)
         if(strlen($password) < 6){
             $error = true;
             header("Location: signup.php?error=shortpassword&username=$username");
             exit();
         }
 
-        // check if username is already taken with pdo
         $sql = "SELECT * FROM users WHERE username = :username";
         $stmt = $db->prepare($sql);
         $stmt->execute(['username' => $username]);

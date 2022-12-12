@@ -48,7 +48,6 @@
             exit();
         }
 
-        // validate carbohydrates, protein, fat, and price to be positive integers
         if(!is_numeric($carbs) | !is_numeric($protein) | !is_numeric($fat) | !is_numeric($price)){
             $error = true;
             header("Location: posting.php?error=invalidnumber");
@@ -57,7 +56,6 @@
 
         if(!$error){
 
-            // insert variables into the dishes table with pdo
             
             $sql = "INSERT INTO dishes (name, description, cuisine, diet, price, carbohydrates, protein, fat, image, chefid) VALUES (:name, :description, :cuisine, :diet, :price, :carbohydrates, :protein, :fat, :image, :chefid)";
 
@@ -65,11 +63,9 @@
 
             $stmt = $db->prepare($sql);
 
-            //execute the query
             $stmt->execute(['name' => $name, 'description' => $description, 'cuisine' => $cuisine, 'diet' => $diet, 'price' => $price, 'carbohydrates' => $carbs, 'protein' => $protein, 'fat' => $fat, 'image' => $image, 'chefid' => $chefid]);
 
 
-            // if successfully inserted into database
             if($stmt){
                 
                 header("Location: posting.php?success=posted");

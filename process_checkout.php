@@ -14,15 +14,10 @@
 
 <?php
     
-    // get the user id from the session
     $customerid = (int)$_SESSION['id'];
 
-    // get the cart from the session
     $cart = $_SESSION['cart'];
 
-    // for every element in the cart, insert the user_id, chefname, quantity, request, and status into the table orders
-    // status is by default "pending"
-    // use pdo
 
     foreach($cart as $key => $value){
         
@@ -35,19 +30,7 @@
         $chefname = $value['chefname'];
         $dishname = $value['name'];
 
-        // echo $customerid."<br>";
-        // echo $dishid."<br>";
-        // echo $dishname."<br>";
-        // echo $quantity."<br>";
-        // echo $request."<br>";
-        // echo $image."<br>";
-        // echo $price."<br>";
-        // echo $chefname."<br>";
-        // echo $dishname."<br>";
-        
-        // insert customerid, chefname, dishid, quantity, request, status, price, image, and dishname into orders table
-        // use pdo
-        // status default is Pending
+
 
         $sql = "INSERT INTO orders (customerid, chefname, dishid, quantity, request, status, price, image, dishname) VALUES (:customerid, :chefname, :dishid, :quantity, :request, :status, :price, :image, :dishname)";
         $stmt = $db->prepare($sql);

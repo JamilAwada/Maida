@@ -12,10 +12,8 @@
     <?php
     require_once("config.php");
     session_start();
-    // get the user id from the session
     $user_id = (int)$_SESSION['id'];
 
-    // get numb, addr, fname, lname, district, and city from GET
     $numb = $_GET['numb'];
     $addr = $_GET['addr'];
     $fname = $_GET['fname'];
@@ -23,19 +21,14 @@
     $district = $_GET['district'];
     $city = $_GET['city'];
 
-    // update user address and phone number and city and district in database
 
-    // use pdo
     $sql = "UPDATE users SET address = :addr, phone = :numb, city = :city, district = :district WHERE id = :user_id";
     $stmt = $db->prepare($sql);
     $stmt->execute(['addr' => $addr, 'numb' => $numb, 'city' => $city, 'district' => $district, 'user_id' => $user_id]);
     ?>
     <form action="process_checkout.php" method="POST">
         <div class="pay">
-            <!-- <input type="radio" id="cod" name="cod">
-                        <label for="cod">Cash On Delivery</label>
-                        <input type="radio" id="card" name="card">
-                        <label for="cod">Credit Card</label> -->
+
             <div class="rect">
                 <div style="width: 100%;height:30px;">
                     <div style="position:relative; float:left;left:30px;top:15px;font-size:20px; font-family:DD-TTNorms, -apple-system, BlinkMacSystemFont, ' Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji' , 'Segoe UI Emoji' , 'Segoe UI Symbol' ;">
@@ -62,7 +55,6 @@
         </div>
     </form>
 
-    <!-- We get the address and the rest of the information from this page and send it to the chef while redirecting to the order tracking page -->
 
 
 </body>

@@ -34,7 +34,6 @@ if (!isset($_SESSION['username'])) {
   <!-- NavBar End -->
 
 
-  <!--Profile Container-->
   <div class="maincontainer" style="margin-top:100px; padding:20px;">
     <div class="maintext">
       <span class="profile">My Profile</span>
@@ -48,8 +47,8 @@ if (!isset($_SESSION['username'])) {
       <br>
       <h4 style="color:orangered;">My Address:</h4>
       <div style="background-color:lightgrey; padding:5px; border-radius:3px; width:90%" contenteditable="false" id="addressfield" name="address"><?php
-        // gett address from database
-        $sql = "SELECT * FROM users WHERE username = '" . $_SESSION['username'] . "'";
+
+$sql = "SELECT * FROM users WHERE username = '" . $_SESSION['username'] . "'";
         $query = $db->prepare($sql);
         $query->execute();
         $result = $query->fetchAll(PDO::FETCH_OBJ);
@@ -77,7 +76,6 @@ if (!isset($_SESSION['username'])) {
       <button class="btn btn-success" style="margin-bottom:10px; margin-top:10px;" id="editbtn"><span>Edit My Profile</span></button>
     </div>
   </div>
-  <!--Profile Container End-->
 
   <center>
     <div class="container">
@@ -90,17 +88,14 @@ if (!isset($_SESSION['username'])) {
         <center>
           <div class="cardsList">
             <?php
-            // select all dishes from the database with chefid = $_SESSION['username']
-            // for each dish, create a card with the dish name and price
+
             $sql = "SELECT * FROM dishes WHERE chefid LIKE '%{$_SESSION['username']}%'";
             $query = $db->prepare($sql);
             $query->execute();
             $result = $query->fetchAll(PDO::FETCH_OBJ);
 
-            // if result is not empty
             if ($query->rowCount() > 0) {
               foreach ($result as $row) {
-                // wrap the container with a link that takes me to process_edit.php?dishid=$row->dishid
                 echo "
                 <div class='cardContainer'>
                 <a id='exists' href=" . "editing.php?dishid=$row->id" . ">
@@ -119,7 +114,6 @@ if (!isset($_SESSION['username'])) {
               ";
               }
             } else {
-              // center the div
 
               echo "<center id='noexist'><h2 style='color: black;'>You have not posted a dish yet.</h2>
               <br>
@@ -187,7 +181,6 @@ if (!isset($_SESSION['username'])) {
   </script>
 
   <script>
-    // check if cards list has a direct child with id = 'noexist', if it does, add d-flex, justify-content-center and align-items-center to its class list
 
     var cardsList = document.querySelector(".cardsList");
     var noexist = document.getElementById("noexist");
@@ -198,9 +191,7 @@ if (!isset($_SESSION['username'])) {
   </script>
 
   <script>
-    // save the changes to the user email and username when save button clicked
-    // storechanges in the database
-    // reload the page
+
     $(document).ready(function() {
       $(".changes1").click(function() {
         var username = $("#usernamefield").text();
