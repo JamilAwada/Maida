@@ -101,18 +101,22 @@ if (!isset($_SESSION['username'])) {
             if ($query->rowCount() > 0) {
               foreach ($result as $row) {
                 // wrap the container with a link that takes me to process_edit.php?dishid=$row->dishid
-                echo "<a id='exists' href=" . "editing.php?dishid=$row->id" . ">
+                echo "
                 <div class='cardContainer'>
+                <a id='exists' href=" . "editing.php?dishid=$row->id" . ">
                 <div class='card'>
+                
                   <img src='imageUploads/$row->image' alt='' />
                 </div>
                 <div class='cardDescription'>
                   <div class='name' style='color:black;'>$row->name</div>
                   
-                  <div class='price'>$row->price</div>
+                  <div class='price'>".$row->price."L.L.</div>
+                  
                 </div>
+                </a>
               </div>
-              </a>";
+              ";
               }
             } else {
               // center the div

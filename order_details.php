@@ -96,10 +96,12 @@
                 </div>
                 <div class="col-4">
                   <div class="mt-3" style="font-size: 24px"><?php echo $username?></div>
+                  
                   <div style="color: gray">
                     would like <?php echo $quantity?> orders of
                     <span style="color: #fa2c02"><?php echo $dishname?></span>
                   </div>
+                  <div class="mt-3" style="font-size: 15px; color:blue;">+961 <?php echo $phone?></div>
                   <i
                     class="fa-solid fa-quote-left my-3"
                     style="font-size: 20px; color: #fa2c02"
