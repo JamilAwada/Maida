@@ -48,22 +48,21 @@ if (!isset($_SESSION['username'])) {
       <br>
       <h4 style="color:orangered;">My Address:</h4>
       <div style="background-color:lightgrey; padding:5px; border-radius:3px; width:90%" contenteditable="false" id="addressfield" name="address"><?php
-                                                                                                                                                  // gett address from database
-                                                                                                                                                  $sql = "SELECT * FROM users WHERE username = '" . $_SESSION['username'] . "'";
-                                                                                                                                                  $query = $db->prepare($sql);
-                                                                                                                                                  $query->execute();
-                                                                                                                                                  $result = $query->fetchAll(PDO::FETCH_OBJ);
-                                                                                                                                                  if ($query->rowCount() > 0) {
-                                                                                                                                                    foreach ($result as $row) {
-                                                                                                                                                      if ($row->address == "") {
-                                                                                                                                                        echo "No address added";
-                                                                                                                                                      } else {
-                                                                                                                                                        echo $row->address;
-                                                                                                                                                      }
-                                                                                                                                                    }
-                                                                                                                                                  }
-
-                                                                                                                                                  ?></div>
+        // gett address from database
+        $sql = "SELECT * FROM users WHERE username = '" . $_SESSION['username'] . "'";
+        $query = $db->prepare($sql);
+        $query->execute();
+        $result = $query->fetchAll(PDO::FETCH_OBJ);
+        if ($query->rowCount() > 0) {
+          foreach ($result as $row) {
+            if ($row->address == "") {
+              echo "No address added";
+            } else {
+              echo $row->address;
+             }
+          }
+        }
+        ?></div>
       <br>
       <h4 style="color:orangered;">Email:</h4>
       <div style="background-color:lightgrey; padding:5px; border-radius:3px; width:90%" contenteditable="false" id="emailfield" name="email"><?php echo $_SESSION['email'] ?></div>
@@ -151,7 +150,6 @@ if (!isset($_SESSION['username'])) {
       if (toggle == 0) {
         saveBtn.style.display = "block";
         cancelBtn.style.display = "block";
-        emailField.contentEditable = true;
         addressfield.contentEditable = true;
         toggle = 1;
       } else {
@@ -214,7 +212,6 @@ if (!isset($_SESSION['username'])) {
             id: <?php echo $_SESSION['id'] ?>
           },
           success: function(data) {
-
             location.reload();
           }
         });
