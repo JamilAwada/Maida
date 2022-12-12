@@ -21,7 +21,7 @@
 
         $username = $_POST['username'];
         $email = $_POST['email'];
-        $password = sha1($_POST['password']);
+        $password = $_POST['password'];
 
         $error = false;
 
@@ -74,6 +74,7 @@
         }
 
         if(!$error){
+            $password = sha1($password);
             // insert into database
             $sql = "INSERT INTO users (username, password, email, address, district, city, phone) VALUES (?, ?, ?, ?, ?, ?, ?)";
             $stmt = $db->prepare($sql);

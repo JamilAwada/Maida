@@ -100,7 +100,7 @@ if (isset($_SESSION['username'])) {
                   } else if ($errorCheck == "invalidemail") {
                     echo "<p style='color:red;'>Choose a proper email!</p>";
                   } else if ($errorCheck == "shortpassword") {
-                    echo "<p style='color:red;'>The password must be at least 6 characters long!</p>";
+                    echo "<p style='color:red;'>Password is too short!</p>";
                   } else if ($errorCheck == "usernametaken") {
                     echo "<p style='color:red;'>Username already taken!</p>";
                   } else if ($errorCheck == "emailtaken") {
