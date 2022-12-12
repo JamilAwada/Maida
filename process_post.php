@@ -71,13 +71,8 @@
 
             // if successfully inserted into database
             if($stmt){
-                echo "
-                <script>
-                        alert('Your meal has been posted!');
-                        window.location.href='account.php';
-                </script>
-                ";
-
+                
+                header("Location: posting.php?success=posted");
                 exit();
             }
             else{

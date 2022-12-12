@@ -88,22 +88,12 @@
                       </div>';
                     }
                   }
-
                 }
-
               ?>
             </div>
-
-
           </div>
-
         </div>
 
-        <!-- <center>
-          <span style="font-weight:bold; font-size:15pt;">Total:</span><span style="font-size:15pt; color:orangered;"><?php echo $fulltotal ?>L.L.</span>
-          <br>
-          <button onclick="location.href='payment.php'" class='btn' style='width:80%; margin-top:50px;background-color:orangered; color:white; font-weight:bold;'>Checkout</button>
-        </center> -->
       </div>
     </div>
   </div>
