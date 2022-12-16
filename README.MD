@@ -1,3 +1,5 @@
+This project was part of the Web Development course at the Lebanese American University, supervised by Dr.Khaleel Mershad. 
+
 # Introduction
 Maida is a website that connects homecooks with food enthusiasts in a community of exchanged deliciousness. With its user-friendly design, Maida allows homecooks to easily post their dishes and allows users to search for and order the dishes that they want.
 # Tools
